@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 4 · RACI and R&amp;R - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 4 of 10</div>
+    <h1>One deliverable, <span class="accent">exactly one A</span></h1>
+    <p class="sub">Northgate's governance project sat still for two months on one unanswered question: "whose data is this?" Nobody was wrong - nobody was accountable. Tonight you learn the grid that prevents that stall: RACI done properly (R does the work, exactly ONE A owns the outcome, C is two-way, I is one-way), the three smells that tell you a grid is decorative, four worked RACIs - one per Northgate domain - and the R&amp;R layer beyond the grid: decision rights and escalation lanes, so a stuck question always has somewhere to go next.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · RACI mechanics + four worked grids</span>
+      <span class="a3" style="flex:5">16-40 · Build-along: fix the stalled RACI</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: RACI MECHANICS ============ -->
+  <section class="section" id="raci-mechanics">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the four letters, the one-A rule, the three smells</span>
+      <h2>RACI mechanics - four letters, one hard rule <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">RACI is a per-deliverable grid, not a per-project org chart. Each row is one deliverable; each cell says what one role does about it. <strong>R</strong>esponsible does the work - several Rs is fine. <strong>A</strong>ccountable owns the outcome - exactly ONE per deliverable, always, and it is a named person, not "the team". <strong>C</strong>onsulted is two-way: their input arrives BEFORE the call and can change it. <strong>I</strong>nformed is one-way: they are told AFTER. Most broken grids break exactly one of those four definitions.</p>
+
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Four worked RACIs covering all four Northgate domains, a 60-second smell test you can run on any grid someone hands you, and the escalation-lane picture that would have saved the governance project its two lost months.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RACI anatomy: R does the work, exactly one A owns the outcome, C is two-way, I is one-way, plus the three smells.">
+        <style>
+          .rnH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .rnT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rnS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .rnK { font: 700 14px Inter, sans-serif; fill: #1C242E; }
+          .rnG { font: 400 11.5px Inter, sans-serif; fill: #1C242E; opacity: .8; }
+          .rnO { font: 700 13px Inter, sans-serif; fill: #E2590A; }
+          .rnX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .rnB { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .rnN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="rnH" x="60" y="36">ONE DELIVERABLE PER ROW · four letters · and exactly one of them is an A</text>
+        <rect x="60" y="56" width="190" height="124" rx="10" fill="#3E5C76"/>
+        <text class="rnT" x="76" y="84">R · Responsible</text>
+        <text class="rnS" x="76" y="106">Does the work</text>
+        <text class="rnS" x="76" y="124">Several Rs is fine</text>
+        <text class="rnS" x="76" y="142">Zero Rs is a wish</text>
+        <rect x="265" y="56" width="190" height="124" rx="10" fill="#22364A"/>
+        <text class="rnT" x="281" y="84">A · Accountable</text>
+        <text class="rnS" x="281" y="106">Owns the outcome</text>
+        <rect x="281" y="118" width="140" height="26" rx="6" fill="#E2590A"/>
+        <text class="rnB" x="294" y="135">EXACTLY ONE</text>
+        <text class="rnS" x="281" y="164">A named person</text>
+        <rect x="470" y="56" width="190" height="124" rx="10" fill="#5C7A94"/>
+        <text class="rnT" x="486" y="84">C · Consulted</text>
+        <text class="rnS" x="486" y="106">Two-way street</text>
+        <text class="rnS" x="486" y="124">Input BEFORE the call</text>
+        <text class="rnS" x="486" y="142">Input can change it</text>
+        <rect x="675" y="56" width="190" height="124" rx="10" fill="#A3B8C9"/>
+        <text class="rnK" x="691" y="84">I · Informed</text>
+        <text class="rnG" x="691" y="106">One-way street</text>
+        <text class="rnG" x="691" y="124">Told AFTER the call</text>
+        <text class="rnG" x="691" y="142">No reply expected</text>
+        <text class="rnH" x="60" y="222">THE THREE SMELLS · spot them in any grid in 60 seconds</text>
+        <rect x="60" y="238" width="246" height="88" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="rnO" x="76" y="264">Two As on one row</text>
+        <text class="rnX" x="76" y="286">Shared ownership means</text>
+        <text class="rnX" x="76" y="304">nobody owns the miss</text>
+        <rect x="322" y="238" width="246" height="88" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="rnO" x="338" y="264">Ten Cs on one row</text>
+        <text class="rnX" x="338" y="286">Every C is a review lap -</text>
+        <text class="rnX" x="338" y="304">the call slows to a crawl</text>
+        <rect x="584" y="238" width="246" height="88" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="rnO" x="600" y="264">Empty A</text>
+        <text class="rnX" x="600" y="286">Work happens, then stalls</text>
+        <text class="rnX" x="600" y="304">at the first real decision</text>
+        <rect x="60" y="356" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="rnN" x="84" y="368">Read by COLUMN too: a role with no R and no A all quarter is a meeting tourist - free them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - RACI anatomy with the one-A rule and the three smells</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The one-A rule, and why A + R together is legal<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The one-A rule is the entire value of RACI compressed into one constraint: for every deliverable there is exactly one person who answers for the outcome. Two clarifications that save endless grid arguments:</p>
+        <ul>
+          <li><strong>A + R in one cell is legal.</strong> The lead data engineer can both do the schema work and own its outcome. Two As in one ROW is never legal - that is not shared ownership, it is pre-negotiated blame diffusion.</li>
+          <li><strong>The A is a name, not a box.</strong> "Data engineering" cannot be accountable. "Priya, lead data engineer" can. If you cannot write a name in the cell, you have found the gap before it found you.</li>
+          <li><strong>C earns its letter.</strong> A real C's input can change the decision, and it arrives before the decision. If their input cannot change anything, they are an I - move them and win the time back.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The two-month stall, in one row.</strong> Northgate's governance project (p9) had a RACI - a decorative one. "Domain data ownership" had an empty A: everyone assumed the governance lead owned it, the governance lead assumed the domains did. When the first real call arrived ("whose data is customer email - marketing's or the warehouse's?") the question circled meetings for two months. The fix took one afternoon: a name in the A cell per domain, and an escalation lane for ties. The lesson: the grid did not fail - the empty cell did.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>RACI is per deliverable, not per project<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The most common RACI mistake is drawing one grid for the whole project: "lakehouse build - A: platform engineer." That is an org chart wearing a costume. Ownership shifts per deliverable: the schema's A is not the dictionary's A, and the dictionary's A is not the validation sign-off's A. Draw the rows at the level where decisions actually get made.</p>
+        <ul>
+          <li><strong>Too coarse</strong> ("the project": 1 row) - the grid answers no real question anyone asks mid-project.</li>
+          <li><strong>Too fine</strong> ("every Jira ticket": 400 rows) - nobody maintains it past week two, so it silently lies.</li>
+          <li><strong>Right altitude:</strong> the deliverables on the charter plus the recurring decisions (change approval, access, publish). Northgate's grids below run 4-5 rows each - that is deliberate, not lazy.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: FOUR WORKED RACIS ============ -->
+  <section class="section" id="worked-racis">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers services #4, #5, #14, #19, #24, #25 - one grid per domain</span>
+      <h2>Four worked RACIs, one per domain <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Same 14-person data office, four very different grids - because the deliverables differ, not because the method does. Watch two things as we walk them: where the A sits (close to the work, not automatically at the top), and how the letters shift when a deliverable turns from "build it" into "keep deciding about it".</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Infrastructure - schema design (#4) + data dictionary (#5), the lakehouse pair<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>P2 Lakehouse build. The schema is engineering-owned; the dictionary is governance-owned even though engineers write most of it - because the dictionary's OUTCOME is "the business trusts the definitions", not "the file exists".</p>
+        <table class="clean">
+          <tr><th>Deliverable</th><th>Data engineers</th><th>Analytics engineers</th><th>Governance lead</th><th>Head of Data</th></tr>
+          <tr><td>Warehouse schema design (#4)</td><td>A + R (the lead, by name)</td><td>C</td><td>C</td><td>I</td></tr>
+          <tr><td>Data dictionary (#5)</td><td>R</td><td>C</td><td>A</td><td>I</td></tr>
+          <tr><td>Validation rules sign-off (#9)</td><td>R</td><td>R</td><td>A</td><td>I</td></tr>
+          <tr><td>Breaking schema change</td><td>R</td><td>C</td><td>C</td><td>A</td></tr>
+        </table>
+        <p>Note the last row: routine schema work never touches the Head of Data, but a BREAKING change - one that ripples into dashboards and models - escalates its A one lane up. Same service, different deliverable, different owner. That is the grid working.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Analytics - metric development (#14) + dictionary scorecard (#19)<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>P4 Exec scorecard + KPI. Metrics are political objects: "gross margin" means three things in three departments until someone owns the definition. So the definition's A sits with the Head of Data, while the routine monthly publish stays down with the analytics lead - bosses own definitions, not deliveries.</p>
+        <table class="clean">
+          <tr><th>Deliverable</th><th>Analytics engineers</th><th>Finance partner</th><th>Governance lead</th><th>Head of Data</th><th>Store ops</th></tr>
+          <tr><td>Metric definitions (#14)</td><td>R</td><td>C</td><td>C</td><td>A</td><td>I</td></tr>
+          <tr><td>Metric definition CHANGE</td><td>R</td><td>C</td><td>C</td><td>A</td><td>I</td></tr>
+          <tr><td>Dictionary scorecard (#19)</td><td>R</td><td>I</td><td>A</td><td>I</td><td>I</td></tr>
+          <tr><td>Monthly scorecard publish</td><td>A + R (the lead)</td><td>I</td><td>I</td><td>I</td><td>I</td></tr>
+        </table>
+        <div class="callout tip">
+          <strong>The publish row is the tell.</strong> If your grid says the Head of Data is A for the monthly publish, one of two things is true: the grid is aspirational, or your Head of Data is doing a team lead's job. Either way, fix the grid to match the truth - a grid that flatters the org chart protects nobody.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Data science - the data product (#24)<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>P8 Data product v1. The trap in DS grids: giving the data scientists the A for everything because they are the experts. Expertise earns the R. The A for VALUE sits with the business sponsor - if adoption fails, no confusion about whose miss it is - while the A for model quality stays with the science.</p>
+        <table class="clean">
+          <tr><th>Deliverable</th><th>Data scientists</th><th>ML engineer</th><th>Data engineers</th><th>Business sponsor</th><th>Head of Data</th></tr>
+          <tr><td>Use-case spec + success metric</td><td>R</td><td>C</td><td>I</td><td>A</td><td>C</td></tr>
+          <tr><td>Model build + evaluation</td><td>A + R (the lead)</td><td>R</td><td>C</td><td>C</td><td>I</td></tr>
+          <tr><td>Serving pipeline + monitoring</td><td>C</td><td>A + R</td><td>R</td><td>I</td><td>I</td></tr>
+          <tr><td>Adoption + value review</td><td>R</td><td>I</td><td>I</td><td>A</td><td>C</td></tr>
+        </table>
+        <p>Two As for the sponsor, two for the builders - and never two on one row. The spec row is the one to fight for early: a sponsor who will not take the A on the success metric in week one will not take the blame for low adoption in month nine either.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Governance (#25, filed under Gen AI) - the grid that stalled<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>P9 Governance + DQ scorecard. Northgate's catalog files governance under Gen AI - keep the filing, but notice it underpins all four domains, which is exactly why its RACI breaks first: every domain feels entitled to a vote. Here is the FIXED grid, post-stall:</p>
+        <table class="clean">
+          <tr><th>Deliverable</th><th>Governance lead</th><th>Domain stewards</th><th>Data engineers</th><th>Legal</th><th>Head of Data</th></tr>
+          <tr><td>Governance policy + standards</td><td>A + R</td><td>C</td><td>I</td><td>C</td><td>I</td></tr>
+          <tr><td>Domain ownership map</td><td>R</td><td>C</td><td>I</td><td>I</td><td>A</td></tr>
+          <tr><td>DQ rules per domain</td><td>C</td><td>A (their domain)</td><td>R</td><td>I</td><td>I</td></tr>
+          <tr><td>Access requests, day to day</td><td>C</td><td>A (their domain)</td><td>R</td><td>C on sensitive data</td><td>I</td></tr>
+        </table>
+        <p>The row that ended the stall is the second one: the ownership MAP gets its A from the Head of Data - someone has to own the meta-question of who owns what. Once the map exists, the stewards own their domains and the governance lead owns the standard they all follow. Three different As, zero circular meetings.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: R&R BEYOND THE GRID ============ -->
+  <section class="section" id="beyond-the-grid">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers decision rights, escalation lanes, governance lead vs stewards</span>
+      <h2>R&amp;R beyond the grid - where stuck questions go <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A RACI tells you who owns each deliverable. It does not tell you what happens when two As disagree, or when a question arrives that no row anticipated - and "whose data is this?" was exactly such a question. That needs the second layer: <strong>decision rights</strong> (who decides what class of question) and an <strong>escalation lane</strong> (where a stuck question goes next, and how fast). Write both down in week one; they are three sentences each.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three ownership lanes at Northgate: domain stewards, governance lead, Head of Data plus steering, with the escalation rule.">
+        <style>
+          .esH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .esT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .esS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .esP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .esX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .esN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .esW { stroke: #E2590A; stroke-width: 2.5; fill: none; marker-end: url(#esHd); }
+        </style>
+        <defs>
+          <marker id="esHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E2590A"/>
+          </marker>
+        </defs>
+        <text class="esH" x="60" y="36">OWNERSHIP LANES · who decides what - and where a stuck question goes next</text>
+        <rect x="60" y="56" width="520" height="76" rx="10" fill="#22364A"/>
+        <text class="esT" x="76" y="84">Head of Data + steering</text>
+        <text class="esS" x="76" y="106">Decides: cross-domain disputes, money, risk appetite</text>
+        <rect x="60" y="152" width="520" height="76" rx="10" fill="#3E5C76"/>
+        <text class="esT" x="76" y="180">Governance lead</text>
+        <text class="esS" x="76" y="202">Decides: the standard - policy, definitions, tie-breaks</text>
+        <rect x="60" y="248" width="520" height="76" rx="10" fill="#5C7A94"/>
+        <text class="esT" x="76" y="276">Domain stewards</text>
+        <text class="esS" x="76" y="298">Decides: their domain day to day - quality, access, fixes</text>
+        <path class="esW" d="M620,286 L620,240"/>
+        <path class="esW" d="M620,190 L620,144"/>
+        <rect x="656" y="120" width="184" height="140" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="esP" x="672" y="146">The escalation rule</text>
+        <text class="esX" x="672" y="170">Stuck for more than</text>
+        <text class="esX" x="672" y="188">one working session?</text>
+        <text class="esX" x="672" y="206">Up one lane - bring</text>
+        <text class="esX" x="672" y="224">two options and a</text>
+        <text class="esX" x="672" y="242">recommendation.</text>
+        <rect x="60" y="356" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="esN" x="84" y="368">The p9 stall: "whose data is this?" had no lane, so it circled for two months. This picture is the fix.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - escalation and ownership lanes for the Northgate data office</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Governance lead vs domain stewards - the split that scales<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One person cannot own the correctness of every field in a 120-store retailer - and should not try. The split that works:</p>
+        <ul>
+          <li><strong>The governance lead owns the standard:</strong> what a definition looks like, what a quality rule looks like, how access decisions get recorded. One person, one rulebook, all domains.</li>
+          <li><strong>Domain stewards own their domain within the standard:</strong> the merchandising steward answers for merchandising data, store ops for store data. They are business people close to the data's meaning, not engineers close to its plumbing.</li>
+          <li><strong>Ties go up, fast.</strong> When two stewards both claim (or both refuse) a dataset, the governance lead tie-breaks on the standard; if it is genuinely cross-domain or political, it rides the lane up to the Head of Data with options attached. One working session per lane - a stuck question is aging inventory.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Escalation is a service, not a failure.</strong> After the fix, Northgate's stewards started escalating small ownership questions within days instead of hoarding them - because the lane made it cheap and blame-free. The count of stuck questions went up for a month, which looked bad and was actually the backlog finally becoming visible. Then it fell. If your escalation lane is never used, it is not because nothing is stuck.</p>
+        </div>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Decision rights in three sentences - the b1 questions, one level down<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>b1 wrote decision rights for the portfolio (who submits, who ranks, who kills). The same discipline applies inside each project, and it is three sentences per project, not a policy document:</p>
+        <ul>
+          <li><strong>Who decides day to day?</strong> The row's A, within the charter's scope. If the A has to ask permission for routine calls, the grid is decorative and the real A is hiding one lane up.</li>
+          <li><strong>Who tie-breaks?</strong> Named in advance, per class of question - technical ties to the lead, standards ties to the governance lead, scope ties to the sponsor. A tie-break invented during the tie is a negotiation, not a rule.</li>
+          <li><strong>What escalates automatically?</strong> Cross-project impact, money beyond the charter, anything a steward and the governance lead cannot settle in one session. Automatic beats heroic: nobody should need courage to escalate.</li>
+        </ul>
+        <p>Write the three sentences on the same page as the RACI. A grid tells you who owns the known deliverables; the sentences catch the questions nobody predicted - which is exactly the kind that stalled p9.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Fix the broken RACI - the governance stall <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">You get the grid Northgate actually had when p9 stalled - two As on the policy row, an empty A on ownership, ten Cs on the DQ rules. Your job: make it decide things again.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Run the 60-second smell test.</strong> Scan row by row: count the As per row (must be exactly one), count the Cs (would each one's input change the call?), find rows where work exists but no A does. Mark every smell before touching anything.</p></div>
+      <div class="step"><p><strong>Fix the two-A row.</strong> Policy showed the governance lead AND the IT director as A. Decide who answers for the outcome, demote the other to C - and say out loud why: two As means the first miss becomes a blame negotiation.</p></div>
+      <div class="step"><p><strong>Fill the empty A.</strong> "Domain ownership map" had no A. Give it to the Head of Data, then cascade: each domain row gets a NAMED steward as A. If the table cannot produce a name for a domain, you have found the real gap - log it as an action, not a guess.</p></div>
+      <div class="step"><p><strong>Cut the Cs from ten to three.</strong> For each C on the DQ-rules row ask one question: can their input change the rule? No = they become I. Watch how much lighter the row gets - that weight was your cycle time.</p></div>
+      <div class="step"><p><strong>Add the lane.</strong> Write the three-lane escalation picture next to the grid: stewards decide their domain, governance lead tie-breaks on the standard, Head of Data takes cross-domain calls - one working session per lane, options attached. Then replay "whose data is customer email?" and time it. Two months becomes two lanes.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Fix the grid WITH the people in it, not about them.</strong> A RACI revised in private reads as a power move and gets quietly ignored. Twenty minutes at a whiteboard with the named people beats a perfect grid nobody signed.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Draw the RACI for ONE real deliverable on your team - 4-5 rows, real names in the A cells. If any A cell resists getting a name, that resistance is your finding: bring it.</li>
+      <li>Run the 60-second smell test on a grid you did not write (a colleague's project, an old wiki page). Log the smells: how many As per row, how many Cs would actually change the call?</li>
+      <li>Write your escalation lane in three sentences: who decides day to day, who tie-breaks, who takes cross-cutting calls - and how long a question may sit in each lane before it moves up.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · The lead data engineer is both A and R for the warehouse schema. A colleague objects: "you can't hold two letters." Who is right?</p>
+      <button class="qopt" type="button">A · The colleague - every deliverable needs its A and R in different roles for separation of duties</button>
+      <button class="qopt" type="button">B · Neither - schemas are infrastructure, so the A should default to the Head of Data</button>
+      <button class="qopt" type="button">C · The lead - A + R in one cell is legal; what is never legal is two As on one row</button>
+      <p class="qwhy">One person can do the work AND own the outcome - that is common and healthy. The one-A rule constrains the row, not the person: exactly one A per deliverable, and it is a named person, not a team.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Finance wants to "stay in the loop" on the dictionary scorecard but their input never changes it. Which letter, and why?</p>
+      <button class="qopt" type="button">A · I - Informed is one-way, told after the call; a C whose input cannot change the decision is an I wearing a bigger badge</button>
+      <button class="qopt" type="button">B · C - being consulted is the polite default for any senior stakeholder</button>
+      <button class="qopt" type="button">C · R - if they care that much, give them some of the work</button>
+      <p class="qwhy">C is two-way and arrives BEFORE the decision; I is one-way and arrives after. Handing out courtesy Cs is how a row grows ten of them - and every C is a review lap your cycle time pays for.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · A project hums along for weeks, then freezes solid at its first real decision. Which RACI smell predicts exactly this?</p>
+      <button class="qopt" type="button">A · Ten Cs - too many reviewers slowed it down gradually</button>
+      <button class="qopt" type="button">B · The empty A - work needs only Rs, but decisions need an owner, so the stall arrives precisely when the first call is due</button>
+      <button class="qopt" type="button">C · Two As - the owners argued from day one</button>
+      <p class="qwhy">The empty A is the sneakiest smell because the grid looks busy and healthy right up until a decision is needed. That is the p9 story: months of motion, then "whose data is this?" with no cell to answer it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">RACI framework (verified rules)</span><span class="note">R does the work · exactly one A owns the outcome · C two-way · I one-way - plus the three smells</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Schema Design (#4) + Data Dictionary (#5)</span><span class="note">The lakehouse pair - worked Infrastructure RACI with the breaking-change escalation row</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Metric Development (#14) + Data Dictionary Scorecard (#19)</span><span class="note">Worked Analytics RACI - bosses own definitions, leads own the routine publish</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Product (#24)</span><span class="note">Worked DS RACI - sponsor holds the A for value, science holds the A for model quality</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Governance (#25, filed under Gen AI)</span><span class="note">The stalled grid fixed live - stewards vs governance lead, plus the escalation lanes</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Validation (#9)</span><span class="note">Ownership row only tonight - its early-warning role in tracking lands in b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PMBOK 7 - Team performance domain</span><span class="note">Touched via decision rights and role clarity - the leader-side headcount view is a4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The four letters</b><span>R does the work (several fine) · A owns the outcome (exactly one) · C two-way, before the call · I one-way, after.</span></div>
+      <div class="cheat-item"><b>The one-A rule</b><span>Exactly one A per deliverable, and it is a NAMED person. A cell that resists a name has found your gap for you.</span></div>
+      <div class="cheat-item"><b>A + R is legal</b><span>One person can do and own. Two As on one row is never legal - that is blame diffusion signed in advance.</span></div>
+      <div class="cheat-item"><b>Three smells</b><span>Two As (nobody owns the miss) · ten Cs (every C is a review lap) · empty A (stalls at the first real decision).</span></div>
+      <div class="cheat-item"><b>Read by column</b><span>A role with no R and no A all quarter is a meeting tourist. Demote courtesy Cs to I and win the time back.</span></div>
+      <div class="cheat-item"><b>Right altitude</b><span>Rows = charter deliverables + recurring decisions. 4-5 rows per grid, per project. Not one row, not four hundred.</span></div>
+      <div class="cheat-item"><b>Stewards vs governance lead</b><span>Stewards own their domain day to day · governance lead owns the standard + tie-breaks · Head of Data takes cross-domain calls.</span></div>
+      <div class="cheat-item"><b>The escalation rule</b><span>Stuck more than one working session? Up one lane, with two options and a recommendation. The p9 stall had no lane - two months gone.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 4 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-sprint-planning-for-data.html">← Prev: Sprint planning for data</a> &nbsp;·&nbsp; <a href="b5-timeline-management.html">Next: Timeline management + the simulator →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

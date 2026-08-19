@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 8 · Conflict management - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 8 of 10</div>
+    <h1>Conflict is a <span class="accent">routing problem</span></h1>
+    <p class="sub">Month five at Northgate, and the honeymoon is over. Two executives both want Q1: the CMO's customer segmentation against store ops' self-serve BI. The 14-person team, still new, is storming - the analytics engineers and the data scientists are quietly relitigating who owns metrics. And the CMO wants the dashboard shipped before data validation is done. Tonight: the five Thomas-Kilmann conflict modes (1974) and why no mode is best, how to tell structural conflicts from interpersonal ones and route each to the right fix, and the etiquette of disagree-and-commit and escalation - including the short list of hills actually worth competing on. Then we script the hardest conversation of the quarter, line by line.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Five modes + structural routing</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: script the conversation</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: THE FIVE MODES ============ -->
+  <section class="section" id="five-modes">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the Thomas-Kilmann five modes on two axes</span>
+      <h2>Five modes, two axes, zero winners <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The Thomas-Kilmann model (1974) plots conflict behavior on two independent axes: <strong>assertiveness</strong> (how hard you push your own concern) and <strong>cooperativeness</strong> (how hard you work for the other side's). Five modes fall out: competing, collaborating, compromising, avoiding, accommodating. The trap everyone falls into is ranking them - collaborating good, avoiding bad. Wrong. <strong>No mode is best.</strong> Each is the right tool for a specific combination of stakes and relationship, and each has a failure mode when it becomes your only gear.</p>
+
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A working map of all five TKI modes with the stakes-x-relationship fit for each, a routing test that separates structural conflicts from interpersonal ones before you pick a mode, and a scripted, reusable version of the "we can't ship before validation" conversation.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thomas-Kilmann two-axis map: assertiveness vertical, cooperativeness horizontal, with the five modes placed.">
+        <style>
+          .tkT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .tkS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .tkK { font: 700 14px Inter, sans-serif; fill: #1C242E; }
+          .tkJ { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .tkH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .tkL { font: 600 11px Inter, sans-serif; fill: #626D79; }
+          .tkN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .tkAx { stroke: #626D79; stroke-width: 2; fill: none; marker-end: url(#tkHd); }
+        </style>
+        <defs>
+          <marker id="tkHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#626D79"/>
+          </marker>
+        </defs>
+        <text class="tkH" x="150" y="52">ASSERTIVENESS ↑</text>
+        <path class="tkAx" d="M150,400 L150,66"/>
+        <path class="tkAx" d="M150,400 L826,400"/>
+        <text class="tkH" x="620" y="430">COOPERATIVENESS →</text>
+        <text class="tkL" x="112" y="92">high</text>
+        <text class="tkL" x="118" y="392">low</text>
+        <rect x="180" y="80" width="200" height="70" rx="10" fill="#22364A"/>
+        <text class="tkT" x="196" y="108">Competing</text>
+        <text class="tkS" x="196" y="130">I win · use for safety +</text>
+        <text class="tkS" x="196" y="144">integrity, sparingly</text>
+        <rect x="596" y="80" width="200" height="70" rx="10" fill="#3E5C76"/>
+        <text class="tkT" x="612" y="108">Collaborating</text>
+        <text class="tkS" x="612" y="130">we both win · costly,</text>
+        <text class="tkS" x="612" y="144">save it for big stakes</text>
+        <rect x="388" y="205" width="200" height="70" rx="10" fill="#5C7A94"/>
+        <text class="tkT" x="404" y="233">Compromising</text>
+        <text class="tkS" x="404" y="255">split the difference ·</text>
+        <text class="tkS" x="404" y="269">fast, half-satisfying</text>
+        <rect x="180" y="312" width="200" height="70" rx="10" fill="#A3B8C9"/>
+        <text class="tkK" x="196" y="340">Avoiding</text>
+        <text class="tkJ" x="196" y="362">not now · fine for noise,</text>
+        <text class="tkJ" x="196" y="376">toxic for real issues</text>
+        <rect x="596" y="312" width="200" height="70" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="2"/>
+        <text class="tkK" x="612" y="340">Accommodating</text>
+        <text class="tkJ" x="612" y="362">you win · reversible +</text>
+        <text class="tkJ" x="612" y="376">low stakes, builds credit</text>
+        <rect x="60" y="452" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="tkN" x="84" y="464">No mode is best (TKI, 1974) - pick by stakes x relationship, and say which mode you are in out loud.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the five Thomas-Kilmann modes placed on assertiveness x cooperativeness</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Fitting the mode to stakes + relationship<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Before opening your mouth in a conflict, answer two questions: <strong>how much does the outcome matter</strong>, and <strong>how much does the relationship matter</strong>? The answers pick the mode - not your temperament, which is the usual (bad) default.</p>
+        <table class="clean">
+          <tr><th>Mode</th><th>Reach for it when</th><th>Northgate example</th><th>Overuse smell</th></tr>
+          <tr><td>Competing</td><td>Stakes are non-negotiable: safety, quality, integrity of numbers</td><td>Refusing to ship the dashboard before validation (#9)</td><td>You win every fight and lose every ally</td></tr>
+          <tr><td>Collaborating</td><td>Both concerns are real and the prize funds the effort</td><td>Redesigning the metrics ownership split with BI + DS together</td><td>Two-hour workshops for ten-dollar problems</td></tr>
+          <tr><td>Compromising</td><td>Moderate stakes, clock running, both sides half-satisfied beats deadlock</td><td>Splitting a shared analytics engineer 60/40 for one sprint</td><td>Every decision is a haircut nobody wanted</td></tr>
+          <tr><td>Avoiding</td><td>Trivial issue, or emotions need a night to cool</td><td>Letting a snippy retro comment die unanswered</td><td>The "parking lot" where real issues go to rot</td></tr>
+          <tr><td>Accommodating</td><td>Reversible, low stakes, the relationship is the prize</td><td>Accepting the sponsor's dashboard color scheme</td><td>Your team learns you cave, and so does everyone else</td></tr>
+        </table>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The mode named out loud.</strong> Northgate's PMO lead opens a tense resourcing session with: "I'm going to accommodate on the report format - your call entirely - and compete on the validation gate, because that one is the integrity of the numbers." Naming the modes did two things: the exec stopped bracing for a fight on everything, and the one hard line got heard as principle rather than stubbornness. The meeting took eleven minutes.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Reading the other side's mode<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The model works in both directions: diagnosing the mode across the table tells you what response actually lands.</p>
+        <ul>
+          <li><strong>They are competing.</strong> Do not mirror it reflexively - two competitors produce a winner and a grudge. Match it only if the issue is on YOUR short list; otherwise slow the tempo: restate their concern until they confirm you have it, then move the decision to a forum with structure (steering, the one-pager). Competitors soften when they feel heard and when the audience changes.</li>
+          <li><strong>They are avoiding.</strong> The conflict is not absent, it is deferred with interest - a stakeholder who goes quiet on the ranking has not agreed to it. Create a low-stakes on-ramp: a 1:1, a draft shared "for your edits," a direct "I'd rather hear the objection now than in month four."</li>
+          <li><strong>They are accommodating - always.</strong> A counterpart who caves on everything is lending you rope, and somewhere a ledger is being kept. Invite the real opinion explicitly, and spend their concessions carefully; serial accommodators churn without warning.</li>
+          <li><strong>They are compromising by reflex.</strong> Useful clock-saver, but watch for the 50/50 that ships both halves broken - some things (one Accountable owner, one Q1 slot) do not split. Name when the issue is indivisible and route it to a ranking instead.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Portfolio conflicts wear three costumes<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most data-portfolio conflict arrives in one of three shapes - worth recognizing on sight:</p>
+        <ul>
+          <li><strong>Priority fights.</strong> Two sponsors, one quarter. Feels personal, almost never is - it is the portfolio being finite. Route to structure (Part 2), not to charm.</li>
+          <li><strong>Resource contention.</strong> Two projects, one ML engineer. The org made an overallocation (b10's math) and the humans downstream are fighting about it. Fix the allocation, not the humans.</li>
+          <li><strong>Credit disputes.</strong> Whose slide says whose name after the segmentation model ships. Small stakes, big feelings - usually an accommodating or collaborating moment, and a sign your insights-sharing cadence (#18) is not distributing visibility evenly.</li>
+        </ul>
+        <p>The common thread: the loudest conflicts are rarely the important ones, and the mode you pick should follow the shape, not the volume.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: STRUCTURAL CONFLICTS ============ -->
+  <section class="section" id="structural">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers structural vs interpersonal routing, WSJF + steering, Tuckman</span>
+      <h2>Structural conflicts need structural fixes <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The single most useful conflict question a PMO can ask: <strong>if we swapped out the people, would the fight remain?</strong> The CMO wants customer segmentation (#21) in Q1; store ops wants self-serve BI (#13) in Q1; the team can deliver one. Replace both executives with two different executives and the conflict is identical - because it is not about them. It is the portfolio being finite. Structural conflicts get resolved with <strong>WSJF scoring and a steering decision (b1, b6), never with volume</strong> - whoever shouts loudest winning is just prioritization by decibel, and it teaches everyone to shout.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision flow: conflicts that survive a personnel swap route to WSJF and steering; conflicts that follow the people route to a TKI mode and the Tuckman lens.">
+        <style>
+          .sfT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .sfS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .sfP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .sfX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .sfN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .sfW { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#sfHd); }
+        </style>
+        <defs>
+          <marker id="sfHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <rect x="310" y="36" width="260" height="56" rx="10" fill="#22364A"/>
+        <text class="sfT" x="330" y="60">A conflict lands on the desk</text>
+        <text class="sfS" x="330" y="78">Before picking a mode: route it</text>
+        <path class="sfW" d="M440,92 L440,128"/>
+        <rect x="290" y="132" width="300" height="58" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="2"/>
+        <text class="sfP" x="310" y="156">THE SWAP TEST</text>
+        <text class="sfX" x="310" y="174">Swap the people out - does the fight remain?</text>
+        <path class="sfW" d="M340,190 L240,236"/>
+        <text class="sfX" x="180" y="216">yes · structural</text>
+        <path class="sfW" d="M540,190 L640,236"/>
+        <text class="sfX" x="596" y="216">no · interpersonal</text>
+        <rect x="70" y="240" width="340" height="128" rx="10" fill="#3E5C76"/>
+        <text class="sfT" x="88" y="268">Structural: fix the system</text>
+        <text class="sfS" x="88" y="290">Segmentation #21 vs self-serve BI #13:</text>
+        <text class="sfS" x="88" y="308">both want Q1, the team delivers one</text>
+        <text class="sfS" x="88" y="326">WSJF scores both, steering ranks them</text>
+        <text class="sfS" x="88" y="344">Loser gets a named start quarter</text>
+        <rect x="470" y="240" width="340" height="128" rx="10" fill="#5C7A94"/>
+        <text class="sfT" x="488" y="268">Interpersonal: work the people</text>
+        <text class="sfS" x="488" y="290">Pick a TKI mode for the stakes at hand</text>
+        <text class="sfS" x="488" y="308">Tuckman lens: a new team storming is</text>
+        <text class="sfS" x="488" y="326">a stage, not a staffing mistake</text>
+        <text class="sfS" x="488" y="344">1:1s and working agreements, not memos</text>
+        <rect x="60" y="408" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="sfN" x="84" y="420">Escalate the structure, not the person - steering ranks Q1 with WSJF, and trust survives the fight.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the swap test routes structural conflicts to steering and interpersonal ones to people work</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Two execs, one Q1: the worked resolution<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The play, step by step, exactly as Northgate ran it:</p>
+        <ul>
+          <li><strong>Depersonalize in the framing.</strong> The PMO's steering memo never says "the CMO wants" - it says "two Q1 candidates, one Q1 slot." The conflict is now a scheduling fact, not a contest between people.</li>
+          <li><strong>Score both in the open.</strong> WSJF on each (cost of delay over job size, b1's method), inputs argued at the table by the whole steering group. The CMO argues segmentation's delay cost up; store ops argues theirs. Good - the disagreement is now specific and about inputs, not about who matters more.</li>
+          <li><strong>Steering decides, with a consolation that is real.</strong> Self-serve BI edges it; segmentation gets a committed Q2 start with its enabler named. A dated, published start quarter is what makes the loss survivable - "later" is a brush-off, "April" is a plan.</li>
+          <li><strong>The PMO holds the line afterward.</strong> When the CMO's office probes for a side door two weeks later ("could a couple of the data scientists just start quietly?"), the answer is the intake board and the published ranking. No side doors - or the whole steering mechanism was theater.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Volume is data, not a verdict.</strong> An exec pounding the table tells you their perceived cost of delay is high - so capture it as a scored input and argue it there. The moment loudness wins directly, every future conflict arrives pre-amplified.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Tuckman: the new team is supposed to storm<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tuckman (1965): teams move through <strong>forming, storming, norming, performing</strong>. Northgate's 14-person data office is months old - built from strangers, three hiring waves, two contractors. The current friction (BI vs DS relitigating metric ownership, retro sniping, the governance lead feeling ignored) is <strong>storming: a stage, not a staffing mistake</strong>.</p>
+        <ul>
+          <li><strong>Do not suppress it.</strong> A team frog-marched from forming straight to "we're all professionals here" politeness never norms - the arguments go underground and resurface as passive resistance and quiet attrition.</li>
+          <li><strong>Give the storm rails.</strong> Working agreements, a clear RACI (b4 already gave metrics one Accountable owner - point at it), and retros where disagreement is explicitly welcome. The storm burns out fastest in daylight.</li>
+          <li><strong>Watch for the turn.</strong> Norming looks like the team quoting their own working agreements at each other without you in the room. That is the sign to loosen your grip, not tighten it.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: DISAGREE AND COMMIT ============ -->
+  <section class="section" id="disagree-and-commit">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers disagree-and-commit, escalation etiquette, the hills worth dying on</span>
+      <h2>Losing well and escalating cleanly <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A PMO that wins every argument is a bottleneck; a PMO that loses badly is a saboteur. <strong>Disagree-and-commit</strong> is the professional third way: argue hard before the decision, then execute the decision as if it were yours - visibly, without the eye-roll, without the "well, I said at the time..." insurance policy. And when you genuinely cannot commit, you do not go quiet or go rogue: you <strong>escalate cleanly</strong> - announced, structured, and aimed at the decision, not the person.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The etiquette, in six rules<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>1 · Compete only on the short list.</strong> Safety, legal exposure, and the integrity of the numbers - shipping unvalidated data, faking a green status, misstating a variance. These are worth burning capital on. Almost nothing else is.</li>
+          <li><strong>2 · Accommodate cheaply and often.</strong> Reversible and low-stakes calls (formats, tool colors, agenda order) are gifts: hand them over gracefully and bank the credit for the short list.</li>
+          <li><strong>3 · Timebox the disagreement.</strong> Argue fully inside the meeting; the decision leaves the room owned by everyone in it. Relitigating in hallways is how teams learn decisions mean nothing.</li>
+          <li><strong>4 · Announce the escalation.</strong> Never surprise anyone from above. "I can't commit to shipping without validation - I'm taking it to steering on Wednesday, here's the one-pager, and I'd love your side represented" is an act of respect, not war.</li>
+          <li><strong>5 · Escalate the decision, not the person.</strong> The one-pager frames a choice with options and consequences ("ship now: these risks; ship after validation: this delay") - never a complaint with a villain.</li>
+          <li><strong>6 · One trip up, then commit.</strong> Escalate once, to the right table, with your best case. If the answer is still no, disagree-and-commit applies to you too. Serial re-escalation is just competing in a trench coat.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The eye-roll tax.</strong> A Northgate delivery lead lost the Q1 ranking fight and technically complied - while telling his squad "steering doesn't get it, we'll do the minimum." The squad's commitment followed his tone, not his words: velocity on the winning project sagged 20% for a month with no visible cause. Losing out loud and committing out loud would have been free. The half-commit cost a sprint.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Escalation timing: too early, too late, just right<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most escalation failures are timing failures. The two ways to get it wrong:</p>
+        <ul>
+          <li><strong>Too early</strong> - escalating before you have tried to resolve at your own level. Executives learn you cannot handle conflict, counterparts learn you go over heads, and steering becomes your outsourced spine. Test: can you honestly describe the resolution attempt you made? If the answer is "I sent an email once," you are early.</li>
+          <li><strong>Too late</strong> - sitting on a blocked decision to avoid the discomfort, while the critical path (b2) quietly absorbs the delay. A conflict that blocks scheduled work for more than one cadence cycle - one sprint, or one steering-to-steering gap - has earned its trip up. Waiting longer does not make it smaller; it converts a decision problem into a schedule problem plus a trust problem.</li>
+          <li><strong>Just right</strong> - you tried a real resolution at your level, the blocker touches scheduled work, and you escalate at the next natural forum with the one-pager ready. Announced (rule 4), decision-framed (rule 5), once (rule 6).</li>
+        </ul>
+        <p>One more practitioner habit: log every escalation in the portfolio log - who, what decision, how long it sat blocked, what steering ruled. Three escalations with the same root cause is not three conflicts; it is one structural problem (Part 2) wearing three costumes, and the log is what lets you name it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Script the conversation: the CMO wants it shipped now <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The scenario: the CMO wants the segmentation dashboard shipped before data validation (#9) is done - "we can validate after launch, the board meeting is Monday." This is the short list (integrity of the numbers), so the mode is compete - but competing is a craft, not a volume setting. You script it line by line, in pairs, and pressure-test it.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Run the swap test first.</strong> Different CMO, same board meeting - fight remains? Mostly yes: it is a structural collision between a real deadline and a real quality gate. So the script must offer a structural resolution, not just a refusal.</p></div>
+      <div class="step"><p><strong>Open with the shared goal.</strong> "You need something credible in front of the board Monday - I want that too, and I want it to still be credible on Tuesday." Competing on the gate, cooperating on the goal. Write your own version.</p></div>
+      <div class="step"><p><strong>Name the mode and the reason.</strong> "I can't ship unvalidated numbers - if the board quotes a wrong segment size, that's the data office's credibility spent in month five." Integrity of numbers, said plainly, no jargon, no PMBOK citations at an executive.</p></div>
+      <div class="step"><p><strong>Offer the third option.</strong> Not ship-dirty vs ship-late: "Monday you get the validated slice - three segments are through validation now - clearly labeled, with the full cut dated ten days out." Scope the deliverable to the validated subset. Write the offer so it sounds like a gift, not a concession.</p></div>
+      <div class="step"><p><strong>Pre-write the escalation branch.</strong> If the CMO pushes past the offer: "Then let's take it to steering together Wednesday - here's the one-pager with both options costed." Announced, structured, decision-framed. Swap pairs and play the CMO ruthlessly; revise the script where it cracked.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Script the second sentence, not just the first.</strong> Everyone survives their opening line. The conversation is won or lost at the CMO's counterpunch ("so you're saying I face the board empty-handed?") - which is exactly where the validated-slice offer has to already be in your pocket.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Take your three most recent real conflicts and run the swap test on each. Which were structural fights you tried to charm your way through? Note what the structural fix would have been.</li>
+      <li>Map yourself on the TKI axes honestly: which mode is your temperament's default, and which listed overuse smell do you recognize? Pick one live situation this week to deliberately use a non-default mode.</li>
+      <li>Write the one-pager for a real escalation you are avoiding: the decision, two options, consequences of each, no villains. You do not have to send it - but notice how writing it changes what you think the fight is about.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The sponsor wants the dashboard in their brand colors; your team prefers the house style. Which mode fits?</p>
+      <button class="qopt" type="button">A · Compete - design standards exist for a reason and exceptions multiply</button>
+      <button class="qopt" type="button">B · Accommodate - it is reversible and low stakes, and the relationship credit is worth more than the colors</button>
+      <button class="qopt" type="button">C · Collaborate - book a workshop to co-design a palette both sides own</button>
+      <p class="qwhy">Stakes x relationship: colors are reversible and low-stakes, the sponsor relationship is not. Accommodating here banks credit for the short-list fights (integrity of numbers) where you must compete. A workshop would be collaborating's overuse smell: two-hour ceremonies for ten-dollar problems.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The CMO and store ops both demand Q1 - segmentation (#21) vs self-serve BI (#13). How does the PMO resolve it?</p>
+      <button class="qopt" type="button">A · Split the team 50/50 so both projects start in Q1 and both execs stay onside</button>
+      <button class="qopt" type="button">B · Back whichever exec has more organizational power - realism beats process</button>
+      <button class="qopt" type="button">C · It survives the swap test, so it is structural: WSJF both in the open, steering ranks, the loser gets a dated start quarter</button>
+      <p class="qwhy">Swap the execs and the fight remains - the portfolio is finite, so this is structural and goes to WSJF + steering, never volume. A 50/50 split ships both late (b10's capacity math), and power-based ranking teaches every exec that shouting is the real intake process.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Steering ruled against you on a call you argued hard. What does good practice look like now?</p>
+      <button class="qopt" type="button">A · Execute the decision visibly as if it were yours - disagree-and-commit, no hallway relitigating, no told-you-so insurance</button>
+      <button class="qopt" type="button">B · Comply formally but keep your reservations visible so accountability stays clear if it fails</button>
+      <button class="qopt" type="button">C · Re-raise it at the next three steerings until the ranking corrects itself</button>
+      <p class="qwhy">Argue fully before the decision, then commit fully after it - the team reads your tone, not your compliance (Northgate's half-commit cost a sprint of velocity). Visible reservations are the eye-roll tax in writing, and serial re-escalation is competing in a trench coat. One trip up, then commit.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Thomas-Kilmann conflict modes (TKI, 1974)</span><span class="note">All five modes on the two axes, stakes-x-relationship fit, and the overuse smell for each</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tuckman stages (1965)</span><span class="note">Forming, storming, norming, performing - applied to the new 14-person data office's storming phase</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Customer Segmentation (#21) · Self-Serve BI Enablement (#13)</span><span class="note">The two-execs-one-Q1 structural conflict, resolved with WSJF + steering and a dated consolation start</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Validation (service #9)</span><span class="note">The ship-before-validation demo - the quality-gate mechanics themselves live in b4 and b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Ad-hoc Thematic Analysis (service #16)</span><span class="note">The side-door probe after the steering loss - the full intake defense is b7's territory</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Two axes</b><span>Assertiveness (push your concern) x cooperativeness (work for theirs). Five modes fall out (TKI, 1974). No mode is best.</span></div>
+      <div class="cheat-item"><b>The five modes</b><span>Competing · collaborating · compromising · avoiding · accommodating. Pick by stakes x relationship, not temperament - and name your mode out loud.</span></div>
+      <div class="cheat-item"><b>The swap test</b><span>Swap the people - does the fight remain? Yes = structural, fix the system. No = interpersonal, work the people.</span></div>
+      <div class="cheat-item"><b>Structural fix</b><span>Two execs, one Q1: WSJF both in the open, steering ranks, never volume. The loser gets a dated start quarter - "April" is a plan, "later" is a brush-off.</span></div>
+      <div class="cheat-item"><b>Tuckman</b><span>Forming → storming → norming → performing (1965). A new team storming is a stage, not a mistake - give it rails (RACI, working agreements), not suppression.</span></div>
+      <div class="cheat-item"><b>Compete short list</b><span>Safety, legal exposure, integrity of the numbers. Everything else, question the reflex. Accommodate cheap reversible calls and bank the credit.</span></div>
+      <div class="cheat-item"><b>Disagree-and-commit</b><span>Argue hard before the decision, execute visibly after it. The team follows your tone, not your compliance - the half-commit costs a sprint.</span></div>
+      <div class="cheat-item"><b>Escalation etiquette</b><span>Announce it, one-page it as a decision with options (no villains), invite the other side, one trip up - then commit either way.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 8 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-time-management.html">← Prev: Time management</a> &nbsp;·&nbsp; <a href="b9-budget-and-cost-management.html">Next: Budget and cost management →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

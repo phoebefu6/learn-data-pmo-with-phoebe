@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Budget and cost - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Two pots of money, <span class="accent">one honest ledger</span></h1>
+    <p class="sub">Northgate's board approved $3,800k for data in year one - and if it lands in one pot, you will not know you are overrunning until the money is gone. Tonight is the leader's money session: split run from change so overruns cannot hide, cost a data project from its three real ingredients (people, platform, variable), and replace padded line items with one visible 10% buffer plus a monthly variance review. You leave able to read a variance report and spot the project heading over budget months before it actually goes over - which is the only time the information is still useful.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Data executives · heads of data · sponsors</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Run vs change + costing</span>
+      <span class="a3" style="flex:5">18-40 · Buffer + variance demo</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: RUN VS CHANGE ============ -->
+  <section class="section" id="run-vs-change">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers run vs change, the two-pot budget</span>
+      <h2>Run money and change money <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Run money keeps the lights on: platform, licences, managed services - it recurs forever and the question is "is unit cost drifting?" Change money buys new capability: the 10 chartered projects - it ends when the project ends and the question is "are we on plan?" Northgate's split: <strong>$1,100k run, $2,700k change</strong>. Different questions, different reviews, different pots. Mix them and both questions become unanswerable.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Northgate's two-pot budget: $1,100k run and $2,700k change, kept apart so overruns stay visible.">
+        <style>
+          .bpT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .bpS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .bpP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .bpX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .bpN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .bpWire { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#bpHd); }
+        </style>
+        <defs>
+          <marker id="bpHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="bpP" x="60" y="40">NORTHGATE YEAR ONE · $3,800k IN TWO POTS</text>
+        <rect x="60" y="60" width="330" height="180" rx="10" fill="#22364A"/>
+        <text class="bpT" x="78" y="90">RUN · $1,100k</text>
+        <text class="bpS" x="78" y="114">Platform + cloud baseline</text>
+        <text class="bpS" x="78" y="133">Licences + managed services</text>
+        <text class="bpS" x="78" y="152">Recurs every year, forever</text>
+        <rect x="78" y="172" width="240" height="30" rx="6" fill="#5C7A94"/>
+        <text class="bpS" x="90" y="192">Ask: is unit cost drifting?</text>
+        <rect x="490" y="60" width="330" height="180" rx="10" fill="#3E5C76"/>
+        <text class="bpT" x="508" y="90">CHANGE · $2,700k</text>
+        <text class="bpS" x="508" y="114">10 chartered projects</text>
+        <text class="bpS" x="508" y="133">Ends when each project ends</text>
+        <text class="bpS" x="508" y="152">Same 10 the simulator scores</text>
+        <rect x="508" y="172" width="240" height="30" rx="6" fill="#5C7A94"/>
+        <text class="bpS" x="520" y="192">Ask: on budget vs plan?</text>
+        <path class="bpWire" d="M225,245 L225,285 L400,285"/>
+        <path class="bpWire" d="M655,245 L655,285 L480,285"/>
+        <rect x="300" y="300" width="280" height="66" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="2"/>
+        <text class="bpP" x="318" y="326">ONE MIXED POT = FOG</text>
+        <text class="bpX" x="318" y="344">A project overrun looks like</text>
+        <text class="bpX" x="318" y="359">"cloud costs" and nobody reacts</text>
+        <rect x="60" y="396" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="bpN" x="84" y="408">Two pots, two questions, two reviews. Merge them and the change overrun hides inside the run baseline.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - Northgate's two-pot budget and what mixing the pots costs you</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why one pot hides the overrun<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Run spend is lumpy and always growing a little - more users, more data, more licences. That noise is the perfect camouflage for a change overrun:</p>
+        <ul>
+          <li><strong>The signal drowns.</strong> A $60k project overrun inside a $3,800k mixed pot is a rounding error. The same $60k against a $480k project budget is a 12% alarm bell.</li>
+          <li><strong>The wrong lever gets pulled.</strong> Mixed-pot pain triggers "cut cloud spend" memos - while the actual leak is a project burning people-months past plan.</li>
+          <li><strong>Next year's baseline lies.</strong> When change spend bleeds into run, year two's "keep the lights on" number quietly inherits year one's overruns - forever.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The overrun that filed itself under electricity.</strong> Northgate month 5: the lakehouse team, behind schedule, quietly leans on extra managed-service hours to catch up. The invoice lands in the run pot - so the lakehouse still reports green on its change budget while run creeps up 8%. Finance flags "platform cost drift" and IT gets the angry email. One tagging rule - every invoice carries a project code or the run code - and the overrun shows up where it belongs, three months earlier, on the project that caused it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What each pot's review looks like<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The pots get different meetings, because they answer different questions:</p>
+        <ul>
+          <li><strong>Run review - quarterly, trend-shaped.</strong> Unit costs over time: cost per store served, per dashboard user, per pipeline run. Drift up with no growth to explain it = investigate. This is where FinOps lives (Part 2).</li>
+          <li><strong>Change review - monthly, variance-shaped.</strong> Each project against its own charter budget: planned vs earned vs actual (Part 3). Ends when the project ends.</li>
+        </ul>
+        <p>One handoff rule keeps the boundary clean: when a project delivers, its ongoing platform and licence cost <strong>moves to run with a named number</strong> - agreed at the gate, not discovered on an invoice. A project is not done until its run cost has a home.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: COSTING A DATA PROJECT ============ -->
+  <section class="section" id="costing">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the three cost families + FinOps basics</span>
+      <h2>What a data project actually costs <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Every data project's budget is three families. <strong>People</strong>: FTE months x loaded rate - almost always the big block, and the one leaders underestimate because "the team is already paid for" (they are paid for, and they are finite). <strong>Platform</strong>: cloud and licences the project consumes. <strong>Variable</strong>: compute that scales with usage - and for Gen AI work, tokens and inference, the family that can surprise you after launch.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cost anatomy of the lakehouse project: people, platform and variable segments under one estimate bracket, plus a 10% contingency block.">
+        <style>
+          .caT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .caS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .caP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .caX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .caN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .caB { stroke: #22364A; stroke-width: 2; fill: none; }
+          .caWire { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#caHd); }
+        </style>
+        <defs>
+          <marker id="caHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="caP" x="60" y="34">COST ANATOMY · LAKEHOUSE BUILD ($480k CHARTER LINE)</text>
+        <path class="caB" d="M60,70 L60,58 L740,58 L740,70"/>
+        <text class="caP" x="450" y="52">the estimate</text>
+        <rect x="60" y="80" width="380" height="64" fill="#22364A" rx="4"/>
+        <text class="caT" x="78" y="106">People</text>
+        <text class="caS" x="78" y="126">FTE months x loaded rate</text>
+        <rect x="440" y="80" width="190" height="64" fill="#3E5C76" rx="4"/>
+        <text class="caT" x="456" y="106">Platform</text>
+        <text class="caS" x="456" y="126">Cloud + licences</text>
+        <rect x="630" y="80" width="110" height="64" fill="#5C7A94" rx="4"/>
+        <text class="caT" x="644" y="106">Variable</text>
+        <rect x="756" y="80" width="64" height="64" fill="#E2590A" rx="4"/>
+        <text class="caT" x="766" y="106">+10%</text>
+        <text class="caS" x="766" y="126">buffer</text>
+        <path class="caWire" d="M690,160 L690,190"/>
+        <text class="caX" x="560" y="210">Variable = compute that scales with use.</text>
+        <text class="caX" x="560" y="226">Gen AI adds tokens + inference metering.</text>
+        <text class="caX" x="60" y="210">People is the big block on almost every data project.</text>
+        <text class="caX" x="60" y="226">"The team is already paid for" is how it gets missed.</text>
+        <text class="caP" x="60" y="262">The buffer sits OUTSIDE the estimate, held at portfolio level - not smeared into the lines.</text>
+        <rect x="60" y="292" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="caN" x="84" y="304">Cost every project in the same three families and projects become comparable at a glance.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three cost families plus the visible 10% buffer</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three families, and where each one bites<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>People - FTE months x loaded rate.</strong> Loaded means salary plus overheads, not payslip. The classic leader error is treating internal staff as free: 4 engineers for 6 months is real money whether or not an invoice arrives, and it is capacity no other project can use (a4 does the capacity math).</li>
+          <li><strong>Platform - cloud + licences.</strong> Mostly predictable, mostly quotable in advance. The trap is the licence that scales per seat right when self-serve BI succeeds.</li>
+          <li><strong>Variable - compute, GenAI tokens, inference.</strong> The only family that can grow AFTER delivery. A pilot that costs pennies at 10 users can cost real money at 4,000 staff - meter it from day one, not after the first surprising invoice.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The pilot that got popular.</strong> Northgate's agentic workflow pilot runs cheap for two months - then store ops discovers it and usage jumps. In the simulator this project lands roughly 20% over on cost, and token spend is the culprit. The team that metered tokens per workflow from week one sees the curve bend in the weekly numbers and adds a cap plus a cheaper model tier. The team that did not meter finds out from Finance, one quarter and one awkward steering meeting later.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>FinOps in four moves - the leader's version<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need a FinOps team on day one. You need four habits, in this order:</p>
+        <ul>
+          <li><strong>Tag everything.</strong> Every resource carries a project code or the run code. Untagged spend is unmanageable spend - this single rule powers the two-pot split from Part 1.</li>
+          <li><strong>Rightsize.</strong> Review what is oversized for its actual load. Dev environments running production-size clusters are the usual first find.</li>
+          <li><strong>Commit discounts.</strong> Once run usage is stable and tagged, commit to baseline capacity for the discount - run money only, never speculative change capacity.</li>
+          <li><strong>Watch unit costs.</strong> Cost per pipeline run, per dashboard user, per 1k tokens. Totals grow with success; unit costs drifting up is the real warning.</li>
+        </ul>
+        <p>Gen AI adds one instrument: <strong>token and inference metering per use case</strong>. b9 turns this into the practitioner's cost-control routine.</p>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Five questions before you sign a charter budget<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The leader's pre-signature checklist, one question per weak spot:</p>
+        <ul>
+          <li><strong>"Which family is the biggest, and why?"</strong> If the answer is not "people" on a data project, ask what got left out - it usually was.</li>
+          <li><strong>"Is the rate loaded?"</strong> Payslip-rate budgets run hot from month one. Loaded means salary plus overheads, agreed with Finance once, reused everywhere.</li>
+          <li><strong>"What is the staffing assumption?"</strong> "4 engineers at 70% focus" is a testable claim (a4 tests it). "The team" is not.</li>
+          <li><strong>"What scales after delivery?"</strong> Per-seat licences and GenAI tokens grow with success. Name the meter and the ceiling now.</li>
+          <li><strong>"Where does the run cost land?"</strong> A number and a pot, agreed at the gate - or the project is not actually costed, only started.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: BUFFER + EVM LITE ============ -->
+  <section class="section" id="buffer-evm">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the 10% buffer + EVM lite traffic lights</span>
+      <h2>The buffer argument, and reading the dials <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every experienced team pads its estimates - the question is whether the padding is visible. Hidden padding in every line item means nobody knows the real cost, and Parkinson's law spends the pad anyway: work expands to fill the money available. The alternative: honest estimates, plus <strong>one visible 10% contingency held at portfolio level</strong>, released through a monthly variance review with a log of who drew what and why. Same insurance, full visibility - in the simulator this lever alone takes budget variance from +12% to +1%.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>EVM lite - three dials an exec can read in a minute<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Earned value sounds like accounting; for the steering chair it is three numbers. <strong>PV</strong> - what the plan said we would have done by now. <strong>EV</strong> - the value of what we actually finished. <strong>AC</strong> - what we actually spent. Two ratios turn them into traffic lights:</p>
+        <table class="clean">
+          <tr><th>Dial</th><th>Formula</th><th>Green</th><th>Amber</th><th>Red - and the question to ask</th></tr>
+          <tr><td>SPI - schedule</td><td>EV / PV</td><td>0.95+</td><td>0.85-0.95</td><td>Below 0.85 · "What re-plan are you proposing?"</td></tr>
+          <tr><td>CPI - cost</td><td>EV / AC</td><td>0.95+</td><td>0.85-0.95</td><td>Below 0.85 · "What is the EAC and the ask?"</td></tr>
+          <tr><td>EAC - landing point</td><td>BAC / CPI</td><td>Near BAC</td><td>Watching</td><td>Over budget + buffer · kill / descope / fund</td></tr>
+        </table>
+        <p>Below 1.0 means behind or over - and the killer feature is that <strong>CPI predicts</strong>: divide the total budget (BAC) by today's CPI and you get EAC, the estimate at completion, months before the money runs out. VAC = BAC - EAC is the size of the hole.</p>
+        <div class="callout tip">
+          <strong>Ask for the ratio, not the burn.</strong> "We have spent 40% of budget" tells you nothing without knowing what got finished. A project can be 40% spent and 20% done - burn rate alone makes that invisible; CPI makes it a red light.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Buffer vs padding - why visible wins<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Both approaches reserve roughly the same money. The difference is who can see it and who governs it:</p>
+        <ul>
+          <li><strong>Padding</strong> hides in each line item. Nobody knows the real estimate, teams spend to their padded number (Parkinson's law), and when a genuine shock hits there is no visible reserve left to draw on - it was all quietly consumed.</li>
+          <li><strong>A buffer</strong> is one line everyone can see, owned at portfolio level, drawn down through the monthly variance review with a written reason. Estimates stay honest because teams are not punished for shocks - they are funded from the reserve, on the record.</li>
+        </ul>
+        <p>The drawdown log doubles as a learning tool: after two quarters it tells you WHERE the shocks come from - discovery risk in the data, scope creep from sponsors, or optimistic sizing - and that is next year's estimating fix.</p>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The monthly variance review - a 20-minute agenda<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The buffer only works if the review that governs it actually happens. The standing agenda, timeboxed:</p>
+        <ul>
+          <li><strong>Minutes 1-5: the dials.</strong> SPI and CPI per project, pre-circulated as traffic lights. Green projects get zero airtime - this meeting is for exceptions.</li>
+          <li><strong>Minutes 5-15: amber and red.</strong> Each exception owner brings the EAC and ONE ask: buffer draw, descope, or re-baseline. No asks without a number.</li>
+          <li><strong>Minutes 15-18: the drawdown log.</strong> Approve or decline each draw, in writing, with the reason. The log is public to the whole data office.</li>
+          <li><strong>Minutes 18-20: buffer health.</strong> Reserve remaining vs months remaining. Burning buffer faster than calendar = the portfolio itself is amber - a steering item (a5), not a PMO item.</li>
+        </ul>
+        <p>Twenty minutes, monthly, and no project gets to be surprised at quarter end. The practitioner version, with the full worked numbers, is b9.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Read a variance report before it is over <span class="tag demo">★ 18 min · everyone reads</span></h2>
+    </div>
+    <p class="lede">The month-4 variance report for the lakehouse build lands on your desk. Charter budget (BAC) $480k. The report says: PV $200k, EV $160k, AC $190k. On paper the project is "only slightly over spend" - your job is to see what is actually happening.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Check the burn story first.</strong> Spent $190k of $480k - about 40%, month 4 of 10. A burn-rate-only report calls this green. Hold that thought.</p></div>
+      <div class="step"><p><strong>Compute SPI.</strong> EV / PV = 160 / 200 = 0.80. The team has finished 80 cents of every planned dollar of work. Red on schedule - this project is a month behind and drifting.</p></div>
+      <div class="step"><p><strong>Compute CPI.</strong> EV / AC = 160 / 190 = 0.84. Every dollar spent bought 84 cents of work. Red on cost too - the "slightly over" story was the burn rate lying.</p></div>
+      <div class="step"><p><strong>Project the landing point.</strong> EAC = BAC / CPI = 480 / 0.84 = roughly $570k. VAC = 480 - 570 = minus $90k. That hole is bigger than the whole portfolio buffer's share for this project - this is a steering item, now.</p></div>
+      <div class="step"><p><strong>Decide like a leader.</strong> Options on the table: descope (cut the out-of-scope-adjacent extras), re-baseline honestly with a buffer draw, or kill. NOT an option: silence until month 8. Write the one-line ask you would bring to steering.</p></div>
+    </div>
+    <div class="callout win">
+      <strong>★ The whole point of tonight.</strong> At month 4 you have choices - descope, re-plan, fund. At month 9 you have a press release. EVM lite exists to move the bad news to the month where it is still cheap.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Split YOUR data budget into run and change - even roughly. Note the three items that resisted classification; they are usually where overruns hide today.</li>
+      <li>Pick one live project and compute SPI and CPI from whatever numbers exist. If the numbers do not exist, that finding IS the homework result - bring it.</li>
+      <li>Find your padding: ask one trusted PM what percentage their estimates carry "for safety." Compare it with what a visible 10% portfolio buffer would cost instead.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Why does Northgate keep run ($1,100k) and change ($2,700k) in separate pots?</p>
+      <button class="qopt" type="button">A · Run money is IT's problem and change money is the data office's problem</button>
+      <button class="qopt" type="button">B · Because the board requires two budget lines for anything over $3m</button>
+      <button class="qopt" type="button">C · They answer different questions - unit-cost drift vs on-plan variance - and a mixed pot lets project overruns hide inside the run baseline</button>
+      <p class="qwhy">Two pots, two questions, two reviews. Run gets a quarterly unit-cost trend review; change gets a monthly variance review per project. Merge them and a $60k project overrun becomes invisible noise inside $3,800k.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · A project reports CPI = 0.84. What does that mean?</p>
+      <button class="qopt" type="button">A · Every dollar spent has earned 84 cents of planned work - it is over cost, and EAC = BAC / 0.84 projects where it lands</button>
+      <button class="qopt" type="button">B · The project has spent 84% of its budget</button>
+      <button class="qopt" type="button">C · The project is 16% ahead of schedule</button>
+      <p class="qwhy">CPI = EV / AC. Below 1.0 = over cost. It is a ratio of value earned to money spent, not a burn percentage - and dividing BAC by it forecasts the landing point months early. Schedule is SPI's job.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What makes a 10% portfolio buffer better than padding every line item?</p>
+      <button class="qopt" type="button">A · It is cheaper - padding usually adds up to more than 10%</button>
+      <button class="qopt" type="button">B · Visibility and governance - estimates stay honest, the reserve is drawn through a monthly review with a logged reason, and Parkinson's law cannot quietly spend it</button>
+      <button class="qopt" type="button">C · Auditors require contingency to be a separate line</button>
+      <p class="qwhy">The money reserved is roughly the same either way. Padding disappears into the lines and gets spent (work expands to fill the money available); a visible buffer is governed, logged, and teaches you where the shocks actually come from.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Northgate budget canon - run $1,100k / change $2,700k</span><span class="note">The two-pot split every money conversation in this course stands on</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Earned value (EVM, standard PMI formulas)</span><span class="note">PV / EV / AC, SPI, CPI, EAC = BAC / CPI, VAC - as exec traffic lights; the full working session is b9</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">FinOps basics</span><span class="note">Tag everything, rightsize, commit discounts, watch unit costs - plus GenAI token/inference metering</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Workflow Automation + Agentic AI (services #29-30)</span><span class="note">The pilot's token-cost story previewed here; the practitioner cost-control routine lands in b9</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Product (service #24)</span><span class="note">Chartered as a change line here; its unit economics get worked in b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Two pots</b><span>Run $1,100k (recurs, ask about unit-cost drift) · change $2,700k (ends, ask about variance vs plan). Never merged.</span></div>
+      <div class="cheat-item"><b>The handoff rule</b><span>A delivered project moves its ongoing platform + licence cost to run with a named number, agreed at the gate.</span></div>
+      <div class="cheat-item"><b>Three cost families</b><span>People (FTE months x loaded rate - the big block) · platform (cloud, licences) · variable (compute, GenAI tokens).</span></div>
+      <div class="cheat-item"><b>FinOps four moves</b><span>Tag everything → rightsize → commit discounts on stable run → watch unit costs. Gen AI adds token metering.</span></div>
+      <div class="cheat-item"><b>Buffer beats padding</b><span>Honest estimates + one visible 10% contingency at portfolio level + monthly variance review with a drawdown log.</span></div>
+      <div class="cheat-item"><b>EVM lite</b><span>PV plan, EV earned, AC spent. SPI = EV/PV, CPI = EV/AC. Below 1.0 = behind / over. Amber under 0.95, red under 0.85.</span></div>
+      <div class="cheat-item"><b>The landing point</b><span>EAC = BAC / CPI, VAC = BAC - EAC. CPI predicts - the hole is visible months before the money runs out.</span></div>
+      <div class="cheat-item"><b>Ask the ratio</b><span>"40% spent" means nothing without what got finished. Burn rate describes; CPI and SPI predict.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a2-annual-roadmap.html">← Prev: The annual roadmap</a> &nbsp;·&nbsp; <a href="a4-headcount-and-rr.html">Next: Headcount and R&amp;R →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

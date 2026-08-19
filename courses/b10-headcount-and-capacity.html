@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 10 · Headcount, capacity + the pack - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 10 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 10 of 10</div>
+    <h1>Ten real people, ten projects, <span class="accent">one pack</span></h1>
+    <p class="sub">Final session. Northgate's org chart says 14 FTE; the portfolio plan quietly assumes all 14 work on projects all day, every day. They do not - and one ML engineer is currently promised to three projects at once. Tonight you build the capacity model that makes the people math honest, learn when to hire, contract, or train your way out of a gap - and then you assemble the thing this whole course has been building toward: the year-one PMO pack. Six artifacts, one checklist, ready to hand to the Head of Data. This is the capstone. Bring everything.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">Capstone</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Capacity math + hire / contract / train</span>
+      <span class="a3" style="flex:5">18-42 · Capstone: the matrix + the pack</span>
+      <span class="a4" style="flex:1">42-45 · Send-off</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The last invisible budget</h2>
+    </div>
+    <p class="lede">Money got its discipline in b9. People are the other budget - and the one most portfolios never write down. A plan that fits the money but not the people fails exactly as hard, just with more burnout on the way down. Part 1 builds Northgate's capacity model and hunts the overallocation hiding in it. Part 2 covers the three ways to buy capacity - hire, contract, train - and the ramp-up tax Brooks warned about. Part 3 is the finale: the six-artifact year-one PMO pack, assembled and checked against the a6 health lens.</p>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A filled people-x-projects allocation matrix with its hotspot found and fixed, a hire / contract / train decision table for your next capacity gap, and the complete year-one PMO pack checklist - the artifact that makes ten sessions of work portable to your real job on Monday.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE CAPACITY MODEL ============ -->
+  <section class="section" id="capacity-model">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the focus factor + the allocation matrix</span>
+      <h2>Fourteen names, ten real FTE <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The math that saves the year: <strong>14 FTE x ~70% focus factor ≈ 10 real project FTE</strong>. The missing 30% is not laziness - it is standups, steering prep, support tickets, training, holidays, and the ad-hoc requests b7 taught you to route through intake. Plan against 14 and every project is secretly understaffed by design. Plan against 10 and the plan survives contact with the calendar. Then write the 10 down in an <strong>allocation matrix</strong> - people down the side, projects across the top, each cell a percentage of that person's focus-adjusted capacity.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Northgate allocation matrix, roles by projects, with the ML engineer row overallocated at 130 percent in orange.">
+        <style>
+          .amCH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .amCC { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .amCR { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .amCV { font: 600 12px Inter, sans-serif; fill: #FFFFFF; }
+          .amCX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .amCN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .amCG { stroke: #C3CCD5; stroke-width: 1; }
+        </style>
+        <text class="amCH" x="20" y="34">Allocation matrix · each cell = % of that role's focus-adjusted capacity (70% of calendar = 100% here)</text>
+        <rect x="190" y="56" width="660" height="26" fill="#22364A"/>
+        <text class="amCC" x="220" y="74" text-anchor="middle">P1</text>
+        <text class="amCC" x="280" y="74" text-anchor="middle">P2</text>
+        <text class="amCC" x="340" y="74" text-anchor="middle">P3</text>
+        <text class="amCC" x="400" y="74" text-anchor="middle">P4</text>
+        <text class="amCC" x="460" y="74" text-anchor="middle">P5</text>
+        <text class="amCC" x="520" y="74" text-anchor="middle">P6</text>
+        <text class="amCC" x="580" y="74" text-anchor="middle">P7</text>
+        <text class="amCC" x="640" y="74" text-anchor="middle">P8</text>
+        <text class="amCC" x="700" y="74" text-anchor="middle">P9</text>
+        <text class="amCC" x="760" y="74" text-anchor="middle">P10</text>
+        <text class="amCC" x="820" y="74" text-anchor="middle">Total</text>
+        <rect x="190" y="82" width="660" height="216" fill="#EDF2F6"/>
+        <line class="amCG" x1="250" y1="82" x2="250" y2="298"/>
+        <line class="amCG" x1="310" y1="82" x2="310" y2="298"/>
+        <line class="amCG" x1="370" y1="82" x2="370" y2="298"/>
+        <line class="amCG" x1="430" y1="82" x2="430" y2="298"/>
+        <line class="amCG" x1="490" y1="82" x2="490" y2="298"/>
+        <line class="amCG" x1="550" y1="82" x2="550" y2="298"/>
+        <line class="amCG" x1="610" y1="82" x2="610" y2="298"/>
+        <line class="amCG" x1="670" y1="82" x2="670" y2="298"/>
+        <line class="amCG" x1="730" y1="82" x2="730" y2="298"/>
+        <line class="amCG" x1="790" y1="82" x2="790" y2="298"/>
+        <line class="amCG" x1="190" y1="118" x2="850" y2="118"/>
+        <line class="amCG" x1="190" y1="154" x2="850" y2="154"/>
+        <line class="amCG" x1="190" y1="190" x2="850" y2="190"/>
+        <line class="amCG" x1="190" y1="226" x2="850" y2="226"/>
+        <line class="amCG" x1="190" y1="262" x2="850" y2="262"/>
+        <text class="amCR" x="24" y="105">Platform eng · 1</text>
+        <rect x="192" y="84" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="220" y="105" text-anchor="middle">60</text>
+        <rect x="252" y="84" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="280" y="105" text-anchor="middle">40</text>
+        <rect x="792" y="84" width="56" height="32" rx="4" fill="#22364A"/><text class="amCV" x="820" y="105" text-anchor="middle">100</text>
+        <text class="amCR" x="24" y="141">Data eng · 4</text>
+        <rect x="192" y="120" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="220" y="141" text-anchor="middle">20</text>
+        <rect x="252" y="120" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="280" y="141" text-anchor="middle">50</text>
+        <rect x="312" y="120" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="340" y="141" text-anchor="middle">20</text>
+        <rect x="612" y="120" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="640" y="141" text-anchor="middle">10</text>
+        <rect x="792" y="120" width="56" height="32" rx="4" fill="#22364A"/><text class="amCV" x="820" y="141" text-anchor="middle">100</text>
+        <text class="amCR" x="24" y="177">Analytics eng · 3</text>
+        <rect x="312" y="156" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="340" y="177" text-anchor="middle">40</text>
+        <rect x="372" y="156" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="400" y="177" text-anchor="middle">30</text>
+        <rect x="432" y="156" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="460" y="177" text-anchor="middle">30</text>
+        <rect x="792" y="156" width="56" height="32" rx="4" fill="#22364A"/><text class="amCV" x="820" y="177" text-anchor="middle">100</text>
+        <text class="amCR" x="24" y="213">Data scientists · 2</text>
+        <rect x="492" y="192" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="520" y="213" text-anchor="middle">50</text>
+        <rect x="552" y="192" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="580" y="213" text-anchor="middle">30</text>
+        <rect x="612" y="192" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="640" y="213" text-anchor="middle">20</text>
+        <rect x="792" y="192" width="56" height="32" rx="4" fill="#22364A"/><text class="amCV" x="820" y="213" text-anchor="middle">100</text>
+        <text class="amCR" x="24" y="249">ML engineer · 1</text>
+        <rect x="492" y="228" width="56" height="32" rx="4" fill="#E2590A"/><text class="amCV" x="520" y="249" text-anchor="middle">40</text>
+        <rect x="552" y="228" width="56" height="32" rx="4" fill="#E2590A"/><text class="amCV" x="580" y="249" text-anchor="middle">50</text>
+        <rect x="732" y="228" width="56" height="32" rx="4" fill="#E2590A"/><text class="amCV" x="760" y="249" text-anchor="middle">40</text>
+        <rect x="792" y="228" width="56" height="32" rx="4" fill="#E2590A"/><text class="amCV" x="820" y="249" text-anchor="middle">130</text>
+        <text class="amCR" x="24" y="285">Governance · 1</text>
+        <rect x="252" y="264" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="280" y="285" text-anchor="middle">15</text>
+        <rect x="432" y="264" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="460" y="285" text-anchor="middle">15</text>
+        <rect x="672" y="264" width="56" height="32" rx="4" fill="#3E5C76"/><text class="amCV" x="700" y="285" text-anchor="middle">70</text>
+        <rect x="792" y="264" width="56" height="32" rx="4" fill="#22364A"/><text class="amCV" x="820" y="285" text-anchor="middle">100</text>
+        <text class="amCH" x="20" y="334">The hotspot: one ML engineer promised 40 + 50 + 40 = 130% across segmentation, forecasting, the pilot.</text>
+        <text class="amCX" x="20" y="356">Fix: data scientists absorb segmentation model work, the pilot slips to Q3, one BI engineer starts AI literacy (#27).</text>
+        <rect x="20" y="382" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="amCN" x="44" y="394">A cell is a promise. A row over 100% is not ambition - it is a schedule slip you have not scheduled yet.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the allocation matrix, with the overallocated ML engineer in orange</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Reading the matrix - and fixing the hotspot<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three reads, in order, every time you open the matrix:</p>
+        <ul>
+          <li><strong>Row totals first.</strong> Anything over 100% is a promise the calendar cannot keep. Northgate's ML engineer: segmentation 40 + forecasting 50 + agentic pilot 40 = <strong>130%</strong>. The a4 leader session calls this by name: three projects per ML engineer is a plan to fail.</li>
+          <li><strong>Single points of failure second.</strong> Any project whose critical skill lives in exactly one row is one resignation away from red. The pilot depends entirely on the same overloaded ML engineer - two problems, one cell.</li>
+          <li><strong>Empty capacity last.</strong> Under-100 rows are your only free lever. Northgate's data scientists carry segmentation domain knowledge - they can absorb model work without a hiring cycle.</li>
+        </ul>
+        <p>The fix menu, cheapest first: <strong>rebalance</strong> (data scientists take segmentation features), <strong>resequence</strong> (the pilot moves to Q3 - the b1 kanban already parked it there for the governance dependency; now capacity agrees), <strong>train</strong> (a BI engineer starts AI literacy, Part 2's move), and only then <strong>hire or contract</strong>.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The 130% nobody decided.</strong> No one at Northgate ever chose to overload the ML engineer. Segmentation asked in January, forecasting in February, the pilot in March - each ask reasonable, each said yes to separately, no matrix anywhere to add them up. That is the quiet way every data team drowns: not one bad decision, but three good ones with no row total. The matrix does not prevent the asks; it makes the arithmetic public before the burnout does.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why 70% - and why your number might differ<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The 70% focus factor is a planning default, not a law of physics. It absorbs the recurring skeleton from b7 (standups, steering, sprint events, variance review), support and on-call, holidays and training, and the intake-routed ad-hoc work that is real work even when it is not project work. Two honest adjustments:</p>
+        <ul>
+          <li><strong>Measure yours once.</strong> Two weeks of coarse time tracking (project / run / overhead, nothing finer) gives you a real number. Teams carrying heavy support duty often plan at 60%; a greenfield team with no legacy can touch 80%.</li>
+          <li><strong>Never plan at 100%, ever.</strong> A plan at 100% has zero slack for the discovery risk b2 taught (the unusable data dump) - so the first surprise cascades through every row. The 30% is not waste; it is the shock absorber.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: HIRE VS CONTRACT VS TRAIN ============ -->
+  <section class="section" id="hire-contract-train">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the capacity gap decision + training as a multiplier</span>
+      <h2>Three ways to buy capacity <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">When the matrix shows a gap that rebalancing and resequencing cannot close, you have three purchases available - and they buy different things on different clocks. <strong>Hire</strong> buys permanent capability, slowly and with a ramp-up tax. <strong>Contract</strong> buys speed on a defined skill, expensively and temporarily. <strong>Train</strong> buys leverage: it makes the people you already have worth more - which is why Northgate's catalog lists data literacy training (#20) and AI literacy training (#27) as portfolio services, not HR perks.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The decision table + the Brooks tax<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Signal from the matrix</th><th>Reach for</th><th>Watch out for</th></tr>
+          <tr><td>Gap is permanent - the run book needs this skill forever</td><td>Hire</td><td>Ramp-up: months before a new hire is a full cell in the matrix - and never mid-crisis (below)</td></tr>
+          <tr><td>Gap is sharp + temporary - one project, one specialist skill</td><td>Contract</td><td>Knowledge walks out at the end - pair them with a staff member or the capability leaves too</td></tr>
+          <tr><td>Gap is broad + shallow - many people each need a bit more skill</td><td>Train (#20 / #27)</td><td>Training time IS capacity spend - put it in the matrix as a cell, or it silently eats the 70%</td></tr>
+        </table>
+        <p>And the caution that guards the whole table - <strong>Brooks's law</strong> (The Mythical Man-Month, 1975): "adding manpower to a late software project makes it later." Two mechanisms: new people need ramp-up time from exactly the people who have none to give, and communication paths grow as <strong>n(n-1)/2</strong> - a team of 5 has 10 paths, a team of 8 has 28. You met this as the simulator's CRASH anti-lever in b5: adding headcount to late projects improved nothing and added about a month plus 15% cost to every late project. Hire for the NEXT project, never to rescue this one.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The multiplier nobody budgets for.</strong> Northgate's store-ops analysts used to file a dashboard ticket for every question - each one a slice of an analytics engineer's 70%. After the data literacy course (#20), most of those questions became self-serve lookups in the BI layer from b6. Nobody's row total changed, but the intake queue thinned - which is capacity you never had to hire. Training is the only lever in this session that makes OTHER rows cheaper.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Costing the ramp honestly<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A new hire is not +1.0 FTE on day one. Plan the ramp as matrix cells: a fraction of a cell in the first months (they absorb more help than they produce), climbing toward full capacity over a quarter or more depending on stack complexity - and the mentor's row LOSES a slice for the same period. Budget both sides or the matrix lies for a quarter. Same logic, smaller scale, for contractors (onboarding, access, context) and for internal moves between domains. The only free-ish ramp is training an adjacent skill into someone who already knows your data - which is why train beats hire for broad-shallow gaps.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE CAPSTONE PACK ============ -->
+  <section class="section" id="capstone-pack">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the capstone: six artifacts, one pack</span>
+      <h2>Assemble the year-one PMO pack <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Ten sessions ago Northgate handed you a 30-line service catalog and a job title. Everything since has been building one thing: a portfolio a new Head of Data could pick up cold and RUN. That thing is the pack - <strong>six artifacts, each earned in a session, each answering one executive question</strong>. Tonight you staple them together and check the seams.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The year-one PMO pack: six artifacts on one checklist - roadmap, RACI, budget, capacity plan, steering deck, health scorecard.">
+        <style>
+          .pkDB { font: 700 17px Inter, sans-serif; fill: #FFFFFF; }
+          .pkDT { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .pkDS { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .pkDC { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .pkDF { font: 700 14px Inter, sans-serif; fill: #22364A; }
+          .pkDN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <rect x="20" y="22" width="840" height="54" rx="10" fill="#22364A"/>
+        <rect x="40" y="41" width="16" height="16" rx="3" fill="#E2590A"/>
+        <text class="pkDB" x="72" y="55">THE YEAR-ONE PMO PACK · six artifacts, one portfolio, ready for steering</text>
+        <rect x="30" y="98" width="130" height="112" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <rect x="44" y="110" width="20" height="20" rx="4" fill="#E2590A"/><text class="pkDC" x="54" y="125" text-anchor="middle">✓</text>
+        <text class="pkDT" x="44" y="152">Roadmap +</text>
+        <text class="pkDT" x="44" y="168">timeline</text>
+        <text class="pkDS" x="44" y="194">b2</text>
+        <rect x="168" y="98" width="130" height="112" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <rect x="182" y="110" width="20" height="20" rx="4" fill="#E2590A"/><text class="pkDC" x="192" y="125" text-anchor="middle">✓</text>
+        <text class="pkDT" x="182" y="152">RACI</text>
+        <text class="pkDT" x="182" y="168">one A each</text>
+        <text class="pkDS" x="182" y="194">b4</text>
+        <rect x="306" y="98" width="130" height="112" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <rect x="320" y="110" width="20" height="20" rx="4" fill="#E2590A"/><text class="pkDC" x="330" y="125" text-anchor="middle">✓</text>
+        <text class="pkDT" x="320" y="152">Budget +</text>
+        <text class="pkDT" x="320" y="168">buffer log</text>
+        <text class="pkDS" x="320" y="194">b9</text>
+        <rect x="444" y="98" width="130" height="112" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <rect x="458" y="110" width="20" height="20" rx="4" fill="#E2590A"/><text class="pkDC" x="468" y="125" text-anchor="middle">✓</text>
+        <text class="pkDT" x="458" y="152">Capacity</text>
+        <text class="pkDT" x="458" y="168">plan</text>
+        <text class="pkDS" x="458" y="194">b10</text>
+        <rect x="582" y="98" width="130" height="112" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <rect x="596" y="110" width="20" height="20" rx="4" fill="#E2590A"/><text class="pkDC" x="606" y="125" text-anchor="middle">✓</text>
+        <text class="pkDT" x="596" y="152">Steering</text>
+        <text class="pkDT" x="596" y="168">deck</text>
+        <text class="pkDS" x="596" y="194">b6</text>
+        <rect x="720" y="98" width="130" height="112" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <rect x="734" y="110" width="20" height="20" rx="4" fill="#E2590A"/><text class="pkDC" x="744" y="125" text-anchor="middle">✓</text>
+        <text class="pkDT" x="734" y="152">Health</text>
+        <text class="pkDT" x="734" y="168">scorecard</text>
+        <text class="pkDS" x="734" y="194">a6 · b5</text>
+        <text class="pkDF" x="30" y="248">Ten sessions ago: a 30-line catalog. Today: a governed portfolio, with the pack to prove it.</text>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="pkDN" x="54" y="278">Print the six, staple them, hand the stack to the Head of Data. That staple IS the year-one PMO.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the six-artifact year-one PMO pack, complete</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What each artifact proves - and the health lens check<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Artifact</th><th>Built in</th><th>The executive question it answers</th></tr>
+          <tr><td>Roadmap + timeline</td><td>b2 (on a2's sequence)</td><td>"What lands when, and what blocks what?"</td></tr>
+          <tr><td>RACI</td><td>b4</td><td>"Who owns each deliverable?" - exactly one A, every row</td></tr>
+          <tr><td>Budget + buffer log</td><td>b9</td><td>"What does it cost, and how will we know if that changes?"</td></tr>
+          <tr><td>Capacity plan</td><td>b10</td><td>"Can the people we have actually do this?" - no row over 100</td></tr>
+          <tr><td>Steering deck</td><td>b6</td><td>"How do we stay informed without micromanaging?"</td></tr>
+          <tr><td>Health scorecard</td><td>a6 / b5</td><td>"How do we know it is working - before it is not?"</td></tr>
+        </table>
+        <p>Then the seam check: run the assembled pack past the <strong>a6 health lens</strong> - on-time %, budget variance, benefit realization, risk burn-down. Every lens metric must be COMPUTABLE from the pack alone. If the scorecard promises benefit realization but no charter in the pack names a benefit with a number, you found a seam - fix the charter, not the scorecard.</p>
+        <div class="callout tip">
+          <strong>The pack is a system, not a stack.</strong> The roadmap's dates assume the capacity plan's rows; the budget's EAC feeds the scorecard's variance; the steering deck reports all of it. Change one artifact and touch its neighbors - that discipline is the difference between a PMO and a folder of PDFs.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Fill the matrix, ship the pack <span class="tag demo">★ 24 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The final build-along. You leave with a completed allocation matrix and the six-artifact checklist scored against the health lens - the capstone deliverable of the course.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Compute real capacity.</strong> 14 FTE, minus Head of Data and PMO lead (oversight, not delivery), times the ~70% focus factor. Write the number at the top of the matrix - it is the portfolio's true people-budget.</p></div>
+      <div class="step"><p><strong>Fill the matrix.</strong> Allocate the six delivery rows across the 10 projects from the roadmap's current quarter. Every cell is a percentage; every promise from b1's charters must appear as a cell somewhere.</p></div>
+      <div class="step"><p><strong>Hunt the hotspot.</strong> Total every row. Find the ML engineer's 130%. Fix it with the cheapest-first menu: rebalance to the data scientists, slip the pilot to Q3, nominate the AI-literacy trainee - and only propose a hire if the gap survives all three.</p></div>
+      <div class="step"><p><strong>Assemble the pack.</strong> Lay out your six artifacts from b2, b4, b6, b9, b10, and a6/b5. Tick each against the checklist. A missing artifact is homework, not shame - but it goes on the list with a date.</p></div>
+      <div class="step"><p><strong>Run the health lens.</strong> For each of a6's four metrics, point at the exact artifact and field it will be computed from. Four clean traces = the pack ships. Hand it to whoever plays your Head of Data, and shake on it.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Do this with your REAL portfolio within two weeks.</strong> The Northgate pack is the rehearsal. The version with your projects, your names, and your numbers is the one that changes your Monday - and every template you need is in sessions b1 through b10.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">After the course</span>
+      <h2>Homework <span class="tag exercise">◐ 45 min</span></h2>
+    </div>
+    <ul>
+      <li>Build the allocation matrix for your real team - real names, real projects, real row totals. Find your 130% (there is almost always one) and write the cheapest-first fix before you show anyone.</li>
+      <li>Assemble your own six-artifact pack. Score each artifact: exists / draft / missing. Anything missing gets a session number from this course and a date on your calendar.</li>
+      <li>Book the recurring skeleton that keeps the pack alive: monthly variance review (b9), monthly steering (b6), quarterly re-rank (b1). A pack without a cadence is a snapshot; with one, it is a PMO.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Northgate has 14 FTE. How much project capacity does the portfolio actually have to plan against?</p>
+      <button class="qopt" type="button">A · 14 FTE - that is what the org chart says and payroll confirms</button>
+      <button class="qopt" type="button">B · About 10 real FTE - 14 x ~70% focus factor, after meetings, support, training, and intake work</button>
+      <button class="qopt" type="button">C · About 18 FTE - sustained crunch and weekends make up the difference</button>
+      <p class="qwhy">14 x 0.7 ≈ 10. The 30% is real work (cadences, support, training, ad-hoc) - it just is not project work. Planning at 14 understaffs every project by design; planning at crunch is how you lose the 14.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The forecasting project is late. Leadership offers two extra engineers to catch up. Brooks's law says?</p>
+      <button class="qopt" type="button">A · Take them - more hands always move a project faster</button>
+      <button class="qopt" type="button">B · Take one - half the help gives half the speedup with none of the risk</button>
+      <button class="qopt" type="button">C · Decline for this project - ramp-up drains the existing team and communication paths grow as n(n-1)/2; hire for the next project instead</button>
+      <p class="qwhy">"Adding manpower to a late software project makes it later." The sim's CRASH anti-lever showed it: no on-time improvement, about a month plus 15% cost added to every late project. New capacity helps the next project, not the burning one.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A new Head of Data asks for the year-one PMO pack. What lands on their desk?</p>
+      <button class="qopt" type="button">A · Six artifacts: roadmap + timeline, RACI, budget + buffer log, capacity plan, steering deck, health scorecard</button>
+      <button class="qopt" type="button">B · The budget and the roadmap - the rest is operational detail the PMO keeps internally</button>
+      <button class="qopt" type="button">C · A screenshot of the simulator at 9 of 10 on time - the numbers speak for themselves</button>
+      <p class="qwhy">All six, stapled: b2 roadmap, b4 RACI, b9 budget, b10 capacity, b6 steering deck, a6/b5 scorecard. Each answers one executive question, and the health lens must be computable from the pack alone - that is the completeness test.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Literacy Training (service #20)</span><span class="note">Capacity multiplier: self-serve lookups replace dashboard tickets, thinning the intake queue</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI Literacy Training (service #27)</span><span class="note">The train lever for broad-shallow gaps - the BI engineer who backfills the ML hotspot</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brooks's law (The Mythical Man-Month, 1975)</span><span class="note">Ramp-up plus n(n-1)/2 communication paths - the theory behind b5's CRASH anti-lever</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Capacity math (focus factor, a4)</span><span class="note">14 FTE x ~70% ≈ 10 real FTE, worked into the full allocation matrix</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The year-one pack (b2 · b4 · b6 · b9 · b10 · a6/b5)</span><span class="note">All six artifacts assembled and traced through the a6 health lens - the course capstone</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 10 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Focus factor</b><span>14 FTE x ~70% ≈ 10 real project FTE. Measure your own factor once; never plan at 100%.</span></div>
+      <div class="cheat-item"><b>The matrix</b><span>People x projects, cells = % of focus-adjusted capacity. Read: row totals → single points of failure → free capacity.</span></div>
+      <div class="cheat-item"><b>A cell is a promise</b><span>Row over 100% = a schedule slip not yet scheduled. Northgate's ML engineer: 40 + 50 + 40 = 130%.</span></div>
+      <div class="cheat-item"><b>The fix menu</b><span>Cheapest first: rebalance → resequence → train → contract → hire. A hire proposed before the first three is a smell.</span></div>
+      <div class="cheat-item"><b>Hire / contract / train</b><span>Permanent gap = hire (ramp tax) · sharp + temporary = contract (pair them) · broad + shallow = train (#20 / #27).</span></div>
+      <div class="cheat-item"><b>Brooks's law</b><span>Adding people to a late project makes it later: ramp-up + n(n-1)/2 paths. Sim CRASH: ~+1 month, +15% cost, zero on-time gain.</span></div>
+      <div class="cheat-item"><b>The pack</b><span>Roadmap (b2) · RACI (b4) · budget + buffer log (b9) · capacity plan (b10) · steering deck (b6) · health scorecard (a6/b5).</span></div>
+      <div class="cheat-item"><b>The seam check</b><span>Every a6 lens metric (on-time %, variance, benefit, risk burn-down) must be computable from the pack alone.</span></div>
+    </div>
+  </section>
+
+  <!-- ============ GOODBYE ============ -->
+  <section class="section" id="goodbye">
+    <div class="callout win">
+      <strong>★ That's the course - thank you for building it with me</strong>
+      Ten sessions, one portfolio, and a pack with your fingerprints on it. If you steer rather than deliver - or want the executive view of everything you just built - the <a href="a1-the-data-pmo.html">Leader track (a1-a6)</a> covers the same Northgate year from the steering chair in six sessions. And whenever you are ready for the next course, the whole shelf lives at the <a href="../index.html">course hub</a>. Go run your portfolio - you have the pack now. - Phoebe
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 10 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b9-budget-and-cost-management.html">← Prev: Budget and cost management</a> &nbsp;·&nbsp; <a href="../index.html">Back to all sessions →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

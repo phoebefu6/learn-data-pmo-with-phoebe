@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 6 · Stakeholder management - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 6 of 10</div>
+    <h1>Trust is <span class="accent">a cadence</span>, not a charm offensive</h1>
+    <p class="sub">In b5 you watched the simulator: stakeholder steering was the lever that took Northgate from 4 to 6 projects on time. Tonight you build that lever by hand. First the map - power x interest, and the comms plan each quadrant deserves. Then the cadences that compound: steering that decides, demos that show, an insights digest that lands the same day every month, and self-serve BI that quietly retires the Friday fire drill. Last, the discovery workshop - aligning stakeholders on which problems are worth automating BEFORE anyone builds anything.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · Map, plan, cadences</span>
+      <span class="a3" style="flex:5">16-40 · Build-along: comms plan rows</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: MAP + PLAN ============ -->
+  <section class="section" id="map-and-plan">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the power x interest grid + the exec scorecard (#12) and KPI system (#15) as stakeholder artifacts</span>
+      <h2>Map first, then plan - the grid decides the comms <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Stakeholder management fails when it is improvised per person: the loud get demos, the quiet get forgotten, and the CFO learns about a slip from a corridor. The fix is mechanical. Place every stakeholder on a <strong>power x interest grid</strong>, and let the quadrant dictate the comms: manage the high-power high-interest closely, keep the high-power low-interest satisfied with zero surprises, keep the high-interest informed generously, and monitor the rest without guilt. The plan falls straight out of the map.</p>
+
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A filled power x interest grid for Northgate's five key stakeholders, a comms plan with a written row per quadrant, a monthly trust-cadence skeleton you can lay on your own calendar, and the discovery-workshop agenda that aligns executives before a single agent gets built.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Power x interest grid for Northgate with the comms action per quadrant: manage closely, keep satisfied, keep informed, monitor.">
+        <style>
+          .pgH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .pgT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .pgS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .pgK { font: 700 14px Inter, sans-serif; fill: #1C242E; }
+          .pgG { font: 400 11.5px Inter, sans-serif; fill: #1C242E; opacity: .8; }
+          .pgX { font: 600 11px Inter, sans-serif; fill: #626D79; }
+          .pgN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .pgAx { stroke: #A3B8C9; stroke-width: 2; fill: none; marker-end: url(#pgHd); }
+        </style>
+        <defs>
+          <marker id="pgHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#A3B8C9"/>
+          </marker>
+        </defs>
+        <text class="pgH" x="90" y="36">THE MAP · quadrant in, comms plan out - Northgate's five key stakeholders placed</text>
+        <rect x="90" y="56" width="355" height="150" rx="10" fill="#3E5C76"/>
+        <text class="pgT" x="106" y="84">Keep satisfied</text>
+        <text class="pgS" x="106" y="106">Legal · IT leadership</text>
+        <text class="pgS" x="106" y="130">Monthly one-pager, zero surprises</text>
+        <text class="pgS" x="106" y="148">Consult early on anything sensitive</text>
+        <rect x="465" y="56" width="355" height="150" rx="10" fill="#22364A"/>
+        <text class="pgT" x="481" y="84">Manage closely</text>
+        <text class="pgS" x="481" y="106">CFO · CMO</text>
+        <text class="pgS" x="481" y="130">Steering seat + exec scorecard (#12)</text>
+        <text class="pgS" x="481" y="148">Bad news travels to them FIRST</text>
+        <rect x="90" y="222" width="355" height="150" rx="10" fill="#A3B8C9"/>
+        <text class="pgK" x="106" y="250">Monitor</text>
+        <text class="pgG" x="106" y="272">Wider org</text>
+        <text class="pgG" x="106" y="296">Newsletter tier - honest, low effort</text>
+        <text class="pgG" x="106" y="314">Watch for quadrant moves</text>
+        <rect x="465" y="222" width="355" height="150" rx="10" fill="#5C7A94"/>
+        <text class="pgT" x="481" y="250">Keep informed</text>
+        <text class="pgS" x="481" y="272">Store ops managers</text>
+        <text class="pgS" x="481" y="296">Demos + monthly insights digest (#18)</text>
+        <text class="pgS" x="481" y="314">Self-serve BI answers the rest (#13)</text>
+        <path class="pgAx" d="M76,372 L76,60"/>
+        <text class="pgX" transform="rotate(-90 66 214)" x="66" y="214">POWER →</text>
+        <path class="pgAx" d="M90,388 L820,388"/>
+        <text class="pgX" x="410" y="382">INTEREST →</text>
+        <rect x="90" y="404" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="pgN" x="114" y="416">The map stays private; the plan it produces is public. Re-map quarterly - people change seats and quadrants.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - power x interest grid with the comms action per quadrant</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The scorecard is a stakeholder artifact, not a reporting chore<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two catalog services do double duty as your stakeholder machinery, and treating them that way changes how you build them:</p>
+        <ul>
+          <li><strong>Executive scorecard (#12)</strong> - this is what "manage closely" LOOKS like in practice. The CFO does not want your Gantt chart; they want the same one-page scorecard every month: on-time status, budget variance, the two decisions steering owes. Build it for the reader in the top-right quadrant, and the steering meeting stops being show-and-tell.</li>
+          <li><strong>KPI system design (#15)</strong> - the quiet trust-builder. When "gross margin" means one thing on every dashboard (definitions locked in b4's metric RACI), executives stop cross-examining the numbers and start discussing them. Contested definitions are the number-one way data teams burn stakeholder trust without noticing.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Bad news travels first class.</strong> Month 5: the forecasting project needs a re-baseline (the b5 story). The PMO walks it to the CFO two days BEFORE steering - one page, cause, two options, a recommendation. In steering the CFO backs the re-baseline before anyone else speaks. The alternative timeline - the CFO ambushed by the same slide in public - produces a defensive meeting and a suspicious quarter. Same news, opposite trust outcome. Quadrant top-right earns the early call: that is what "manage closely" means.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Reading the grid without being cynical about it<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The grid can feel Machiavellian - it is not, if you use it as an attention budget rather than a ranking of human worth. Three honest reads:</p>
+        <ul>
+          <li><strong>"Keep satisfied" is respect, not neglect.</strong> Legal and IT do not want more meetings from you. They want no surprises and early consultation on the sensitive stuff. Flooding them with demos ANNOYS the high-power low-interest quadrant - that is the classic rookie move.</li>
+          <li><strong>"Monitor" is not "ignore".</strong> It is a lightweight honest channel plus watchfulness: a store analyst who starts pulling your data weekly is migrating quadrants, and your plan should notice before they do.</li>
+          <li><strong>Placement is a hypothesis.</strong> You will misplace someone. The quarterly re-map is where the grid gets corrected - which is why it stays private and dated, like any working document.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CADENCES ============ -->
+  <section class="section" id="cadences">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers steering + demos + insights sharing (#18), self-serve BI (#13), biz performance monitoring (#17)</span>
+      <h2>Cadences that build trust <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Stakeholder trust is not built in big moments - it compounds on repetition. The same scorecard, the same day, every month, for a year: that is what makes a data office feel reliable. Northgate's skeleton has four beats: a weekly PMO review (internal), a sprint demo every two weeks (open invite), a monthly steering that decides, and a monthly insights share that DELIVERS. Under it all, an always-on layer: live business performance monitoring (#17), so meetings discuss the numbers instead of reading them out.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One Northgate month as a trust cadence: weekly PMO review, biweekly demos, monthly steering and insights share, always-on monitoring.">
+        <style>
+          .tcH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .tcW { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .tcE { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .tcD { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .tcG { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .tcN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="tcH" x="60" y="36">ONE NORTHGATE MONTH · same artifacts, same days, every month - boring is the feature</text>
+        <rect x="60" y="56" width="190" height="28" rx="6" fill="#22364A"/>
+        <text class="tcW" x="76" y="75">Week 1</text>
+        <rect x="262" y="56" width="190" height="28" rx="6" fill="#22364A"/>
+        <text class="tcW" x="278" y="75">Week 2</text>
+        <rect x="464" y="56" width="190" height="28" rx="6" fill="#22364A"/>
+        <text class="tcW" x="480" y="75">Week 3</text>
+        <rect x="666" y="56" width="190" height="28" rx="6" fill="#22364A"/>
+        <text class="tcW" x="682" y="75">Week 4</text>
+        <rect x="60" y="94" width="190" height="30" rx="6" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcE" x="72" y="113">PMO review · 30 min</text>
+        <rect x="262" y="94" width="190" height="30" rx="6" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcE" x="274" y="113">PMO review · 30 min</text>
+        <rect x="464" y="94" width="190" height="30" rx="6" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcE" x="476" y="113">PMO review · 30 min</text>
+        <rect x="666" y="94" width="190" height="30" rx="6" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcE" x="678" y="113">PMO review · 30 min</text>
+        <rect x="262" y="132" width="190" height="30" rx="6" fill="#5C7A94"/>
+        <text class="tcD" x="274" y="151">Demo - open invite</text>
+        <rect x="666" y="132" width="190" height="30" rx="6" fill="#5C7A94"/>
+        <text class="tcD" x="678" y="151">Demo - open invite</text>
+        <rect x="464" y="132" width="190" height="30" rx="6" fill="#3E5C76"/>
+        <text class="tcD" x="476" y="151">Insights share (#18)</text>
+        <rect x="666" y="170" width="190" height="30" rx="6" fill="#22364A"/>
+        <text class="tcD" x="678" y="189">Steering · 45 min</text>
+        <rect x="666" y="208" width="190" height="30" rx="6" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcE" x="678" y="227">Variance review</text>
+        <rect x="60" y="262" width="796" height="34" rx="8" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcG" x="76" y="283">Always on: biz performance monitoring (#17) - the numbers are live, so meetings discuss them</text>
+        <rect x="60" y="306" width="796" height="34" rx="8" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="tcG" x="76" y="327">Deflection layer: self-serve BI (#13) - stakeholders answer routine questions themselves</text>
+        <rect x="60" y="360" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="tcN" x="84" y="372">Trust compounds on repetition: skip a beat and say so loudly - a silent gap reads as a hidden problem.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one month of the Northgate trust cadence</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Steering decides, demos show, status is dead<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three meetings that look similar and do completely different jobs - collapse them into one and each job gets done badly:</p>
+        <table class="clean">
+          <tr><th>Cadence</th><th>Job</th><th>Audience</th><th>Smell that it is broken</th></tr>
+          <tr><td>Monthly steering</td><td>DECIDE - priorities, money, re-baselines</td><td>Top-right quadrant</td><td>45 minutes pass, zero decisions logged</td></tr>
+          <tr><td>Biweekly demo</td><td>SHOW working things, honestly incomplete</td><td>Open invite, high-interest quadrants</td><td>Slides appear instead of the real thing</td></tr>
+          <tr><td>Monthly insights share (#18)</td><td>DELIVER a finding worth acting on</td><td>Business audience, top-right first</td><td>It becomes a metrics readout nobody asked for</td></tr>
+          <tr><td>Status meeting</td><td>None - retire it</td><td>Nobody willingly</td><td>Its existence; the live scorecard (#17) replaced it</td></tr>
+        </table>
+        <div class="callout tip">
+          <strong>Run insights sharing as a product, not a favor.</strong> Same slot every month, one finding, one recommended action, one owner - and track whether anyone acts on it. A digest nobody acts on for three straight months is telling you to change the finding, the audience, or both. That feedback loop is what makes it a product.
+        </div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The demo that recruited a sponsor.</strong> Northgate's biweekly demo is open invite - and in month 3 a store ops regional manager wandered in to watch the dashboarding work. She saw her own region's numbers render live, asked two sharp questions, and left with the digest subscription. By the discovery workshop in Part 3 she was the loudest voice scoring the store-workflow use case - a sponsor the data team never had to pitch. Demos do quiet recruiting that steering packs never will: that is why the invite stays open even when attendance is thin.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Self-serve BI (#13): the enablement that kills the fire drill<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every Friday-afternoon "quick number for Monday" request is a stakeholder telling you they have no other way to get an answer. You can staff for the fire drills forever, or you can remove their cause. Self-serve BI enablement is stakeholder management by architecture:</p>
+        <ul>
+          <li><strong>Curated, not open.</strong> Self-serve on governed, defined metrics (the #15 system) is empowerment; self-serve on raw tables is chaos with extra steps. The b1 lesson stands: enablement rides ON the governed layer.</li>
+          <li><strong>Teach the top-right quadrant's teams first.</strong> When the CFO's analyst can self-serve, the CFO's ad-hoc requests fall - and the top-right quadrant is where your attention budget is most expensive.</li>
+          <li><strong>Route what remains through intake.</strong> Ad-hoc thematic analysis (#16) still exists for the genuinely novel questions - but it enters through the b1 intake board, not through a DM. The full time-defense playbook lands in b7.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The fire drill is a symptom, not a personality.</strong> Northgate's store ops kept requesting the same three cuts of weekly sales - each time as an urgent one-off. The team's instinct was to grumble about "stakeholders who can't plan". The comms plan said otherwise: high interest, no self-serve path. One enablement session and a pinned dashboard later, the repeat requests became self-serve pulls, and the requests still arriving were the interesting ones. The grumble was misdiagnosed demand.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: DISCOVERY WORKSHOPS ============ -->
+  <section class="section" id="discovery">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the AI use case discovery workshop (#28) as stakeholder alignment</span>
+      <h2>Discovery workshops - align before you automate <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The agentic pilot (P10) is where stakeholder management gets tested hardest, because everyone has an AI idea and most of them should not be built. The AI use case discovery workshop (#28) is a stakeholder-alignment tool wearing a technical costume: get the executives in one room BEFORE any build, inventory the real pains, and rank them together - so the pilot that gets built carries their fingerprints, not just the data team's enthusiasm.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The workshop that picks problems worth automating<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Half a day, the right people, four moves:</p>
+        <ul>
+          <li><strong>Inventory pains, not solutions.</strong> Open with "what eats your team's week?" - not "where could we use AI?". The second question produces demo-day fantasies; the first produces automatable drudgery.</li>
+          <li><strong>Score together: value x feasibility.</strong> Business stakeholders score value, the data team scores feasibility (is the data there? is the workflow stable?). Scoring in the same room is the alignment - the argument about a score IS the requirements conversation.</li>
+          <li><strong>Rank, and keep the losers visible.</strong> The output is a ranked problem list with a named owner per item - winners feed the b1 intake board like any other work; the rest stay parked in daylight.</li>
+          <li><strong>Say no to the pet use case out loud.</strong> Every workshop has one exec favorite that scores poorly. Declining it WITH the scores on the wall, in the room, is cheaper than declining it by email forever after.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The workshop output is alignment, not a backlog.</strong> The ranked list matters less than the fact that the CFO, CMO, and store ops watched each other agree to it. When the pilot hits its first rough sprint, that shared memory is what keeps the sponsors sponsoring.
+        </div>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "feasibility" means when the data team scores it<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Value is the business side's column; feasibility is yours - and scoring it honestly in front of executives is a stakeholder move in itself. Three questions behind the number:</p>
+        <ul>
+          <li><strong>Is the data actually there?</strong> Data work carries discovery risk that app work does not: the source might be missing, stale, or unusable. A use case whose data you have never touched gets a low confidence score, said out loud - not a hopeful shrug.</li>
+          <li><strong>Is the workflow stable?</strong> Automating a process that changes every month means rebuilding the automation every month. Boring, stable, high-volume drudgery is the sweet spot - which is why the winning use case is rarely the glamorous one.</li>
+          <li><strong>Can we tell if it works?</strong> If nobody can define what a good output looks like, nobody can evaluate the agent producing it. Flag it in the room; the evaluation mechanics arrive with the pilot's cost story in b9.</li>
+        </ul>
+        <p>Scoring low on feasibility is not saying no to the stakeholder - it is showing your homework. Executives forgive "not yet, and here is why" far more readily than a confident yes that dies in month three.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Write the comms plan rows - CFO and store ops <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">One comms plan, one row per stakeholder, six columns. You write two rows tonight - the top-right quadrant's most expensive reader and the bottom-right's most numerous one - then compare against the worked versions below.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Place them on the grid.</strong> CFO: high power, high interest (funds the portfolio, chairs steering) - manage closely. Store ops managers: high interest, lower power (live with every dashboard daily) - keep informed. Say the quadrant out loud before writing anything; the quadrant dictates the row.</p></div>
+      <div class="step"><p><strong>Choose the artifact per reader.</strong> CFO: the exec scorecard (#12) plus the steering pack - decisions and variance, one page. Store ops: the demo invite plus the monthly insights digest (#18) - things they can use this week, not portfolio finance.</p></div>
+      <div class="step"><p><strong>Set frequency and channel.</strong> CFO: scorecard monthly two days before steering, slip alerts within a day, in person for anything amber. Store ops: demo every two weeks, digest monthly, self-serve dashboard (#13) always on for the routine numbers.</p></div>
+      <div class="step"><p><strong>Write the "never hears late" clause.</strong> The sharpest column in the plan. CFO: never hears about a budget overrun or re-baseline second-hand. Store ops: never discovers a metric definition changed by seeing their number move.</p></div>
+      <div class="step"><p><strong>Name the owner and stress-test it.</strong> Every row has one owner (PMO lead for the CFO row; the analytics lead for store ops). Then run the b5 scenario against both rows: forecasting slips - who calls whom, in what order, before steering meets?</p></div>
+    </div>
+    <table class="clean">
+      <tr><th>Stakeholder</th><th>Quadrant</th><th>What they get</th><th>When</th><th>Never hears late</th><th>Owner</th></tr>
+      <tr><td>CFO</td><td>Manage closely</td><td>Exec scorecard (#12) + steering pack</td><td>Monthly, 2 days pre-steering; slips within a day</td><td>Overruns, re-baselines</td><td>PMO lead</td></tr>
+      <tr><td>Store ops managers</td><td>Keep informed</td><td>Demos + insights digest (#18) + self-serve (#13)</td><td>Demo biweekly · digest monthly · dashboard always on</td><td>Metric definition changes</td><td>Analytics lead</td></tr>
+    </table>
+    <div class="callout tip">
+      <strong>Six columns, no more.</strong> A comms plan that needs a legend will not survive contact with a busy month. If a row cannot fit on one line, the stakeholder needs two rows or the plan needs fewer ambitions.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Map YOUR real stakeholders on the power x interest grid - at least five names, dated, kept private. Note the one placement you are least sure of.</li>
+      <li>Write comms plan rows for your top-right and bottom-right quadrants, all six columns - especially "never hears late". Show the relevant stakeholder their own row if you dare; their edits are free requirements.</li>
+      <li>Draft your discovery-workshop invite list: which stakeholders must be in the room for a use-case ranking to stick? Who is the likely pet-use-case owner, and what will you say when it scores low?</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Legal is high power, low interest. The team proposes adding them to every biweekly demo "to keep them engaged". Good move?</p>
+      <button class="qopt" type="button">A · Yes - more touchpoints always build more trust</button>
+      <button class="qopt" type="button">B · No - keep satisfied means zero surprises and early consultation on sensitive items, not more meetings; flooding that quadrant erodes goodwill</button>
+      <button class="qopt" type="button">C · No - low interest means they should only be contacted when something goes wrong</button>
+      <p class="qwhy">Each quadrant gets the comms it wants, not the comms you enjoy giving. High-power low-interest stakeholders want no surprises and respect for their time - demos are for the high-interest quadrants. And "only when something goes wrong" guarantees every contact is a bad one.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What separates a demo from a status meeting?</p>
+      <button class="qopt" type="button">A · The audience - demos are for executives, status is for the team</button>
+      <button class="qopt" type="button">B · The length - demos are shorter</button>
+      <button class="qopt" type="button">C · The evidence - a demo shows the working thing itself, honestly incomplete; status describes work in slides, and the live scorecard already made that meeting redundant</button>
+      <p class="qwhy">Demos show, steering decides, and status meetings got retired by always-on business performance monitoring (#17). The moment slides replace the real thing in a demo, it has quietly become a status meeting with better lighting.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What is the primary output of the AI use case discovery workshop (#28)?</p>
+      <button class="qopt" type="button">A · A ranked list of problems worth automating, scored value x feasibility by the stakeholders together - alignment first, builds later</button>
+      <button class="qopt" type="button">B · A working prototype of the most promising agent, built live in the room</button>
+      <button class="qopt" type="button">C · A signed budget for the agentic pilot</button>
+      <p class="qwhy">The workshop picks problems worth automating BEFORE anything gets built - and the ranking's real value is that the executives produced it together. Winners then enter through the b1 intake board like any other work; nothing skips the door.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Power x interest stakeholder grid</span><span class="note">Northgate's five key stakeholders placed, with the comms action per quadrant - the leader-side view is a5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Executive Scorecard (#12) + KPI System Design (#15)</span><span class="note">Reframed as stakeholder artifacts - the scorecard is what "manage closely" looks like on paper</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Regular Insights Sharing (#18)</span><span class="note">Run as a product: same slot, one finding, one action, one owner - and tracked for whether anyone acts</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Self-Serve BI Enablement (#13)</span><span class="note">Stakeholder enablement that retires the fire drill - curated on the governed layer, top-right teams first</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Biz Performance Monitoring (#17)</span><span class="note">The always-on layer that let Northgate retire the status meeting - the health-scorecard view is a6</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI Use Case Discovery Workshop (#28)</span><span class="note">Stakeholder alignment before the P10 build - value x feasibility scored together, losers parked in daylight</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Ad-hoc Thematic Analysis (#16)</span><span class="note">Named as the fire-drill pattern and routed through intake - the full time defense lands in b7</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Power x interest</b><span>Manage closely (top right) · keep satisfied (top left) · keep informed (bottom right) · monitor (bottom left). The quadrant dictates the comms.</span></div>
+      <div class="cheat-item"><b>Map private, plan public</b><span>The grid is a dated working document, re-mapped quarterly. The comms plan it produces is the public artifact.</span></div>
+      <div class="cheat-item"><b>Comms row, 6 columns</b><span>Stakeholder · quadrant · what they get · when · never hears late · owner. One line per row or it will not survive a busy month.</span></div>
+      <div class="cheat-item"><b>Bad news travels first</b><span>Top-right hears slips and re-baselines before the meeting, with options attached. Ambush in steering = one defensive meeting + a suspicious quarter.</span></div>
+      <div class="cheat-item"><b>Steering vs demo vs status</b><span>Steering DECIDES, demos SHOW the real thing, status is retired - live monitoring (#17) already does its job.</span></div>
+      <div class="cheat-item"><b>Insights share = product (#18)</b><span>Same slot monthly, one finding, one action, one owner - and track whether anyone acts. Unacted for 3 months = change finding or audience.</span></div>
+      <div class="cheat-item"><b>Self-serve kills fire drills (#13)</b><span>Curated self-serve on governed metrics, top-right teams enabled first, leftover ad-hoc (#16) routed through intake - never DMs.</span></div>
+      <div class="cheat-item"><b>Discovery before builds (#28)</b><span>Inventory pains, score value x feasibility together, rank in the room, decline the pet use case with the scores on the wall.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 6 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-timeline-management.html">← Prev: Timeline management + the simulator</a> &nbsp;·&nbsp; <a href="b7-time-management.html">Next: Time management →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

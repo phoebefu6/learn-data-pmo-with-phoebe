@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 9 · Budget and cost management - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 9 of 10</div>
+    <h1>Where the money went: <span class="accent">earned value</span> by hand</h1>
+    <p class="sub">Month 3 of the lakehouse. Half the calendar is gone, $250k of the $480k is spent, and the status report says "on track." Tonight you learn the three letters that end that sentence: PV, EV, AC. You will work the lakehouse numbers by hand to SPI, CPI, and a forecast at completion - then turn the same discipline on Northgate's cloud bill and the agentic pilot's token meter. You leave able to say, in month 3, what the project will really cost in month 6 - and to run the variance review where that sentence gets said out loud.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · EVM by hand + cost control</span>
+      <span class="a3" style="flex:5">20-42 · Build-along: month-6 variance review</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Two pots of money, one honest question</h2>
+    </div>
+    <p class="lede">Northgate's data office runs on two pots: the <strong>$2,700k change budget</strong> across the 10 portfolio projects, and the <strong>$1,100k run budget</strong> for platform, licences, and managed services. Mix them and overruns hide; keep them apart and every dollar has a question attached. Tonight is the change-pot session: Part 1 works earned value on the lakehouse by hand, Part 2 chases the run-side leaks (cloud and GenAI tokens), Part 3 builds the monthly variance review and the buffer drawdown log. The simulator's budget-buffer lever (b5) took portfolio variance from +12% to +1% - tonight you learn the manual craft behind that lever.</p>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A worked EVM example you can redo on your own project in ten minutes, a four-lever cost-control checklist for cloud and GenAI spend, and a variance review agenda + buffer drawdown log that make "are we over budget?" a two-minute question instead of a month-six surprise.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: EVM WORKING SESSION ============ -->
+  <section class="section" id="evm-working-session">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers PV / EV / AC worked by hand on the lakehouse</span>
+      <h2>Three letters that end status theater <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Earned value asks three questions any sponsor understands. <strong>PV (planned value)</strong>: what work SHOULD be done by now, in dollars? <strong>EV (earned value)</strong>: what work IS done, valued at plan price? <strong>AC (actual cost)</strong>: what did we actually spend? "Percent complete" is an opinion. EV is the same opinion forced to carry a dollar sign - and dollars can be divided, compared, and forecast.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PV, EV and AC curves for the lakehouse at month 3, with the EAC forecast line rising to 558 thousand dollars.">
+        <style>
+          .evAH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .evAX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .evAL { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .evAB { font: 700 13px Inter, sans-serif; fill: #22364A; }
+          .evAN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .evAG { stroke: #E3E8ED; stroke-width: 1; }
+        </style>
+        <text class="evAH" x="90" y="36">Lakehouse EVM at month 3 · BAC $480k over 6 months · plan spends and earns $80k of value per month</text>
+        <rect x="560" y="50" width="12" height="12" rx="2" fill="#A3B8C9"/><text class="evAX" x="578" y="60">PV plan</text>
+        <rect x="650" y="50" width="12" height="12" rx="2" fill="#3E5C76"/><text class="evAX" x="668" y="60">EV earned</text>
+        <rect x="750" y="50" width="12" height="12" rx="2" fill="#E2590A"/><text class="evAX" x="768" y="60">AC spent</text>
+        <line class="evAG" x1="90" y1="400" x2="810" y2="400"/>
+        <line class="evAG" x1="90" y1="287" x2="810" y2="287"/>
+        <line class="evAG" x1="90" y1="173" x2="810" y2="173"/>
+        <line class="evAG" x1="90" y1="60" x2="810" y2="60"/>
+        <text class="evAX" x="80" y="404" text-anchor="end">$0</text>
+        <text class="evAX" x="80" y="291" text-anchor="end">$200k</text>
+        <text class="evAX" x="80" y="177" text-anchor="end">$400k</text>
+        <text class="evAX" x="80" y="64" text-anchor="end">$600k</text>
+        <text class="evAX" x="210" y="420">m1</text>
+        <text class="evAX" x="330" y="420">m2</text>
+        <text class="evAX" x="450" y="420">m3</text>
+        <text class="evAX" x="570" y="420">m4</text>
+        <text class="evAX" x="690" y="420">m5</text>
+        <text class="evAX" x="806" y="420">m6</text>
+        <line x1="450" y1="72" x2="450" y2="400" stroke="#626D79" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text class="evAL" x="458" y="84">today · month 3</text>
+        <path d="M90,400 L810,128" stroke="#A3B8C9" stroke-width="3" fill="none"/>
+        <text class="evAX" x="736" y="148">BAC $480k</text>
+        <path d="M90,400 L450,278" stroke="#3E5C76" stroke-width="3" fill="none"/>
+        <path d="M90,400 L450,258" stroke="#E2590A" stroke-width="3" fill="none"/>
+        <path d="M450,258 L810,84" stroke="#E2590A" stroke-width="2.5" stroke-dasharray="6 5" fill="none"/>
+        <text class="evAL" x="655" y="76">EAC $558k at CPI 0.86</text>
+        <circle cx="450" cy="264" r="5" fill="#A3B8C9"/>
+        <circle cx="450" cy="278" r="5" fill="#3E5C76"/>
+        <circle cx="450" cy="258" r="5" fill="#E2590A"/>
+        <text class="evAL" x="440" y="246" text-anchor="end">AC $250k</text>
+        <text class="evAL" x="462" y="270">PV $240k</text>
+        <text class="evAL" x="440" y="296" text-anchor="end">EV $215k</text>
+        <text class="evAB" x="90" y="448">SV = 215 - 240 = -$25k · CV = 215 - 250 = -$35k · SPI = 215 / 240 = 0.90 · CPI = 215 / 250 = 0.86</text>
+        <rect x="90" y="468" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="evAN" x="114" y="480">CPI 0.86 = each dollar buys 86 cents of work. EAC $558k, VAC -$78k. Say it in month 3, not month 6.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the lakehouse PV / EV / AC picture at month 3, with the EAC forecast</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The month-3 arithmetic, by hand<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The lakehouse: <strong>BAC $480k, 6 months</strong>, planned as $80k of value per month. At the end of month 3:</p>
+        <ul>
+          <li><strong>PV = $240k</strong> - three months of plan, 3 x $80k.</li>
+          <li><strong>EV = $215k</strong> - the milestones actually finished, valued at their PLAN price (schema done, ingestion done, half the warehouse models - not a gut-feel percent).</li>
+          <li><strong>AC = $250k</strong> - what the ledger says left the building.</li>
+        </ul>
+        <p>Now the whole method is six divisions and subtractions:</p>
+        <ul>
+          <li><strong>SV = EV - PV</strong> = 215 - 240 = <strong>-$25k</strong> · behind schedule by $25k of work.</li>
+          <li><strong>CV = EV - AC</strong> = 215 - 250 = <strong>-$35k</strong> · over cost by $35k.</li>
+          <li><strong>SPI = EV / PV</strong> = 215 / 240 = <strong>0.90</strong> · delivering 90 cents of planned work per planned dollar of schedule.</li>
+          <li><strong>CPI = EV / AC</strong> = 215 / 250 = <strong>0.86</strong> · every real dollar buys 86 cents of work.</li>
+          <li><strong>EAC = BAC / CPI</strong> = 480 / 0.86 = <strong>$558k</strong> · if spending efficiency stays as-is, this is the real price.</li>
+          <li><strong>VAC = BAC - EAC</strong> = 480 - 558 = <strong>-$78k</strong> · the overrun, named, three months early.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>"We're 50% done" met the ledger.</strong> Northgate's lakehouse PM genuinely believed month 3 meant halfway - the calendar said so. EVM disagreed: EV said 45% of the value existed, AC said 52% of the money was gone. Nobody was lying; the ingestion rework just never made it into anyone's mental percent. The number did the confronting so the people did not have to - and the fix (descope two nice-to-have marts, protect the critical path) happened in month 3, when it cost a conversation instead of a quarter.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Traffic-light reporting: EVM for people who will not read EVM<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Execs do not want six formulas - they want lights. The course convention (same one the a3 leader session teaches from the steering chair):</p>
+        <table class="clean">
+          <tr><th>Light</th><th>SPI / CPI band</th><th>What the PMO says</th></tr>
+          <tr><td>🟢 Green</td><td>0.95 or above</td><td>"On plan - nothing to discuss."</td></tr>
+          <tr><td>🟡 Amber</td><td>0.85 to 0.95</td><td>"Drifting - here is the cause and the correction underway."</td></tr>
+          <tr><td>🔴 Red</td><td>below 0.85</td><td>"Off plan - decision needed: descope, re-baseline, or add money."</td></tr>
+        </table>
+        <p>The lakehouse at CPI 0.86 is <strong>amber, one bad month from red</strong> - which is exactly the sentence that goes on the steering slide. Two rules keep the lights honest: the light is COMPUTED from SPI/CPI, never hand-picked; and an amber must always carry a cause and a correction, or it is just a mood.</p>
+        <div class="callout tip">
+          <strong>Watch the trend, not the light.</strong> A project that goes 0.98 → 0.93 → 0.88 across three reviews is a red story wearing amber. Report the three-month arrow next to every light - direction is the leading indicator, the band is the lagging one.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CLOUD + GENAI COST CONTROL ============ -->
+  <section class="section" id="cost-control">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers FinOps levers, token metering, workflow automation ROI</span>
+      <h2>The run-side leaks: cloud and tokens <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">EVM watches the change pot. The <strong>$1,100k run pot</strong> leaks differently: nobody overspends it in one decision - it dribbles out through idle clusters, oversized warehouses, on-demand pricing for steady loads, and GenAI calls nobody is counting. FinOps in one sentence: <strong>tag everything, rightsize, commit to what is proven, and watch unit costs</strong> - and GenAI adds a fourth meter, tokens, that most orgs discover on an invoice.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four cost control levers in order: tag everything, rightsize, commit discounts, meter tokens.">
+        <style>
+          .clBT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .clBS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .clBH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .clBP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .clBN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .clBW { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#clBHd); }
+        </style>
+        <defs>
+          <marker id="clBHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="clBH" x="40" y="36">Four levers, in this order: visibility first, then efficiency, then price, then the GenAI meter</text>
+        <rect x="40" y="60" width="190" height="110" rx="10" fill="#22364A"/>
+        <text class="clBT" x="56" y="88">1 · Tag everything</text>
+        <text class="clBS" x="56" y="110">project, owner, env on</text>
+        <text class="clBS" x="56" y="128">every cloud resource -</text>
+        <text class="clBS" x="56" y="146">untagged = unowned</text>
+        <path class="clBW" d="M232,115 L243,115"/>
+        <rect x="245" y="60" width="190" height="110" rx="10" fill="#3E5C76"/>
+        <text class="clBT" x="261" y="88">2 · Rightsize</text>
+        <text class="clBS" x="261" y="110">kill idle clusters, size</text>
+        <text class="clBS" x="261" y="128">compute to real load,</text>
+        <text class="clBS" x="261" y="146">schedule the dev boxes</text>
+        <path class="clBW" d="M437,115 L448,115"/>
+        <rect x="450" y="60" width="190" height="110" rx="10" fill="#5C7A94"/>
+        <text class="clBT" x="466" y="88">3 · Commit discounts</text>
+        <text class="clBS" x="466" y="110">reserve what is proven</text>
+        <text class="clBS" x="466" y="128">steady - never on</text>
+        <text class="clBS" x="466" y="146">day-one guesswork</text>
+        <path class="clBW" d="M642,115 L653,115"/>
+        <rect x="655" y="60" width="190" height="110" rx="10" fill="#22364A"/>
+        <text class="clBT" x="671" y="88">4 · Meter tokens</text>
+        <text class="clBS" x="671" y="110">GenAI budgets + alerts</text>
+        <text class="clBS" x="671" y="128">per workflow, per day,</text>
+        <text class="clBS" x="671" y="146">wired before launch</text>
+        <rect x="40" y="196" width="805" height="46" rx="8" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="clBP" x="58" y="224">The simulator's agentic pilot (#30) ran 20% over on unmetered token spend - lever 4 was never switched on.</text>
+        <rect x="40" y="268" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="clBN" x="64" y="280">Watch unit costs, not totals: cost per pipeline run, per dashboard user, per 1k tokens. Totals hide growth.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four cost-control levers in working order</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The token meter: what the agentic pilot taught the hard way<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In the b5 simulator, the agentic pilot (#30) ran <strong>20% over on unmetered token spend</strong> - the only overrun in the portfolio that no EVM report would catch early, because token cost is a RUN-shaped leak inside a CHANGE-shaped project. The controls, all cheap, all pre-launch:</p>
+        <ul>
+          <li><strong>A token budget per workflow, per day</strong> - agreed at charter time, not discovered at invoice time.</li>
+          <li><strong>Metering wired in from call one</strong> - every agent call logs workflow, tokens in/out, and model, to a dashboard someone actually owns.</li>
+          <li><strong>Alerts at 80% of budget</strong> - so the conversation happens while there is still budget to converse about.</li>
+          <li><strong>An eval gate before scale-up</strong> (#31) - the eval framework decides whether more tokens buy more value, or just more retries on a task the agent cannot do.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The retry loop nobody billed for.</strong> Northgate's pilot agent hit a malformed supplier file, failed to parse it, and - being a diligent agent - retried. And retried. Every retry was a full-context call, and nothing in the architecture said stop. Metering with an alert would have paged someone at 80% of the day's budget; instead the team learned about it the way most teams do, from finance, weeks later. The fix took an afternoon. The lesson is the order: meter FIRST, then launch.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Workflow automation ROI: the honest denominator<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Workflow automation (#29) is where cost control goes on offense - but only if the math includes ALL the costs. The frame:</p>
+        <ul>
+          <li><strong>Value per year</strong> = hours the workflow saves x loaded hourly rate of the people saved (loaded = salary + overhead, not base pay).</li>
+          <li><strong>Cost</strong> = build cost (the project) + run cost per year (licences, tokens, hosting, AND the maintenance hours - automations are pets, not statues).</li>
+          <li><strong>Payback</strong> = build cost / monthly net saving. Under a year: strong. Over two: ask why this one.</li>
+        </ul>
+        <p>Two honesty rules. First, hours saved only count if they are REDEPLOYED - "capacity freed" that nobody re-tasks is a feel-good zero. Second, token spend goes in the run line at the metered rate from lever 4, not at the optimistic pilot-week number. An automation that only pays back on unmetered assumptions is a cost center with good PR.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: EAC + BUFFER DRAWDOWN ============ -->
+  <section class="section" id="forecast-and-buffer">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the variance review + the buffer drawdown log</span>
+      <h2>Forecast at completion, and who may touch the buffer <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">EAC turns EVM from a report card into a forecast: <strong>EAC = BAC / CPI</strong> says "at today's efficiency, this is the real price." The portfolio answer to a bad EAC is not padding every line item - it is a <strong>single visible buffer</strong> (a3's rule: 10% contingency plus a monthly variance review beats padded lines) and a <strong>drawdown log</strong> that records every dollar that leaves it. In the simulator, this pairing is the budget-buffer lever: portfolio variance +12% → +1%.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The monthly variance review - a 45-minute agenda that pays for itself<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One meeting a month, all 10 projects, five fixed items:</p>
+        <ul>
+          <li><strong>1 · The lights</strong> (5 min) - SPI/CPI traffic lights for all 10, with three-month arrows. Greens get zero airtime.</li>
+          <li><strong>2 · Exceptions</strong> (15 min) - every amber and red: cause, correction, owner, date. No cause-and-correction means the item is not ready for the meeting.</li>
+          <li><strong>3 · EAC movement</strong> (10 min) - which forecasts moved since last month, and why. A quietly creeping EAC is the portfolio's smoke detector.</li>
+          <li><strong>4 · Buffer requests</strong> (10 min) - formal asks against the drawdown log, decided in the room.</li>
+          <li><strong>5 · Decisions logged</strong> (5 min) - who decided what, written before anyone leaves.</li>
+        </ul>
+        <p>The buffer drawdown log itself is six columns: <strong>date · project · amount · reason · approved by · buffer remaining</strong>. Three release rules keep it honest: buffer pays for <strong>materialized risks</strong>, never scope additions (new scope = new charter, the b1 move); every release is <strong>visible at steering</strong>; and a <strong>second release to the same project</strong> triggers a re-baseline conversation, not a third release.</p>
+        <div class="callout tip">
+          <strong>When to release, in one test:</strong> "Did something we listed as a risk actually happen?" Yes → buffer exists for exactly this, release it without drama. No, someone just wants more scope → charter it as new work with new money. The log turns that test from a negotiation into a lookup.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Run the month-6 variance review <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">You are the PMO lead. It is the end of month 6 on the live portfolio, and the variance review starts now - the same 10 projects the b5 simulator scores, worked with tonight's tools.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Light the board.</strong> Compute SPI and CPI for the lakehouse from the month-6 figures handed out (same method as the month-3 worked example) and assign lights to all 10 projects from their SPI/CPI pairs. Greens go to the parking lot immediately.</p></div>
+      <div class="step"><p><strong>Work the exceptions.</strong> For each amber and red, write the one-line cause and the one-line correction. The forecasting project stays amber by design - it carries model risk no budget move fixes (b5's honesty rail); practice saying "re-baselined, monitored" instead of pretending green.</p></div>
+      <div class="step"><p><strong>Move the forecasts.</strong> Recompute EAC = BAC / CPI for the two worst CPI projects and VAC = BAC - EAC for each. Say the VAC sentence out loud, with the month attached: "at current efficiency, this lands $X over, in month N."</p></div>
+      <div class="step"><p><strong>Judge two buffer requests.</strong> One is a materialized risk (the data dump that turned out unusable in b2 - discovery risk, listed at charter). One is scope creep wearing a risk costume ("execs now also want mobile dashboards"). Release one, charter the other. Log both in the drawdown log.</p></div>
+      <div class="step"><p><strong>Check the token meter.</strong> Pull the agentic pilot's per-workflow token report against its daily budget. Set the 80% alert if it is missing. This is the once-a-month glance that replaces the invoice surprise.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Timebox the greens to zero.</strong> The whole review earns its 45 minutes by spending them ONLY where the lights are not green. If your review discusses healthy projects, it is a status meeting in a variance costume.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Run the six EVM numbers (SV, CV, SPI, CPI, EAC, VAC) on ONE real project you know - even roughly. Note which of the three inputs (PV, EV, AC) was hardest to get; that is your reporting gap.</li>
+      <li>Find one untagged or unmetered cost in your world - a shared cluster, a team API key, a licence nobody owns. Write its tag (project, owner, env) or its budget-and-alert line.</li>
+      <li>Draft your buffer drawdown log header and the three release rules with real names attached to "approved by." Bring it - b10's capstone pack has a slot for it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Month 3 on the lakehouse: EV $215k, AC $250k. What is CPI, and what does it mean?</p>
+      <button class="qopt" type="button">A · 1.16 - we get $1.16 of work per dollar, ahead on cost</button>
+      <button class="qopt" type="button">B · 0.90 - divide EV by PV, we are 90% on schedule</button>
+      <button class="qopt" type="button">C · 0.86 - CPI = EV / AC, every dollar spent buys 86 cents of planned work</button>
+      <p class="qwhy">CPI = EV / AC = 215 / 250 = 0.86. Option B computes SPI (EV / PV, the schedule index) - the classic mix-up. Below 1.0 means over cost, and 0.86 is amber trending red.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Same project: BAC $480k, CPI 0.86. What does the lakehouse really cost if nothing changes?</p>
+      <button class="qopt" type="button">A · EAC = BAC / CPI = 480 / 0.86 ≈ $558k - about $78k over, knowable in month 3</button>
+      <button class="qopt" type="button">B · EAC = BAC x CPI = 480 x 0.86 ≈ $413k - efficiency discounts the budget</button>
+      <button class="qopt" type="button">C · Still $480k - the budget is the budget until it is actually spent</button>
+      <p class="qwhy">EAC = BAC / CPI (the typical case): dividing by an efficiency below 1.0 makes the forecast GROW. VAC = BAC - EAC = -$78k names the overrun three months before the ledger does.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · The agentic pilot ran 20% over on token spend in the simulator. What is the control that would have caught it?</p>
+      <button class="qopt" type="button">A · A bigger contingency buffer, so the overrun is absorbed quietly</button>
+      <button class="qopt" type="button">B · Per-workflow token budgets with metering wired in before launch and alerts at 80%</button>
+      <button class="qopt" type="button">C · Ban GenAI workloads until cloud costs are fully under control</button>
+      <p class="qwhy">Buffer absorbs materialized risks - it does not detect leaks, and unmetered spend just drains it silently. Metering + budget + alert is lever 4: cheap, pre-launch, and it turns the invoice surprise into a Tuesday ping.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Earned value management (PMI standard formulas)</span><span class="note">SV, CV, SPI, CPI, EAC, VAC worked by hand on the lakehouse month-3 numbers</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">FinOps basics</span><span class="note">Tag everything, rightsize, commit discounts, unit costs - plus the GenAI token meter</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Workflow Automation (service #29)</span><span class="note">The honest ROI frame: loaded rates, redeployed hours, metered token costs in the run line</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Agentic AI + Eval Framework (services #30, #31)</span><span class="note">The 20% token overrun from the sim, and the eval gate that decides whether tokens buy value</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Product (service #24)</span><span class="note">Costed here with the unit-cost lens - its RACI and ownership story lives in b4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The three letters</b><span>PV = work planned by now, in $. EV = work done, at plan price. AC = money actually spent. EV is the opinion with a dollar sign.</span></div>
+      <div class="cheat-item"><b>The formulas</b><span>SV = EV - PV · CV = EV - AC · SPI = EV / PV · CPI = EV / AC. Below 1.0 = behind / over.</span></div>
+      <div class="cheat-item"><b>The forecast</b><span>EAC = BAC / CPI · VAC = BAC - EAC. Lakehouse: 480 / 0.86 ≈ $558k, VAC -$78k - known in month 3.</span></div>
+      <div class="cheat-item"><b>Traffic lights</b><span>Green ≥ 0.95 · amber 0.85-0.95 · red &lt; 0.85 - computed, never hand-picked, always with the 3-month arrow.</span></div>
+      <div class="cheat-item"><b>Two pots</b><span>Change $2,700k (the 10 projects) vs run $1,100k (platform, licences, services). Mixing them hides overruns.</span></div>
+      <div class="cheat-item"><b>FinOps four levers</b><span>Tag everything → rightsize → commit discounts → meter tokens. Visibility first. Watch unit costs, not totals.</span></div>
+      <div class="cheat-item"><b>Token rule</b><span>Per-workflow daily budget + metering from call one + alert at 80% + eval gate (#31) before scale-up. Meter FIRST, then launch.</span></div>
+      <div class="cheat-item"><b>Buffer drawdown log</b><span>Date · project · amount · reason · approved by · remaining. Pays for materialized risks only; 2nd release = re-baseline talk.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 9 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-conflict-management.html">← Prev: Conflict management</a> &nbsp;·&nbsp; <a href="b10-headcount-and-capacity.html">Next: Headcount, capacity + the pack →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

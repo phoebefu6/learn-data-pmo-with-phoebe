@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · Portfolio health - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Leader track · Session 6 of 6</div>
+    <h1>Read the board <span class="accent">like a leader</span></h1>
+    <p class="sub">Final leader session, and the whole year lands on one screen. First the health scorecard - four dials, and the crucial split between numbers that predict and numbers that merely report. Then stage gates: the kill, pivot, re-baseline decisions where sunk cost whispers loudest, with Northgate's sales forecasting re-baseline as the worked example. Then the simulator itself, live on this page: ten projects, $2,700k, twelve months. With nothing switched on, 1 project in 10 lands on time at +38% over budget; with all five PMO levers on, 9 of 10 at +1%. Your job in the exec chair is not to pull the levers - it is to read the board, name the missing lever, and ask for the right fix. Including the one fix that always backfires.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Data executives · heads of data · sponsors</span>
+      <span class="chip time">▶ The simulator, exec view</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-15 · Scorecard + stage gates</span>
+      <span class="a3" style="flex:5">15-42 · Build-along: the simulator, exec view</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">Five sessions built the machinery: operating model (a1), dependency-sequenced roadmap (a2), two-pot budget (a3), honest capacity (a4), and the steering rhythm (a5). Tonight the machinery gets its dashboard - and you get the leader's core skill: looking at a struggling portfolio and asking for the RIGHT thing, which is almost never "more people, faster." Practitioners meet the same simulator with full mechanics in b5; tonight is the view from your chair.</p>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A four-dial health scorecard with the leading vs lagging split marked, a stage-gate discipline where sunk cost is never a reason, the forecasting re-baseline as your template for hearing bad news well, and one unforgettable click: watching "add headcount to late projects" push the overrun from +38% to +61% while rescuing exactly nothing.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE HEALTH SCORECARD ============ -->
+  <section class="section" id="health-scorecard">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the four dials + leading vs lagging indicators</span>
+      <h2>Four dials, two kinds of truth <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Portfolio health fits on one page or it is not being managed: <strong>on-time %</strong> (schedule truth), <strong>budget variance</strong> (money truth), <strong>benefit realization</strong> (the only truth the board funds you for), and <strong>risk burn-down</strong> (trouble's direction of travel). But the sharper split is temporal: <strong>lagging</strong> dials report what already happened; <strong>leading</strong> dials - velocity trend, validation pass rates, pipeline run times - predict what will. A board with only lagging dials is a rear-view mirror at highway speed.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portfolio health scorecard anatomy: four dials on top, leading versus lagging indicator rows beneath.">
+        <style>
+          .hsT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .hsV { font: 700 20px Inter, sans-serif; fill: #FFFFFF; }
+          .hsS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .hsH { font: 700 12.5px Inter, sans-serif; fill: #1C242E; }
+          .hsC { font: 600 11.5px Inter, sans-serif; fill: #1C242E; }
+          .hsX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .hsN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="hsH" x="60" y="36">The health scorecard - Northgate at month 6, three levers on</text>
+        <rect x="60" y="56" width="180" height="116" rx="10" fill="#22364A"/>
+        <text class="hsT" x="76" y="82">ON TIME</text>
+        <text class="hsV" x="76" y="116">6 / 10</text>
+        <text class="hsS" x="76" y="140">lagging · vs charter dates</text>
+        <rect x="254" y="56" width="180" height="116" rx="10" fill="#3E5C76"/>
+        <text class="hsT" x="270" y="82">BUDGET VARIANCE</text>
+        <text class="hsV" x="270" y="116">+17%</text>
+        <text class="hsS" x="270" y="140">lagging · spend vs plan</text>
+        <rect x="448" y="56" width="180" height="116" rx="10" fill="#5C7A94"/>
+        <text class="hsT" x="464" y="82">BENEFITS</text>
+        <text class="hsV" x="464" y="116">tracking</text>
+        <text class="hsS" x="464" y="140">lagging · realized value</text>
+        <rect x="642" y="56" width="178" height="116" rx="10" fill="#22364A"/>
+        <text class="hsT" x="658" y="82">RISK BURN-DOWN</text>
+        <text class="hsV" x="658" y="116">falling</text>
+        <text class="hsS" x="658" y="140">leading · open risks trend</text>
+        <text class="hsH" x="60" y="216">LEADING · predicts, buys options</text>
+        <rect x="60" y="230" width="190" height="30" rx="15" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <text class="hsC" x="76" y="250">Sprint velocity trend</text>
+        <rect x="262" y="230" width="200" height="30" rx="15" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <text class="hsC" x="278" y="250">Validation pass rates</text>
+        <rect x="474" y="230" width="190" height="30" rx="15" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <text class="hsC" x="490" y="250">Pipeline run times</text>
+        <rect x="676" y="230" width="144" height="30" rx="15" fill="#EDF2F6" stroke="#3E5C76" stroke-width="1.5"/>
+        <text class="hsC" x="692" y="250">Risk trend</text>
+        <text class="hsH" x="60" y="306">LAGGING · reports, settles arguments</text>
+        <rect x="60" y="320" width="150" height="30" rx="15" fill="#EDF2F6" stroke="#A3B8C9" stroke-width="1.5"/>
+        <text class="hsC" x="76" y="340">On-time %</text>
+        <rect x="222" y="320" width="180" height="30" rx="15" fill="#EDF2F6" stroke="#A3B8C9" stroke-width="1.5"/>
+        <text class="hsC" x="238" y="340">Budget variance</text>
+        <rect x="414" y="320" width="200" height="30" rx="15" fill="#EDF2F6" stroke="#A3B8C9" stroke-width="1.5"/>
+        <text class="hsC" x="430" y="340">Benefit realization</text>
+        <text class="hsX" x="60" y="392">Leading dials come from the portfolio's own telemetry (biz performance monitoring, #17) - not from asking people.</text>
+        <rect x="60" y="424" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="hsN" x="84" y="436">Lagging dials report the past - leading dials buy options. An all-lagging board is a rear-view mirror.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - scorecard anatomy with the leading vs lagging split</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>How a leader reads the four dials<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each dial has a leader question attached - the question is the skill:</p>
+        <ul>
+          <li><strong>On-time %</strong> - not "who is late" but "what do the late ones share?" Three projects late for three reasons is noise; three late on the same shared engineer is a capacity finding (a4).</li>
+          <li><strong>Budget variance</strong> - direction beats level. +17% and improving after a lever came on is a different animal from +17% and drifting. Ask for the trend line, never the snapshot.</li>
+          <li><strong>Benefit realization</strong> - the dial everyone forgets after funding. If the scorecard shipped but store managers still file tickets for P&amp;L numbers, the benefit is zero regardless of the green delivery status.</li>
+          <li><strong>Risk burn-down</strong> - the cheapest leading indicator: are risks being closed faster than found? A rising count with green projects everywhere means the projects are lying, politely.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Green board, red telemetry.</strong> Month 5 at Northgate: every workstream reports green, but the leading row disagrees - validation pass rates slipping three weeks running, the nightly pipeline creeping from 40 minutes toward 3 hours. The head of data asks one question at steering: "what do the leading dials predict the lagging dials will say in month 7?" The answer surfaces the reporting project's slip two months before it would have landed as a surprise. Leading dials exist to make exactly that question askable.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the dials come from - no new bureaucracy<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The health scorecard should cost almost nothing to refresh, because every dial is a byproduct of machinery you already funded:</p>
+        <ul>
+          <li><strong>On-time %</strong> falls out of the b2 timeline against charter dates - no separate tracking sheet.</li>
+          <li><strong>Variance</strong> falls out of the a3/b9 monthly review that the buffer discipline already requires.</li>
+          <li><strong>Benefits</strong> ride the biz performance monitoring service (#17) - the same KPI plumbing the business uses, pointed at your own portfolio's promises.</li>
+          <li><strong>The leading row</strong> is engineering telemetry (APM, validation) plus sprint data - collected by machines, immune to optimism.</li>
+        </ul>
+        <p>The rule of thumb: if refreshing the health board takes anyone more than an hour a month, you built a reporting project, not a scorecard - and someone will quietly stop refreshing it by Q3.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Scorecard smells a leader can catch in one glance<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Smell</th><th>What it usually means</th><th>The question to ask</th></tr>
+          <tr><td>Everything green, all year</td><td>The scorecard measures effort, not commitments - or bad news is being managed out of it</td><td>"Show me the last three items that turned red and what we did"</td></tr>
+          <tr><td>No leading row at all</td><td>Health is being reported by asking people, so it lags reality by a month or more</td><td>"Which machine-collected number would have warned us last time?"</td></tr>
+          <tr><td>Benefits column blank after Q1</td><td>Delivery is being celebrated as value - nobody owns realization after go-live</td><td>"Who signs that the promised number actually moved?"</td></tr>
+          <tr><td>Definitions argued in the meeting</td><td>The KPI system (#15) underneath is weak - the same word means three things</td><td>"One owner per metric - who owns this one?"</td></tr>
+        </table>
+        <p>None of these need a data background to catch - which is exactly why they are the leader's job. The scorecard is your instrument panel; smells are how it tells you it needs calibration.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: STAGE GATES ============ -->
+  <section class="section" id="stage-gates">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers kill / pivot / re-baseline + the sales forecasting worked example</span>
+      <h2>Gates: sunk cost is not a reason <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A stage gate is a scheduled moment where continuing must be justified by the future, not the past. The only legal question is <strong>"what does the NEXT dollar buy?"</strong> - never "how much have we spent?" The money already spent is gone whichever way you decide; it votes in every gate meeting anyway, through the most senior voice in the room. The gate's job is to outvote it with evidence, and the outcome is always one of three: kill, pivot, or re-baseline.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stage gate flow: evidence enters a gate review, which exits to kill, pivot, or re-baseline; the sales forecasting example is a re-baseline.">
+        <style>
+          .kgT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .kgS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .kgH { font: 700 12.5px Inter, sans-serif; fill: #1C242E; }
+          .kgX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .kgN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .kgWire { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#kgHd); }
+        </style>
+        <defs>
+          <marker id="kgHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="kgH" x="60" y="36">The gate asks one question: what does the next dollar buy?</text>
+        <rect x="60" y="130" width="220" height="90" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="2"/>
+        <text class="kgH" x="80" y="160">GATE REVIEW</text>
+        <text class="kgX" x="80" y="180">evidence in: scorecard, DQ,</text>
+        <text class="kgX" x="80" y="196">model plateau, benefit case</text>
+        <path class="kgWire" d="M285,155 C350,140 380,105 428,95"/>
+        <path class="kgWire" d="M285,175 L428,175"/>
+        <path class="kgWire" d="M285,195 C350,210 380,245 428,255"/>
+        <rect x="436" y="60" width="384" height="70" rx="10" fill="#22364A"/>
+        <text class="kgT" x="456" y="88">KILL</text>
+        <text class="kgS" x="456" y="108">value gone - stop, salvage the pipeline, thank the team</text>
+        <rect x="436" y="140" width="384" height="70" rx="10" fill="#3E5C76"/>
+        <text class="kgT" x="456" y="168">PIVOT</text>
+        <text class="kgS" x="456" y="188">value moved - new charter, new scope, new intake score</text>
+        <rect x="436" y="220" width="384" height="70" rx="10" fill="#5C7A94"/>
+        <text class="kgT" x="456" y="248">RE-BASELINE</text>
+        <text class="kgS" x="456" y="268">value real, plan wrong - new dates, same goal, said early</text>
+        <text class="kgX" x="60" y="336">Worked example: forecasting hits the bar for 2 SKU families, not fresh → re-baseline: v1 ships, v2 chartered.</text>
+        <rect x="60" y="368" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="kgN" x="84" y="380">Sunk cost is not a reason. The spent money is gone either way - gates price only the next dollar.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the gate's three exits, with forecasting as the re-baseline example</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The forecasting re-baseline, from the exec chair<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Northgate's sales forecasting project is the course's honest heartbreak: the model reliably hits the accuracy bar for beverages and snacks, and will not hit it for fresh this year - the data cannot support it, and the biz performance monitoring service (#17) has the evidence on the table. The gate meeting is where leadership either earns its keep or destroys it:</p>
+        <ul>
+          <li><strong>What the room wants to say:</strong> "we have spent too much to ship half a forecast." That is the sunk cost fallacy wearing a suit.</li>
+          <li><strong>What the gate says:</strong> the next dollar buys either a March v1 on two SKU families (real value, real date), a paid extension with modest confidence, or a stop. Priced options, sponsor's choice.</li>
+          <li><strong>The decision:</strong> re-baseline - v1 ships two families in March, v2 for fresh goes back through intake as chartered future work. Steering heard it early, so it lands as a decision, not a scandal.</li>
+        </ul>
+        <p><strong>How you receive the news is a lever.</strong> If the room punishes the messenger, the next re-baseline arrives six months later and twice as expensive. The leader's line that keeps the system honest: "thank you for telling us in March."</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The kill that paid for itself.</strong> The same gate discipline, different exit: a data product concept clears two gates, then the benefit case collapses when the target customer signs with a competitor's tool. The gate kills it, the pipeline work rolls into the lakehouse, and the freed engineers unblock the reporting project. Nobody calls it a failure at the quarterly board - it is presented, accurately, as $190k of remaining budget redeployed to projects with live benefit cases. Portfolios that never kill anything are not disciplined; they are just slow.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Kill vs pivot vs re-baseline - the tell for each<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Exit</th><th>The tell</th><th>What survives</th></tr>
+          <tr><td>Kill</td><td>The benefit case itself died - the business changed, not the plan</td><td>Reusable assets (pipelines, cleaned data), the team's credibility, the budget remainder</td></tr>
+          <tr><td>Pivot</td><td>The value exists but somewhere else than chartered - wrong problem, right capability</td><td>The capability; the charter does not - pivots re-enter intake and get scored like new work</td></tr>
+          <tr><td>Re-baseline</td><td>The value and problem are right, the plan's assumptions were not (data quality, model risk, estimates)</td><td>The goal and the team - only dates, scope slices, or money change, once, in daylight</td></tr>
+        </table>
+        <p>The abuse to watch for: serial re-baselining as a euphemism for drift. The b5 rule holds at the exec level - re-baseline once per finding, not monthly, and every re-baseline names what the monitoring caught and when.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE SIMULATOR, EXEC VIEW ============ -->
+  <section class="section" id="simulator-exec">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the portfolio simulator - read the board, name the missing lever, ask for the right fix</span>
+      <h2>Northgate's year, on your desk <span class="tag demo">★ 20 min · everyone drives</span></h2>
+    </div>
+    <p class="lede">This is the same live board practitioners drive in b5 - ten projects, $2,700k, twelve months, grey bar plan versus colored bar actual. Your exercise is different from theirs. They learn to OPERATE the levers: RACI, sprint cadence, stakeholder steering, capacity plan, budget buffer. You learn to look at a failing board and diagnose <strong>which lever is missing from the failure stories</strong> - because in the real year, what you control is not the toggle, it is the question you ask and the fix you fund.</p>
+
+    <div id="pmo-live"></div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The exec read: endpoints, ladder, and the one amber<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three facts anchor the board, and they are the simulator's exact canon:</p>
+        <ul>
+          <li><strong>With no levers on: 1 of 10 on time, +38% over budget.</strong> That is what "we hired great people and trusted the process" buys a first-year data office.</li>
+          <li><strong>With all five levers on: 9 of 10 on time, +1% variance.</strong> The ladder in between (1 → 2 → 4 → 6 → 9 as RACI, sprints, steering, capacity, buffer come on; variance +38% → +28% → +22% → +17% → +12% → +1%) prices each discipline in months and money.</li>
+          <li><strong>9 of 10 is the ceiling, on purpose.</strong> Sales forecasting carries irreducible model risk no lever removes. With sprints + steering on, it becomes an amber "re-baselined" - the Part 2 decision, visible on the board - never a green. A portfolio promising 10 for 10 is promising you a surprise.</li>
+        </ul>
+        <p>The leader's translation table: RACI, sprints, and steering move <strong>dates</strong>. Capacity is the single biggest schedule jump (6 → 9). The buffer moves <strong>money</strong> - it never rescues a date, it rescues the year-end number. So when a board is bleeding, your first question is which currency it is bleeding in.</p>
+        <div class="callout tip">
+          <strong>Honesty rails.</strong> This is a teaching simulation: the failure patterns are scripted from real portfolio pathologies, while the arithmetic on top is computed live in your browser. It is not a benchmark and its numbers are its own labeled canon - the lesson is the shape of the responses, which is very real. And the goal was never 10 of 10; it is that every slip is seen early enough to be a decision.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The red button, from the sponsor's chair<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"Crash it: add headcount to late projects" is the most natural sentence a sponsor ever says - it feels generous, decisive, and leaderly. Press it at zero levers and read the canon result: <strong>on-time delivery does not improve at all, every late project gets about a month later, and the overrun jumps from +38% to +61%.</strong> More money, more people, less portfolio.</p>
+        <p>The mechanism is Brooks's law (The Mythical Man-Month, 1975): "adding manpower to a late software project makes it later." New people must be ramped up by exactly the people who have no time, and communication paths grow as <strong>n(n-1)/2</strong> - a team of 4 manages 6 paths, a team of 8 manages 28. The sponsor's alternative purchases that DO work: scope relief on the late project, a contractor on the upstream blocker (isolated work, cheap ramp-up), or funding the next project's start on time.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The question that replaces the button.</strong> A sponsor who has internalized this board stops saying "what do you need - more people?" and starts saying "which lever is this project missing, and what does that lever cost?" At Northgate's month-6 steering, that one substitution turns a $200k emergency-hiring conversation into a $0 capacity re-allocation (the a4 matrix had a double-booked engineer all along). The best portfolio intervention of the year was a question.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Board-reading drills for the next real steering meeting<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three habits to carry from the simulated board to your real one:</p>
+        <ul>
+          <li><strong>Read the notes before the colors.</strong> Every red row on this board carries a failure story keyed to its missing lever. Real portfolios are the same: the RAG color tells you almost nothing; the one-line cause tells you which discipline to fund.</li>
+          <li><strong>Cluster before reacting.</strong> One late project is a project problem. Three late projects sharing a cause - unowned sources, double-booked specialists, unmetered spend - is a portfolio problem, and lever-shaped.</li>
+          <li><strong>Ask for the lever, not the miracle.</strong> "Get it back on track" is not an ask. "Stand up the capacity plan and show me the allocation matrix next steering" is. Executives get what they specify.</li>
+        </ul>
+        <p>Full mechanics, the rung-by-rung ladder walk, and the re-baseline scripting live in b5 - worth reading even from the leader track, if only to know what your practitioners are being taught to say to you.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Pull the levers, then press the button <span class="tag demo">★ 18 min · everyone drives</span></h2>
+    </div>
+    <p class="lede">Pairs: one drives, one plays the sponsor who only sees the board monthly. Swap halfway. The exit skill is diagnosis at a glance - failure story in, missing lever out.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Baseline read.</strong> All levers off: 1 of 10, +38%. The sponsor reads three red rows aloud; the driver names the missing lever for each BEFORE toggling anything. Disagreements are the good part.</p></div>
+      <div class="step"><p><strong>Climb the ladder</strong> in the recommended order - RACI, sprints, steering, capacity, buffer - and watch 1 → 2 → 4 → 6 → 9 while variance falls +38% → +1%. At each rung the sponsor asks: which projects moved, and would I have funded this lever last month?</p></div>
+      <div class="step"><p><strong>Press CRASH at zero levers.</strong> On-time stays 1 of 10, every late project slips another month, variance jumps to +61%. The sponsor says the n(n-1)/2 reason out loud - in their own words, because they are the one who will be tempted in real life.</p></div>
+      <div class="step"><p><strong>Find the amber.</strong> All levers on: 9 of 10, and sales forecasting reads amber "re-baselined." Connect it to Part 2 - rehearse the leader's receiving line: "thank you for telling us in March."</p></div>
+      <div class="step"><p><strong>Translate to your portfolio.</strong> Each person names their real portfolio's weakest lever, the project it is currently costing, and the specific ask they will make at their next steering. Write the ask down - that sentence is the course's takeaway.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before you go lead</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Draft your portfolio's one-page health scorecard: the four dials plus a leading row, and mark each indicator leading or lagging. If everything is lagging, that is the finding.</li>
+      <li>Pick one in-flight project and run the gate question honestly: what does the next dollar buy - kill, pivot, or re-baseline? Write three priced options as if for steering.</li>
+      <li>Write the lever ask: your portfolio's weakest lever, the project it is costing, and the one-sentence request you will make at the next steering meeting. Then make it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Every project reports green, but validation pass rates have slipped three weeks running and pipeline run times are climbing. What is the leader's read?</p>
+      <button class="qopt" type="button">A · Green is green - engineering telemetry is not a portfolio concern</button>
+      <button class="qopt" type="button">B · The leading dials are predicting what the lagging dials will report in two months - ask the forecast question at steering now</button>
+      <button class="qopt" type="button">C · Ask each project to re-confirm its green status in writing</button>
+      <p class="qwhy">Leading indicators (velocity, validation, run times) predict; lagging indicators (on-time %, variance) report. When they disagree, the leading row wins - that is the entire reason the scorecard carries it. Re-confirming green in writing just collects politer optimism.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · At a gate, the forecasting model hits the accuracy bar for two SKU families but cannot support fresh this year. A director argues "we've spent too much to ship half a forecast." What does the gate discipline say?</p>
+      <button class="qopt" type="button">A · The director is right - continue at full scope so the investment is not wasted</button>
+      <button class="qopt" type="button">B · Kill it - a model that misses any scope has failed its charter</button>
+      <button class="qopt" type="button">C · Re-baseline - the spent money is gone either way; the next dollar buys a real March v1 on two families, with v2 chartered through intake</button>
+      <p class="qwhy">Sunk cost is not a reason - the gate prices only the future. The value is real and the problem is right; the plan's assumption (fresh data quality) was wrong. That is the re-baseline exit by definition: same goal, new slice, said early enough to be a decision instead of a scandal.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Month 6, three projects late, and a sponsor proposes adding headcount to all three. What does the board show if they get their way?</p>
+      <button class="qopt" type="button">A · On-time does not improve, each late project slips about another month, and the overrun jumps toward +61% - Brooks's law, priced</button>
+      <button class="qopt" type="button">B · Delivery recovers within a month - more hands, more done</button>
+      <button class="qopt" type="button">C · Schedule holds but costs rise slightly - a fair trade under pressure</button>
+      <p class="qwhy">The crash button is the canon's cautionary tale: at zero levers, +38% becomes +61% with zero schedule gain. Ramp-up steals the busiest people's time and communication paths grow as n(n-1)/2. The purchases that work: scope relief, upstream contractors, or the next project's on-time start.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Biz Performance Monitoring (service #17)</span><span class="note">The evidence engine behind the health scorecard's dials and the forecasting gate decision</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brooks's law (The Mythical Man-Month, 1975)</span><span class="note">The crash anti-lever read from the sponsor's chair: ramp-up + n(n-1)/2, priced live on the board</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The portfolio simulator (exec view)</span><span class="note">Canon endpoints 1/10 +38% to 9/10 +1%; the full lever mechanics are b5's session</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Sales Forecasting (service #22)</span><span class="note">The worked re-baseline - irreducible model risk landing as an amber decision, not a surprise</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">EVM traffic-light thinking (PMI)</span><span class="note">Variance direction over level on the money dial - the working session is a3 and b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four dials</b><span>On-time % · budget variance · benefit realization · risk burn-down. One page, refreshed from machinery you already funded.</span></div>
+      <div class="cheat-item"><b>Leading vs lagging</b><span>Velocity, validation, run times predict; on-time and variance report. When they disagree, the leading row wins.</span></div>
+      <div class="cheat-item"><b>The gate question</b><span>"What does the next dollar buy?" - never "what have we spent?" Sunk cost votes in every room; the gate exists to outvote it.</span></div>
+      <div class="cheat-item"><b>Kill / pivot / re-baseline</b><span>Benefit died = kill. Value moved = pivot (back through intake). Plan wrong, value real = re-baseline - once, in daylight.</span></div>
+      <div class="cheat-item"><b>The canon endpoints</b><span>No levers: 1/10 on time, +38%. All five on: 9/10, +1%. The ladder prices each discipline: 1 → 2 → 4 → 6 → 9.</span></div>
+      <div class="cheat-item"><b>The red button</b><span>Crashing late projects: zero schedule gain, +1 month each, +38% → +61%. Buy scope relief, upstream help, or the next start.</span></div>
+      <div class="cheat-item"><b>The honest amber</b><span>Forecasting never goes green - model risk is irreducible. Levers change WHEN you learn it: amber "re-baselined," not a month-12 shock.</span></div>
+      <div class="cheat-item"><b>The leader's lines</b><span>"Which lever is missing, and what does it cost?" · "Thank you for telling us in March." Ask for levers, reward early truth.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a5-stakeholders-and-steering.html">← Prev: Stakeholders and steering</a> &nbsp;·&nbsp; <a href="b1-portfolio-intake.html">Continue: the Practitioner track →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/pmo-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

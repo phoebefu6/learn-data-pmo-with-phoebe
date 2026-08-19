@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 2 · Roadmap to timeline - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 2 of 10</div>
+    <h1>From roadmap to a <span class="accent">timeline that holds</span></h1>
+    <p class="sub">The charters are signed, the queue is scored - and now Northgate's CFO asks the only question executives ever ask: "so when do I get my dashboards?" A roadmap says what happens this year; a timeline says what happens in March, and why April depends on it. Tonight you decompose the lakehouse into milestones, wire up the dependencies (including the sneaky cross-project ones), find the critical path and guard it with your life, and learn why every estimate you have ever made was too optimistic - and what to do about it. You leave with Northgate's 12-month timeline, built from the a2 roadmap.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap b1</span>
+      <span class="a2" style="flex:4">3-18 · Milestones → dependencies → critical path</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: the 12-month timeline</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are in the arc</h2>
+    </div>
+    <p class="lede">b1 turned Northgate's 30-service catalog into 10 chartered projects with a scored queue. Tonight the scoring meets the calendar: <strong>milestones, dependencies, the critical path, and honest estimates</strong>. This timeline is the spine everything later hangs on - b3 plans sprints inside it, b5's simulator stress-tests it, b9 prices it, b10 staffs it. On the Leader track, a2 built the quarter-level roadmap; tonight we zoom in to months and hand the leaders back a date they can defend.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live portfolio sim - arrives in b5</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A milestone decomposition of the lakehouse build, a dependency register that separates "inside my project" from "crossing projects," the critical path through Northgate's year one - and a reference-class estimating habit that beats gut feel every single time it has been tested.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: MILESTONES + DEPENDENCIES ============ -->
+  <section class="section" id="milestones-dependencies">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers milestone decomposition + the dependency register</span>
+      <h2>Milestones and the wires between them <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A charter promises an outcome; a timeline needs <strong>milestones</strong> - binary, sponsor-legible checkpoints roughly 4-6 weeks apart. "Warehouse 60% done" is not a milestone; "store sales queryable in the warehouse" is. Then wire them: schema design blocks the dictionary, the dictionary blocks validation - and validation lives in a DIFFERENT project. Cross-project dependencies are where portfolios die quietly, because nobody's status report owns them. The PMO does.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lakehouse milestone dependency graph: schema design blocks the dictionary which blocks validation in the reporting project.">
+        <style>
+          .dpT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .dpS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .dpH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .dpX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .dpN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .dpWire { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#dpHd); }
+          .dpCross { stroke: #E2590A; stroke-width: 2.5; fill: none; marker-end: url(#dpOr); }
+        </style>
+        <defs>
+          <marker id="dpHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+          <marker id="dpOr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E2590A"/>
+          </marker>
+        </defs>
+        <text class="dpH" x="50" y="36">Milestones + dependencies · the lakehouse decomposed</text>
+        <text class="dpX" x="50" y="66">P2 LAKEHOUSE BUILD</text>
+        <rect x="685" y="48" width="180" height="240" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="dpH" x="695" y="68">P3 Reporting</text>
+        <rect x="50" y="80" width="170" height="54" rx="8" fill="#22364A"/>
+        <text class="dpT" x="62" y="102">Schema design (#4)</text>
+        <text class="dpS" x="62" y="120">tables + contracts</text>
+        <rect x="270" y="80" width="170" height="54" rx="8" fill="#3E5C76"/>
+        <text class="dpT" x="282" y="102">Dictionary (#5)</text>
+        <text class="dpS" x="282" y="120">every field defined</text>
+        <rect x="50" y="200" width="170" height="54" rx="8" fill="#22364A"/>
+        <text class="dpT" x="62" y="222">Data dump (#6)</text>
+        <text class="dpS" x="62" y="240">raw extracts land</text>
+        <rect x="270" y="200" width="170" height="54" rx="8" fill="#3E5C76"/>
+        <text class="dpT" x="282" y="222">Data lake (#7)</text>
+        <text class="dpS" x="282" y="240">zones + storage</text>
+        <rect x="490" y="140" width="170" height="54" rx="8" fill="#5C7A94"/>
+        <text class="dpT" x="502" y="162">Warehouse (#8)</text>
+        <text class="dpS" x="502" y="180">modeled marts</text>
+        <rect x="695" y="80" width="160" height="54" rx="8" fill="#22364A"/>
+        <text class="dpT" x="707" y="102">Validation (#9)</text>
+        <text class="dpS" x="707" y="120">trust the numbers</text>
+        <rect x="695" y="200" width="160" height="54" rx="8" fill="#5C7A94"/>
+        <text class="dpT" x="707" y="222">Dashboards (#11)</text>
+        <text class="dpS" x="707" y="240">what stores see</text>
+        <path class="dpWire" d="M224,107 L266,107"/>
+        <path class="dpWire" d="M224,227 L266,227"/>
+        <path class="dpWire" d="M444,227 L486,185"/>
+        <path class="dpWire" d="M664,167 L691,125"/>
+        <path class="dpWire" d="M775,138 L775,196"/>
+        <path class="dpCross" d="M444,107 L691,100"/>
+        <text class="dpX" x="50" y="316">Grey arrow = inside one project · Orange arrow = crosses projects - the PMO tracks these</text>
+        <rect x="50" y="334" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="dpN" x="74" y="346">Cross-project dependencies die quietly - the dictionary blocks a project its team does not run.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the lakehouse milestone graph, with one orange cross-project dependency</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Decompose before you schedule<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three tests for a milestone worth putting on the wall:</p>
+        <ul>
+          <li><strong>Binary.</strong> Done or not done - no percentages. "Raw extracts land daily" either happens or it does not.</li>
+          <li><strong>Sponsor-legible.</strong> Written in business language. The sponsor should never need a translator to know why a milestone matters.</li>
+          <li><strong>4-6 weeks apart.</strong> Closer and you are micromanaging; further and a slip hides for a quarter before anyone sees it.</li>
+        </ul>
+        <p>Then build the <strong>dependency register</strong>: for every milestone, what must finish first, and does that thing live inside this project or in another one? Internal dependencies get managed at stand-up. Cross-project dependencies get a named owner and a line on the portfolio wall - because the dictionary team does not attend the reporting team's stand-up.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The dependency nobody owned.</strong> Northgate's reporting lead plans validation for month 9, assuming the dictionary is done. The lakehouse lead, under pressure, quietly deprioritizes the dictionary - it is nobody's dashboard, after all. Month 9 arrives: validation cannot certify a single metric because half the fields have no agreed definition. Two projects, both "on track" in their own status reports, jointly late. The fix costs one line on the portfolio wall: "Dictionary → Validation, owner: PMO, check monthly." That line is tonight's whole lesson.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The dependency register: four columns, no drama<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Keep it boring and visible: <strong>what blocks what · internal or cross-project · named owner · next check date</strong>. Two habits make it work:</p>
+        <ul>
+          <li><strong>Review it at portfolio cadence, not project cadence.</strong> Cross-project wires belong to the PMO's monthly review - the one meeting where both sides of every wire sit at the same table (steering mechanics arrive in b6).</li>
+          <li><strong>Promote noisy wires.</strong> Any dependency that slips twice gets promoted to a milestone of its own on the receiving project's plan. Visibility is the cure; the register is just the symptom log.</li>
+        </ul>
+        <p>Northgate's year one has a handful of these wires, and one of them - dictionary to validation - sits on the critical path. Which brings us to Part 2.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CRITICAL PATH ============ -->
+  <section class="section" id="critical-path">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers CPM, float, protecting the path</span>
+      <h2>The critical path: find it, protect it <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The critical path method (CPM, developed at DuPont in the late 1950s) says something almost embarrassingly simple: <strong>the longest dependent chain of tasks sets the earliest possible finish</strong>. Everything on that chain has zero float - slip a week there and the whole portfolio finishes a week later. Everything off it has float: room to slip without moving the end date. The PMO's daily question is not "is everything on track?" but "is the PATH on track?"</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Twelve-month bar chain for the Northgate lakehouse: the critical path in orange, tasks with float in slate with dashed float windows.">
+        <style>
+          .cmH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .cmL { font: 600 11.5px Inter, sans-serif; fill: #1C242E; }
+          .cmM { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .cmX { font: 400 12px Inter, sans-serif; fill: #626D79; }
+          .cmN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .cmCrit { stroke: #E2590A; stroke-width: 2; fill: none; marker-end: url(#cmHd); }
+        </style>
+        <defs>
+          <marker id="cmHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E2590A"/>
+          </marker>
+        </defs>
+        <text class="cmH" x="40" y="36">The critical path: schema → lake → warehouse → validation → dashboards · 12 months</text>
+        <line x1="170" y1="70" x2="170" y2="350" stroke="#A3B8C9" opacity="0.4"/>
+        <line x1="335" y1="70" x2="335" y2="350" stroke="#A3B8C9" opacity="0.4"/>
+        <line x1="500" y1="70" x2="500" y2="350" stroke="#A3B8C9" opacity="0.4"/>
+        <line x1="665" y1="70" x2="665" y2="350" stroke="#A3B8C9" opacity="0.4"/>
+        <line x1="830" y1="70" x2="830" y2="350" stroke="#A3B8C9" opacity="0.4"/>
+        <text class="cmM" x="197" y="64" text-anchor="middle">M1</text>
+        <text class="cmM" x="252" y="64" text-anchor="middle">M2</text>
+        <text class="cmM" x="307" y="64" text-anchor="middle">M3</text>
+        <text class="cmM" x="362" y="64" text-anchor="middle">M4</text>
+        <text class="cmM" x="417" y="64" text-anchor="middle">M5</text>
+        <text class="cmM" x="472" y="64" text-anchor="middle">M6</text>
+        <text class="cmM" x="527" y="64" text-anchor="middle">M7</text>
+        <text class="cmM" x="582" y="64" text-anchor="middle">M8</text>
+        <text class="cmM" x="637" y="64" text-anchor="middle">M9</text>
+        <text class="cmM" x="692" y="64" text-anchor="middle">M10</text>
+        <text class="cmM" x="747" y="64" text-anchor="middle">M11</text>
+        <text class="cmM" x="802" y="64" text-anchor="middle">M12</text>
+        <text class="cmL" x="40" y="97">Schema design #4</text>
+        <rect x="170" y="80" width="110" height="26" rx="5" fill="#E2590A"/>
+        <text class="cmL" x="40" y="139">Data dump #6</text>
+        <rect x="170" y="122" width="55" height="26" rx="5" fill="#3E5C76"/>
+        <rect x="225" y="122" width="55" height="26" rx="5" fill="none" stroke="#A3B8C9" stroke-dasharray="4 3"/>
+        <text class="cmL" x="40" y="181">Lake build #7</text>
+        <rect x="280" y="164" width="165" height="26" rx="5" fill="#E2590A"/>
+        <text class="cmL" x="40" y="223">Dictionary #5</text>
+        <rect x="280" y="206" width="110" height="26" rx="5" fill="#3E5C76"/>
+        <rect x="390" y="206" width="220" height="26" rx="5" fill="none" stroke="#A3B8C9" stroke-dasharray="4 3"/>
+        <text class="cmL" x="40" y="265">Warehouse #8</text>
+        <rect x="445" y="248" width="165" height="26" rx="5" fill="#E2590A"/>
+        <text class="cmL" x="40" y="307">Validation #9</text>
+        <rect x="610" y="290" width="110" height="26" rx="5" fill="#E2590A"/>
+        <text class="cmL" x="40" y="349">Dashboards #11</text>
+        <rect x="720" y="332" width="110" height="26" rx="5" fill="#E2590A"/>
+        <path class="cmCrit" d="M280,108 L280,160"/>
+        <path class="cmCrit" d="M445,192 L445,244"/>
+        <path class="cmCrit" d="M610,276 L610,286"/>
+        <path class="cmCrit" d="M720,318 L720,328"/>
+        <text class="cmX" x="40" y="382">Orange = critical path, zero float · Slate = has float · Dashed box = the float window</text>
+        <rect x="40" y="396" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="cmN" x="64" y="408">Protect the orange chain - a week lost there is a week lost at the finish. Spend float, never borrow it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the 12-month chain: orange bars have zero float, dashed windows show slack</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Managing by path: two different playbooks<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Task is...</th><th>Your playbook</th><th>Example</th></tr>
+          <tr><td>On the critical path</td><td>Best people, daily visibility, clear blockers within hours, never share its staff</td><td>Warehouse modeling months 6-8 - the whole year funnels through it</td></tr>
+          <tr><td>Off the path, small float</td><td>Watch weekly - float burns fast and quietly</td><td>Data dump with one month of slack</td></tr>
+          <tr><td>Off the path, big float</td><td>Schedule flexibly, lend its people to path tasks when needed</td><td>Dictionary with a four-month window before validation needs it</td></tr>
+          <tr><td>Newly ON the path</td><td>The path moves when tasks slip - recompute it monthly, do not assume</td><td>If the lake slips 2 months, the dictionary's float evaporates</td></tr>
+        </table>
+        <div class="callout tip">
+          <strong>The path is a computation, not an opinion.</strong> When Northgate's platform engineer says "the lake feels like the risky bit," check the math: feelings nominate candidates, the longest chain decides. And recompute after every slip - yesterday's float is not a fact about today.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Float is a budget, not a cushion<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Float belongs to the portfolio, not to the task that happens to have it. Three rules keep it honest:</p>
+        <ul>
+          <li><strong>Spend float deliberately.</strong> Moving the dictionary two months later to free an engineer for the warehouse is a good trade - made on purpose, logged in the register.</li>
+          <li><strong>Never let float hide a problem.</strong> A task quietly consuming its own float is a slip in disguise. Track "float remaining" the way b9 tracks budget remaining.</li>
+          <li><strong>Zero float = escalation trigger.</strong> The moment a task's float hits zero, it joins the critical path and inherits the path playbook. That transition is a steering-level event, not a footnote.</li>
+        </ul>
+        <p>b5's simulator makes this visceral: the projects that blow up are rarely the ones on the path at kickoff - they are the ones that drifted onto it while everyone watched something else.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: ESTIMATING DATA WORK ============ -->
+  <section class="section" id="estimating">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the planning fallacy, reference classes, discovery spikes</span>
+      <h2>Estimating data work without lying <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Every duration on that timeline is a guess - and human guesses are biased in one direction. The <strong>planning fallacy</strong> (Kahneman + Tversky, 1979) is the finding that people systematically underestimate their own task durations, even when they know their past estimates ran over. The fix is not trying harder: it is the <strong>outside view</strong> - anchor on how long comparable work actually took, then adjust. Data work adds a twist software does not have: <strong>discovery risk</strong>. Sometimes the data simply is not there, or is not usable - and no estimate survives that.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Inside view vs outside view<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Question</th><th>Inside view (default, biased)</th><th>Outside view (reference class)</th></tr>
+          <tr><td>Warehouse build?</td><td>"We know the model, 2 months"</td><td>"Our last three modeling efforts each took 3 months - start at 3"</td></tr>
+          <tr><td>Schema design?</td><td>"The team is strong, 6 weeks"</td><td>"Comparable schema work here has run 8-10 weeks - plan 2 months"</td></tr>
+          <tr><td>Anything with 'just'?</td><td>"Just wire up the extracts"</td><td>The word 'just' is an estimate smell - go find the reference class</td></tr>
+        </table>
+        <p>Mechanics: pick 3-5 comparable past efforts (yours, or a colleague's - anyone's actuals beat your intentions), take their actual durations as the anchor, and adjust only for named, specific differences. Where no reference class exists, that itself is information: you are in discovery territory, and discovery gets a spike, not an estimate.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The data dump that turned out unusable.</strong> Month 2, Northgate's engineers open the first big extract from the legacy POS system (service #6) and find the thing every data team eventually finds: timestamps in three formats, store IDs that changed in a 2019 migration nobody documented, and returns logged as negative sales in some regions but not others. The dump "landed on time" - and is unusable for the lake build (#7) and warehouse (#8) downstream. The schedule did not fail because the team was slow; it failed because the estimate assumed the data was fine. Discovery risk is not a risk you estimate away - it is one you buy information about, early and cheaply.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Discovery spikes: buy the information first<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A <strong>discovery spike</strong> is a short, timeboxed investigation run BEFORE you commit a schedule for data-touching milestones: pull a real sample from every source system, profile it, and answer one question - "is this data usable for what we promised?" Rules:</p>
+        <ul>
+          <li><strong>Timeboxed, not open-ended.</strong> One to two weeks, then a decision - never "we are still investigating."</li>
+          <li><strong>Front of the plan.</strong> Northgate runs the source-data spike in month 1, in parallel with schema design (#4) - so the month-2 surprise above becomes a month-1 known.</li>
+          <li><strong>Output is a decision, not a report.</strong> Green: estimate holds. Amber: re-baseline the affected chain now, honestly (re-baselining etiquette lands in b5). Red: escalate scope - maybe the 2019-and-earlier history is out of scope, and the charter's out-of-scope box (b1) grows a line.</li>
+        </ul>
+        <p>Spikes cost days and save quarters. The alternative - discovering discovery risk on the critical path in month 6 - is how "the data project is late again" becomes a company proverb.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Build the 12-month Northgate timeline <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Input: the a2 quarter-level roadmap and your b1 charters. Output: a month-level timeline with milestones, wired dependencies, a computed critical path, and spikes where discovery risk lives.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Decompose the lakehouse.</strong> Break P2 into 5-7 milestones using the three tests (binary, sponsor-legible, 4-6 weeks apart): extracts landing, lake zones live, schema signed off, dictionary complete, warehouse marts queryable.</p></div>
+      <div class="step"><p><strong>Wire the register.</strong> For each milestone, list what blocks it - and flag every wire that crosses a project boundary. You should find dictionary → validation. If you did not, look again: it is the one that bites.</p></div>
+      <div class="step"><p><strong>Walk the chains.</strong> Add durations, trace every dependent chain start to finish, and mark the longest one in orange. Say out loud what the finish date is - and which five tasks own it.</p></div>
+      <div class="step"><p><strong>Apply the outside view.</strong> Take your two scariest estimates and replace the gut number with a reference-class anchor: how long did comparable work ACTUALLY take, here or anywhere? Watch the timeline move right - that movement is the planning fallacy leaving your plan.</p></div>
+      <div class="step"><p><strong>Place the spikes.</strong> Every milestone touching an unknown source system gets a 1-2 week discovery spike in month 1. Mark what each spike de-risks, and what its amber outcome would re-baseline.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Present the path, not the plan.</strong> When you walk this into steering, lead with the orange chain and its finish date. Forty tasks is noise; five tasks that own the year is a decision-ready picture.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Decompose one project from YOUR real portfolio into milestones with the three tests - then build its dependency register, flagging every cross-project wire with a named owner.</li>
+      <li>Find your critical path and write down its finish date. Then find the task with the most float and decide, on purpose, what that float is for.</li>
+      <li>Take your most confident estimate and outside-view it: find three comparable actuals and note the gap between the reference class and your gut. Bring the gap to next session.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What makes a chain of tasks THE critical path?</p>
+      <button class="qopt" type="button">A · It contains the riskiest and most technically complex data work</button>
+      <button class="qopt" type="button">B · The steering committee designated it as critical in the charter</button>
+      <button class="qopt" type="button">C · It is the longest dependent chain - its length sets the earliest possible finish for everything</button>
+      <p class="qwhy">CPM (DuPont, late 1950s): the critical path is a computation, not a judgment call. Longest dependent chain = earliest finish. Risk and executive attention often live elsewhere - which is exactly why the path needs computing rather than guessing.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · The dictionary has four months of float. What does that float mean?</p>
+      <button class="qopt" type="button">A · It can finish up to four months later than its earliest schedule without moving the portfolio's finish date</button>
+      <button class="qopt" type="button">B · The team has four months of slack to spend on other backlog items automatically</button>
+      <button class="qopt" type="button">C · The critical path also gains four months of safety margin</button>
+      <p class="qwhy">Float is slippage room on off-path tasks only - the critical path has zero, always. And float is a portfolio budget: spend it deliberately, track what remains, and treat float hitting zero as the escalation it is.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Best defense against the planning fallacy when estimating the warehouse build?</p>
+      <button class="qopt" type="button">A · Ask the engineers to double their gut estimate to be safe</button>
+      <button class="qopt" type="button">B · Reference-class estimating: anchor on how long comparable builds actually took, then adjust for named differences</button>
+      <button class="qopt" type="button">C · Commit to the optimistic number and manage the slip when it comes</button>
+      <p class="qwhy">Kahneman + Tversky (1979): we systematically underestimate our own durations - the fix is the outside view. Blind doubling is padding without information; committing to optimism is the fallacy with extra steps.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Schema Design (#4) · Data Dictionary (#5)</span><span class="note">The blocking chain decomposed into milestones - schema blocks dictionary blocks validation</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Dump (#6) · Data Lake (#7) · Data Warehouse (#8)</span><span class="note">The lakehouse spine on the timeline, with the discovery spike guarding the unusable-dump risk</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Critical path method (CPM, DuPont late 1950s)</span><span class="note">Longest dependent chain, float, and the two playbooks - worked on the Northgate year</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Planning fallacy (Kahneman + Tversky, 1979)</span><span class="note">Inside vs outside view, reference-class estimating on the warehouse and schema work</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Validation (#9)</span><span class="note">Appears here as the cross-project dependency - its full RACI and early-warning role land in b4 and b5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Milestone tests</b><span>Binary (done or not) · sponsor-legible (business language) · 4-6 weeks apart. "60% done" is not a milestone.</span></div>
+      <div class="cheat-item"><b>Dependency register</b><span>What blocks what · internal or cross-project · named owner · next check. Cross-project wires belong to the PMO, reviewed monthly.</span></div>
+      <div class="cheat-item"><b>Critical path (CPM)</b><span>The longest dependent chain sets the earliest finish. A computation, not an opinion - recompute after every slip.</span></div>
+      <div class="cheat-item"><b>Float</b><span>Slippage room on off-path tasks. A portfolio budget: spend deliberately, track what remains, float-at-zero = escalation.</span></div>
+      <div class="cheat-item"><b>Two playbooks</b><span>Path tasks: best people, daily visibility, never share staff. Float tasks: schedule flexibly, lend people to the path.</span></div>
+      <div class="cheat-item"><b>Planning fallacy</b><span>Kahneman + Tversky 1979: we underestimate our own durations, systematically. Knowing about it does not fix it.</span></div>
+      <div class="cheat-item"><b>Reference class</b><span>Anchor on comparable ACTUALS (3-5 cases), adjust only for named differences. "Just" in an estimate is a smell.</span></div>
+      <div class="cheat-item"><b>Discovery spike</b><span>1-2 weeks, month 1, real data sample, ends in a decision: green holds / amber re-baselines / red re-scopes. Days spent, quarters saved.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 2 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-portfolio-intake.html">← Prev: Portfolio intake</a> &nbsp;·&nbsp; <a href="b3-sprint-planning-for-data.html">Next: Sprint planning for data →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · The annual roadmap - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>The year, in the <span class="accent">only order that works</span></h1>
+    <p class="sub">Last session you sorted Northgate's 30 services into 10 projects. Tonight you put them on a calendar - and discover that most of the sequencing was never yours to decide. Lake before warehouse before BI before ML before agents: the dependency ladder sets the spine of year one, and your actual leadership decisions live in the gaps it leaves. You will build the quarter-by-quarter roadmap, learn what genuinely runs in parallel and what only pretends to, and then do the most instructive thing possible: break a dependency on purpose and watch the blast radius. You leave treating the roadmap as what it really is - a versioned contract between you and everyone you have made promises to.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Data executives · heads of data · sponsors</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-18 · The dependency ladder</span>
+      <span class="a3" style="flex:5">18-42 · Build the year + break it</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">The portfolio exists: <strong>10 projects, 14 people, $2,700k change budget</strong>. What it lacks is time. Tonight turns the ranked list into a four-quarter roadmap. a3 prices it, a4 staffs it, a5 sells it to stakeholders, a6 checks its health on a live simulator. On the Practitioner track, b2 decomposes this same roadmap into a milestone-level timeline with a critical path - tonight stays at the altitude where you make the calls.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live portfolio sim - arrives in a6</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The dependency ladder with Northgate's real projects on its rungs, a quarter-by-quarter year-one roadmap showing what runs parallel and what cannot, and the three habits that make a roadmap a contract instead of a wish: version it, date it, show the trade-offs.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: SEQUENCING BY DEPENDENCY ============ -->
+  <section class="section" id="dependency-ladder">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers sequencing by dependency, the ladder</span>
+      <h2>The ladder decides first <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Before any prioritization framework gets a vote, physics votes: <strong>lake before warehouse before BI before ML before agents</strong>. Dashboards read from a governed warehouse; models train on the data those pipelines produce; agents act on what the models and the governance layer make safe. This is the "hierarchy of needs" logic for data offices - each layer of ambition stands on the one below, and skipping a rung does not speed you up, it moves the delay downstream and adds rework interest. The leader's job is not to invent the sequence. It is to defend it in rooms where it is inconvenient.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ascending dependency ladder: P1 landing zone, then P2 lakehouse, then the P3 and P5 BI layer, then P7 forecasting, then P10 agents.">
+        <style>
+          .dlT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .dlS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .dlH { font: 700 13px Inter, sans-serif; fill: #1C242E; }
+          .dlX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .dlN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .dlWire { stroke: #5C7A94; stroke-width: 2.5; fill: none; marker-end: url(#dlHd); }
+        </style>
+        <defs>
+          <marker id="dlHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="dlH" x="60" y="38">Lake before warehouse before BI before ML before agents - each rung stands on the last</text>
+        <rect x="60" y="280" width="148" height="78" rx="10" fill="#22364A"/>
+        <text class="dlT" x="76" y="310">P1 Landing zone</text>
+        <text class="dlS" x="76" y="330">cloud foundations</text>
+        <rect x="216" y="225" width="148" height="78" rx="10" fill="#3E5C76"/>
+        <text class="dlT" x="232" y="255">P2 Lakehouse</text>
+        <text class="dlS" x="232" y="275">lake then warehouse</text>
+        <rect x="372" y="170" width="148" height="78" rx="10" fill="#5C7A94"/>
+        <text class="dlT" x="388" y="200">P3 + P5 · BI</text>
+        <text class="dlS" x="388" y="220">dashboards, KPIs</text>
+        <rect x="528" y="115" width="148" height="78" rx="10" fill="#3E5C76"/>
+        <text class="dlT" x="544" y="145">P7 Forecasting</text>
+        <text class="dlS" x="544" y="165">ML on clean data</text>
+        <rect x="684" y="60" width="148" height="78" rx="10" fill="#22364A"/>
+        <text class="dlT" x="700" y="90">P10 Agentic AI</text>
+        <text class="dlS" x="700" y="110">agents + evals</text>
+        <path class="dlWire" d="M134,272 L288,225"/>
+        <path class="dlWire" d="M290,217 L444,170"/>
+        <path class="dlWire" d="M446,162 L600,115"/>
+        <path class="dlWire" d="M602,107 L756,60"/>
+        <text class="dlX" x="60" y="252">Q1</text>
+        <text class="dlX" x="216" y="197">Q1-Q2</text>
+        <text class="dlX" x="372" y="142">Q2-Q3</text>
+        <text class="dlX" x="528" y="87">Q3-Q4</text>
+        <rect x="60" y="374" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="dlN" x="84" y="386">P10 also waits for P9 governance - an agent on ungoverned data automates mistakes at machine speed.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the dependency ladder with Northgate's real projects on its rungs</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Defending the ladder in the boardroom<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Nobody argues with the ladder in the abstract. They argue with it one exception at a time. The three you will hear in year one:</p>
+        <ul>
+          <li><strong>"Just one dashboard, straight off the source systems."</strong> Feels harmless, becomes the permanent shadow pipeline nobody governs. Answer: yes to the dashboard, on the warehouse, in the quarter the warehouse supports it - and the roadmap shows exactly which quarter that is.</li>
+          <li><strong>"The competitor already has AI agents."</strong> The competitor's ladder is invisible from outside; their rework bill is too. Answer: point at P10 on the roadmap, sitting behind its named enablers. Ambition is scheduled, not denied.</li>
+          <li><strong>"Can't we buy a shortcut?"</strong> Sometimes - a managed platform can compress P1. But bought rungs still get climbed in order; money changes the ladder's speed, never its sequence.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The quarter that saved three.</strong> Northgate's CFO pushes hard to start forecasting (P7) in Q1 - revenue season looms. The head of data walks the ladder backwards from P7: it trains on warehouse tables that do not exist until P2 lands, which needs the landing zone from P1. Starting P7 in Q1 means data scientists idling against missing tables for two quarters at full salary. The CFO, shown the idle-cost math instead of an architecture lecture, moves the ask to Q3 himself - and becomes the roadmap's loudest defender.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What genuinely runs in parallel<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The ladder constrains the spine, not everything. Two tests decide whether projects can truly run side by side: <strong>no shared dependency</strong> (neither waits on the other's output) and <strong>no shared people</strong> (separate teams, honestly staffed - a shared ML engineer makes "parallel" a fiction). At Northgate:</p>
+        <ul>
+          <li><strong>Genuinely parallel in Q1:</strong> P1 landing zone (platform engineer + data engineers), P9 governance foundations (governance lead), P4 exec scorecard v1 on existing reports (BI team). Different rungs, different people.</li>
+          <li><strong>Fake parallel:</strong> P6 segmentation "alongside" P2 lakehouse - the data scientists would spend the quarter waiting on tables. Parallel on the slide, sequential in reality, demoralizing in person.</li>
+        </ul>
+        <p>Leader's rule of thumb: every "parallel" claim on the roadmap must name its separate team. If two bars share people, they are one queue wearing two colors.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE FOUR-QUARTER ROADMAP ============ -->
+  <section class="section" id="four-quarters">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the quarter-by-quarter year-one roadmap</span>
+      <h2>Year one, quarter by quarter <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The shape of a healthy year one: <strong>Q1 buys the platform</strong> (landing zone, lakehouse underway, governance foundations, a scorecard v1 for early credibility), <strong>Q2 finishes the floor</strong> (warehouse live, reporting starts flowing), <strong>Q3 fans out</strong> (segmentation, forecasting, self-serve BI, and the agentic pilot all start - because now the platform can hold them), <strong>Q4 harvests</strong> (data product v1, the pilot's evals, the story for year two's budget). The fan-out in Q3 looks like a bet on speed; it is actually the dividend from Q1's patience.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four-quarter roadmap strip: ten Northgate project bars showing the Q1 platform build, Q2 floor, Q3 fan-out, Q4 harvest.">
+        <style>
+          .qrH { font: 700 13px Inter, sans-serif; fill: #1C242E; }
+          .qrL { font: 600 11px Inter, sans-serif; fill: #1C242E; }
+          .qrX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .qrN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .qrG { stroke: #A3B8C9; stroke-width: 1; }
+        </style>
+        <text class="qrH" x="257" y="46" text-anchor="middle">Q1</text>
+        <text class="qrH" x="432" y="46" text-anchor="middle">Q2</text>
+        <text class="qrH" x="607" y="46" text-anchor="middle">Q3</text>
+        <text class="qrH" x="782" y="46" text-anchor="middle">Q4</text>
+        <line class="qrG" x1="170" y1="56" x2="170" y2="390"/>
+        <line class="qrG" x1="345" y1="56" x2="345" y2="390"/>
+        <line class="qrG" x1="520" y1="56" x2="520" y2="390"/>
+        <line class="qrG" x1="695" y1="56" x2="695" y2="390"/>
+        <line class="qrG" x1="870" y1="56" x2="870" y2="390"/>
+        <text class="qrL" x="60" y="93">P1 Landing zone</text>
+        <rect x="170" y="78" width="170" height="20" rx="4" fill="#22364A"/>
+        <text class="qrL" x="60" y="125">P2 Lakehouse</text>
+        <rect x="170" y="110" width="345" height="20" rx="4" fill="#22364A"/>
+        <text class="qrL" x="60" y="157">P9 Governance</text>
+        <rect x="170" y="142" width="345" height="20" rx="4" fill="#5C7A94"/>
+        <text class="qrL" x="60" y="189">P4 Scorecard</text>
+        <rect x="170" y="174" width="290" height="20" rx="4" fill="#5C7A94"/>
+        <text class="qrL" x="60" y="221">P3 Reporting</text>
+        <rect x="345" y="206" width="350" height="20" rx="4" fill="#22364A"/>
+        <text class="qrL" x="60" y="253">P5 Self-serve BI</text>
+        <rect x="520" y="238" width="350" height="20" rx="4" fill="#5C7A94"/>
+        <text class="qrL" x="60" y="285">P6 Segmentation</text>
+        <rect x="520" y="270" width="350" height="20" rx="4" fill="#5C7A94"/>
+        <text class="qrL" x="60" y="317">P7 Forecasting</text>
+        <rect x="520" y="302" width="350" height="20" rx="4" fill="#5C7A94"/>
+        <text class="qrL" x="60" y="349">P10 Agentic</text>
+        <rect x="520" y="334" width="350" height="20" rx="4" fill="#5C7A94"/>
+        <rect x="520" y="334" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="qrL" x="60" y="381">P8 Data product</text>
+        <rect x="695" y="366" width="175" height="20" rx="4" fill="#5C7A94"/>
+        <rect x="170" y="410" width="12" height="12" rx="3" fill="#22364A"/>
+        <text class="qrX" x="190" y="420">the spine - each starts when the last delivers</text>
+        <rect x="520" y="410" width="12" height="12" rx="3" fill="#5C7A94"/>
+        <text class="qrX" x="540" y="420">parallel work - separate teams, no shared dependency</text>
+        <rect x="60" y="446" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="qrN" x="84" y="458">Five bars start in Q3 - only because Q1 and Q2 bought the platform they all stand on. P10 waits for P9 to land.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - Northgate's year one as a four-quarter roadmap strip</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Reading the strip like a sponsor<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four things a leader should be able to read off this one picture in a steering meeting:</p>
+        <ul>
+          <li><strong>The spine.</strong> P1 into P2 into P3 - the dark chain. Anything that slips here slips everything above it. This is where your best people and your earliest attention go.</li>
+          <li><strong>Q1's quiet win.</strong> The scorecard v1 ships on existing reports while the platform builds underneath. It buys the credibility that funds the boring quarters - never leave Q1 with nothing visible.</li>
+          <li><strong>The Q3 gate.</strong> Five starts in one quarter is only sane if the warehouse actually landed in Q2. The Q2 exit review is therefore the most important meeting of the year: it decides whether Q3 is a fan-out or a pile-up.</li>
+          <li><strong>The orange square.</strong> P10's start marker is a condition, not a date: governance landed. If P9 slips, P10 slides with it - visibly, on the next version of this page.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>One page or it did not happen.</strong> If the year does not fit on one strip an executive can absorb in ninety seconds, the roadmap will be ignored in favor of hallway promises - which then become the real roadmap, unversioned and unstaffed.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE ROADMAP AS A CONTRACT ============ -->
+  <section class="section" id="contract">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers versioning, MoSCoW + WSJF at portfolio level</span>
+      <h2>A roadmap is a versioned contract <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A roadmap that silently changes is worse than no roadmap - people keep planning against the version in their heads. Treat yours like a contract: <strong>version it</strong> (v1.0 at approval, v1.1 when anything moves), <strong>date it</strong> (every copy says when it was true), and <strong>show the trade-offs</strong> (every change ships with what moved, what it displaced, and why). The moment someone quotes an old version at you and you can answer "that was v1.2, here is v1.4 and the change log," the roadmap has become the single source of truth - which is the whole game.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>MoSCoW and WSJF at portfolio altitude<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two frameworks earn a place at this level, each doing one job:</p>
+        <ul>
+          <li><strong>MoSCoW</strong> (must / should / could / won't) sets the year's scope honestly. The list that matters most is the <strong>won't</strong>: written, visible, signed. Northgate's year-one won't list keeps real-time streaming and a second GenAI use case off the table - which is why the ten funded projects stay staffed.</li>
+          <li><strong>WSJF</strong> (cost of delay divided by job size, from SAFe) sequences inside the freedom the ladder leaves. When segmentation and self-serve BI both want the same Q3 start slot, WSJF turns the fight into arithmetic the steering group can argue about in the open.</li>
+          <li><strong>The ladder still vetoes both.</strong> A must-have that stands on an unbuilt rung is a must-have with a later start date - it keeps its priority and gets its enabler named, never a quiet re-score.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The change log that ended a feud.</strong> Mid-year, Northgate's warehouse slips three weeks and reporting's start moves with it. The PMO ships roadmap v1.3 the same day: what moved, why, and the downstream effect on self-serve BI. The CMO, who learned about the last such slip through the grapevine, reads the log and asks one question instead of escalating to the CEO. Trust in a roadmap is not built by never slipping - it is built by never slipping silently.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Version hygiene in five lines<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The minimum viable contract, kept by the PMO: <strong>(1)</strong> the strip itself carries a version number and a date in its corner; <strong>(2)</strong> changes land only through steering, never through hallway agreement; <strong>(3)</strong> every version's change log states what moved, what it displaced, and why; <strong>(4)</strong> old versions stay retrievable - being able to show the history IS the credibility; <strong>(5)</strong> quarterly re-plan is scheduled, so change has a legitimate door and stops picking the locks.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Break a dependency on purpose <span class="tag demo">★ 20 min · everyone traces</span></h2>
+    </div>
+    <p class="lede">The fastest way to respect the ladder is to watch it fail safely. Your table takes the roadmap and deliberately ships dashboards before data validation exists - then traces the blast radius, hop by hop.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Make the swap.</strong> On the Q2-Q3 strip, pull P3's dashboards forward so they ship before the validation service (part of P3's own foundation) is running. It looks great on the slide: value one quarter early.</p></div>
+      <div class="step"><p><strong>Trace hop one.</strong> Unvalidated pipelines feed the dashboards. Numbers render beautifully and nobody can vouch for them. Note who notices first - usually a store manager whose region looks wrong.</p></div>
+      <div class="step"><p><strong>Trace hop two.</strong> The exec scorecard (P4) reads the same tables. Now the error sits in front of the CFO with the data office's logo on it. Estimate the trust cost in steering-meeting terms.</p></div>
+      <div class="step"><p><strong>Trace hop three.</strong> Segmentation and forecasting (P6, P7) train on data the office now knows is suspect. Every model result gets a mental asterisk. The one-quarter head start has become a multi-project credibility tax.</p></div>
+      <div class="step"><p><strong>Write the rule.</strong> Restore the roadmap, then write the one-sentence policy your own organization would need to stop this swap being made under pressure. Compare sentences across tables - the best ones name a person, not a principle.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Wrong numbers beat no numbers at spreading.</strong> A missing dashboard generates a complaint; a wrong dashboard generates decisions. That asymmetry is the entire case for validation before visibility.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Draft your own organization's four-quarter strip: ten bars or fewer, spine marked, every parallel claim annotated with its separate team.</li>
+      <li>Find one dependency your current plan quietly violates (dashboards before validation is the classic - look there first). Trace its blast radius three hops, in writing.</li>
+      <li>Stamp your draft v0.1 with today's date and write its first change-log entry. Bring the won't list you had to write to make it fit on one page.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The CMO wants self-serve BI live in Q1. What does the roadmap answer?</p>
+      <button class="qopt" type="button">A · Yes - self-serve BI is high value, and high value goes first</button>
+      <button class="qopt" type="button">B · Earliest honest start is Q3: self-serve stands on a governed warehouse that lands in Q2, so it goes on the strip with its enabler named</button>
+      <button class="qopt" type="button">C · No - Gen AI and BI requests always wait until year two</button>
+      <p class="qwhy">The ladder decides: BI reads from the warehouse, the warehouse lands with P2 in Q2, so P5 starts Q3. The ask is scheduled with its enabler visible - never refused outright and never quietly promised early.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · In WSJF, what sits in the numerator - the thing that makes waiting expensive?</p>
+      <button class="qopt" type="button">A · Job size - bigger projects score higher because they matter more</button>
+      <button class="qopt" type="button">B · Confidence - how sure the team is about its estimate</button>
+      <button class="qopt" type="button">C · Cost of delay - what every month of not having it costs, divided by job size</button>
+      <p class="qwhy">WSJF = cost of delay / job size (SAFe). The numerator prices the waiting, the denominator prices the doing - so small items whose absence bleeds money outrank big exciting ones whose value can wait.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The warehouse slips three weeks and reporting moves with it. What does a contract-grade roadmap do?</p>
+      <button class="qopt" type="button">A · Ship a new version the same day: number bumped, dated, change log stating what moved, what it displaced, and why</button>
+      <button class="qopt" type="button">B · Update the strip quietly - a small slip does not merit alarming stakeholders</button>
+      <button class="qopt" type="button">C · Hold all changes until the annual re-plan so the roadmap stays stable</button>
+      <p class="qwhy">Version it, date it, show the trade-offs. Silent edits leave people planning against the version in their heads; a visible change log is how a roadmap earns the right to be believed after its first slip.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Cloud Infra · Data Lake · Data Warehouse (services 1, 7, 8)</span><span class="note">Sequenced as the spine of year one - P1 into P2, the chain everything else stands on</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">MoSCoW + WSJF (SAFe) at portfolio level</span><span class="note">Won't-list scope setting plus cost-of-delay sequencing inside the ladder's freedom - full scoring math in Practitioner b1</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Validation (service 9)</span><span class="note">The broken-dependency demo's pivot - its early-warning role deepens in b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Machine Learning · Agentic AI (services 23, 30)</span><span class="note">Placed on the ladder's upper rungs; delivery mechanics arrive in b3 and b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The ladder</b><span>Lake → warehouse → BI → ML → agents. Physics votes before any framework does; money changes the ladder's speed, never its sequence.</span></div>
+      <div class="cheat-item"><b>Parallel test</b><span>No shared dependency + no shared people (a named separate team). Bars sharing people are one queue wearing two colors.</span></div>
+      <div class="cheat-item"><b>Year-one shape</b><span>Q1 buys the platform · Q2 finishes the floor · Q3 fans out (5 starts) · Q4 harvests. The Q2 exit review is the year's most important meeting.</span></div>
+      <div class="cheat-item"><b>Q1's quiet win</b><span>Ship a scorecard v1 on existing reports while the platform builds. Never leave Q1 with nothing visible - it funds the boring quarters.</span></div>
+      <div class="cheat-item"><b>Contract habits</b><span>Version it, date it, show the trade-offs. Changes land through steering only; old versions stay retrievable - the history IS the credibility.</span></div>
+      <div class="cheat-item"><b>MoSCoW at altitude</b><span>The won't list is the roadmap's load-bearing wall: written, visible, signed. It is why the ten funded projects stay staffed.</span></div>
+      <div class="cheat-item"><b>WSJF</b><span>Cost of delay ÷ job size. Sequences inside the ladder's freedom; the ladder still vetoes - blocked items keep priority and get their enabler named.</span></div>
+      <div class="cheat-item"><b>Blast radius rule</b><span>Wrong numbers beat no numbers at spreading. Validation before visibility - a wrong dashboard generates decisions, not just complaints.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a1-the-data-pmo.html">← Prev: The data PMO</a> &nbsp;·&nbsp; <a href="a3-budget-and-cost.html">Next: Budget and cost →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

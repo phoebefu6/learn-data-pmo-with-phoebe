@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 7 · Time management - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 7 of 10</div>
+    <h1>The calendar is a <span class="accent">portfolio artifact</span></h1>
+    <p class="sub">Month four at Northgate. The portfolio is moving, the steering rhythm holds - and your week has quietly rotted into 14 meetings, while the CMO DMs the data scientists for "quick" analyses and the engineers have not had an unbroken morning in three weeks. Tonight is time management as a PMO discipline, not a self-help tip: maker vs manager schedules (Paul Graham, 2009) and why the PM absorbs the interrupts, the Eisenhower matrix and Parkinson's law applied to your own week, and the recurring PMO calendar skeleton that makes steering, sprint events, variance review, and insights sharing fit one sane week. Then we rebuild a broken week live: 14 meetings down to 7, and we name what every cut trades away.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · data leads wearing the PMO hat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Maker vs manager + your week</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: rebuild a broken week</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: MAKER VS MANAGER ============ -->
+  <section class="section" id="maker-vs-manager">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers maker vs manager schedules, protecting deep work</span>
+      <h2>Two kinds of schedule live in one team <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Paul Graham's 2009 essay names the split: <strong>makers run on half-day units, managers run on one-hour slots</strong>. A data engineer mid-pipeline and a PM mid-stakeholder-round are not doing the same kind of time. One meeting dropped at 2pm does not cost a maker one hour - it splits the afternoon in half and can ruin it. The PMO's job is not to attend everything. It is to make sure the 14-person team keeps its half-day deep-work blocks - by putting YOUR calendar between the interrupts and theirs.</p>
+
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A defended weekly calendar: the team's maker blocks marked and protected, your own week Eisenhower-sorted and timeboxed, the recurring PMO skeleton laid on five days, and a practiced 14-to-7 meeting cut where every deletion has a named trade-off.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two calendars side by side: the engineers' day holds two half-day maker blocks, the PM's day is meeting confetti absorbing the interrupts.">
+        <style>
+          .mmT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .mmS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .mmP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .mmX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .mmN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="mmP" x="60" y="40">THE ENGINEERS · maker's schedule</text>
+        <rect x="60" y="56" width="330" height="330" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <rect x="76" y="72" width="298" height="26" rx="6" fill="#5C7A94"/>
+        <text class="mmS" x="90" y="89">9:00 · Daily scrum, 15 min, then done</text>
+        <rect x="76" y="108" width="298" height="124" rx="8" fill="#22364A"/>
+        <text class="mmT" x="92" y="136">Deep work · 9:30-12:30</text>
+        <text class="mmS" x="92" y="156">Pipeline build, no meetings,</text>
+        <text class="mmS" x="92" y="174">notifications off</text>
+        <rect x="76" y="242" width="298" height="124" rx="8" fill="#3E5C76"/>
+        <text class="mmT" x="92" y="270">Deep work · 1:30-4:30</text>
+        <text class="mmS" x="92" y="290">Model iteration, door closed,</text>
+        <text class="mmS" x="92" y="308">PM shields the room</text>
+        <text class="mmP" x="490" y="40">THE PM · manager's schedule</text>
+        <rect x="490" y="56" width="330" height="330" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <rect x="506" y="72" width="140" height="26" rx="6" fill="#3E5C76"/>
+        <text class="mmS" x="516" y="89">Steering prep</text>
+        <rect x="662" y="72" width="140" height="26" rx="6" fill="#5C7A94"/>
+        <text class="mmS" x="672" y="89">Sponsor 1:1</text>
+        <rect x="506" y="110" width="140" height="26" rx="6" fill="#22364A"/>
+        <text class="mmS" x="516" y="127">Intake triage</text>
+        <rect x="662" y="110" width="140" height="26" rx="6" fill="#3E5C76"/>
+        <text class="mmS" x="672" y="127">Vendor call</text>
+        <rect x="506" y="148" width="140" height="26" rx="6" fill="#5C7A94"/>
+        <text class="mmS" x="516" y="165">Variance prep</text>
+        <rect x="662" y="148" width="140" height="26" rx="6" fill="#22364A"/>
+        <text class="mmS" x="672" y="165">Escalation call</text>
+        <rect x="506" y="186" width="140" height="26" rx="6" fill="#E2590A"/>
+        <text class="mmS" x="516" y="203">Interrupt eaten</text>
+        <rect x="662" y="186" width="140" height="26" rx="6" fill="#5C7A94"/>
+        <text class="mmS" x="672" y="203">Ad-hoc ask #16</text>
+        <rect x="506" y="224" width="140" height="26" rx="6" fill="#3E5C76"/>
+        <text class="mmS" x="516" y="241">Retro follow-up</text>
+        <rect x="662" y="224" width="140" height="26" rx="6" fill="#E2590A"/>
+        <text class="mmS" x="672" y="241">Interrupt eaten</text>
+        <rect x="506" y="262" width="296" height="26" rx="6" fill="#22364A"/>
+        <text class="mmS" x="516" y="279">Insights share #18 · with the team</text>
+        <rect x="506" y="300" width="296" height="66" rx="8" fill="#EDF2F6" stroke="#3E5C76" stroke-width="2"/>
+        <text class="mmP" x="516" y="324">One protected block of your own</text>
+        <text class="mmX" x="516" y="342">2 hrs · charters, plans, thinking -</text>
+        <text class="mmX" x="516" y="358">the PM is a part-time maker too</text>
+        <rect x="60" y="426" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="mmN" x="84" y="438">One meeting can ruin a maker's afternoon - the PM's calendar takes the hits so the blocks survive.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two calendars side by side: maker blocks vs meeting confetti</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The PM absorbs the interrupts<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Interrupts are not evil - stakeholders have real questions and the portfolio genuinely needs a human router. The design decision is <strong>where they land</strong>. If they land on makers, every ping costs a half-day unit. If they land on you, they cost one slot on a calendar already built out of slots. Three concrete moves:</p>
+        <ul>
+          <li><strong>Publish the maker blocks.</strong> Northgate blocks 9:30-12:30 for all engineers, every day, visible on the shared calendar. A published block is a norm; a private one is a preference that loses to any invite.</li>
+          <li><strong>Be the front door in person.</strong> "Great question - send it to me, not to Priya" is a sentence you will say weekly. You triage in minutes what would cost her an afternoon.</li>
+          <li><strong>Batch what you absorb.</strong> Collect the interrupts and bring them to the team once a day at a scheduled edge (right after daily scrum), not as they arrive. Absorbing and then forwarding in real time protects nobody.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The 2pm invite test.</strong> Month four: a well-meaning IT director invites two Northgate data engineers to a Thursday 2pm "quick sync." The PM declines on their behalf, takes the meeting solo, and brings back the one actual question - which the engineers answer in a two-line message. Cost with PM absorption: 30 PM-minutes. Cost without: two ruined maker afternoons, because a 2pm slot splits 1:30-4:30 into two stubs too short for deep work. The director never notices the substitution. The engineers do.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Meetings at the edges: scheduling around maker time<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When a meeting with makers is genuinely needed - sprint planning, review, retro - <strong>put it at the edge of the day</strong>, touching another meeting or the start/end of work, never in the middle of a block. Graham's core observation: for a maker, the damage of a meeting is not its duration but its position. A 30-minute meeting at 9:00 costs 30 minutes; the same meeting at 2:00 costs the afternoon.</p>
+        <ul>
+          <li><strong>Stack, don't sprinkle.</strong> One meeting-heavy afternoon per week beats five lightly-sprinkled days. Northgate stacks sprint review + retro + planning on alternating Friday afternoons.</li>
+          <li><strong>Guard your own block too.</strong> The PM writes charters, timelines, and variance narratives - maker work. One 2-hour block, twice a week, defended like the team's. A PM with zero maker time ships zero artifacts.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: YOUR OWN WEEK ============ -->
+  <section class="section" id="your-own-week">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers Eisenhower, timeboxing, Parkinson's law, meeting hygiene</span>
+      <h2>Your own week, defended <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The PM's week fails differently from the team's: not fragmentation but <strong>flooding</strong> - everything arrives marked urgent. The Eisenhower matrix sorts by two independent axes, urgent x important, and the whole trick is refusing to let urgency impersonate importance. Then two laws of physics for what remains: <strong>timebox it</strong>, because <strong>Parkinson's law (1955)</strong> says work expands to fill the time available - a status deck given a morning takes a morning; given 45 minutes, it takes 45 and is usually better.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eisenhower matrix with PMO examples: do now, schedule, route to intake, decline.">
+        <style>
+          .eiT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .eiS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .eiK { font: 700 14px Inter, sans-serif; fill: #1C242E; }
+          .eiJ { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .eiH { font: 700 12px Inter, sans-serif; fill: #1C242E; }
+          .eiL { font: 600 11px Inter, sans-serif; fill: #626D79; }
+          .eiN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="eiH" x="180" y="76">URGENT</text>
+        <text class="eiH" x="516" y="76">NOT URGENT</text>
+        <text class="eiL" x="60" y="160">IMPORTANT</text>
+        <text class="eiL" x="60" y="316">NOT</text>
+        <text class="eiL" x="60" y="332">IMPORTANT</text>
+        <rect x="180" y="90" width="320" height="140" rx="10" fill="#22364A"/>
+        <text class="eiT" x="196" y="118">Do it now</text>
+        <text class="eiS" x="196" y="140">Critical-path slip on the lakehouse</text>
+        <text class="eiS" x="196" y="158">Steering pack due today</text>
+        <text class="eiS" x="196" y="176">Production data incident</text>
+        <rect x="516" y="90" width="320" height="140" rx="10" fill="#3E5C76"/>
+        <text class="eiT" x="532" y="118">Schedule it - this is the job</text>
+        <text class="eiS" x="532" y="140">Capacity plan, risk review, charters</text>
+        <text class="eiS" x="532" y="158">1:1s, stakeholder rounds</text>
+        <text class="eiS" x="532" y="176">Quiet, never urgent, decides the year</text>
+        <rect x="180" y="246" width="320" height="140" rx="10" fill="#5C7A94"/>
+        <text class="eiT" x="196" y="274">Route it</text>
+        <text class="eiS" x="196" y="296">Ad-hoc analysis asks (#16)</text>
+        <text class="eiS" x="196" y="314">To the intake board, never DMs</text>
+        <text class="eiS" x="196" y="332">Urgent to someone, not to the plan</text>
+        <rect x="516" y="246" width="320" height="140" rx="10" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="eiK" x="532" y="274">Decline it</text>
+        <text class="eiJ" x="532" y="296">Agenda-less meetings</text>
+        <text class="eiJ" x="532" y="314">FYI threads, vanity reports</text>
+        <text class="eiJ" x="532" y="332">Say no in writing, kindly, once</text>
+        <rect x="60" y="416" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="eiN" x="84" y="428">Urgent shouts, important whispers - timebox the quiet work or Parkinson's law eats the week.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the Eisenhower matrix with Northgate PMO examples in each quadrant</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Meeting hygiene: agenda or decline<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One rule, applied without exceptions including to yourself: <strong>no agenda, no meeting</strong>. An agenda is three lines - decision needed, inputs attached, who must be there. If the organizer cannot write it, the meeting is not ready to exist. The polite decline: "Happy to join once there's an agenda with the decision named - or answer async if you send the question."</p>
+        <table class="clean">
+          <tr><th>Meeting smell</th><th>The move</th><th>What it saves</th></tr>
+          <tr><td>No agenda, "let's sync"</td><td>Decline with the agenda-or-async line</td><td>The hour, plus the norm-setting</td></tr>
+          <tr><td>Status readable from the kanban</td><td>Cancel; the wall is the status report (b1, b5)</td><td>A weekly hour x every attendee</td></tr>
+          <tr><td>Two meetings, same people, same theme</td><td>Merge them, halve the slot</td><td>Parkinson works in reverse too</td></tr>
+          <tr><td>You are optional and silent</td><td>Send a delegate or ask for the notes</td><td>Your own maker block</td></tr>
+          <tr><td>60 minutes booked by default</td><td>Timebox to 25 or 45, end early on purpose</td><td>The slack that absorbs real urgencies</td></tr>
+        </table>
+        <div class="callout tip">
+          <strong>Default durations are Parkinson's front door.</strong> Northgate switched the calendar default from 60 to 45 minutes and nothing broke - the same decisions got made in the same meetings, 25% smaller. Nobody misses the quarter hour, and back-to-back meetings gained a breathing gap.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Timebox patterns that fit data work<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Timeboxing is not one trick - it is a family, and data work uses specific members of it:</p>
+        <ul>
+          <li><strong>The exploration timebox.</strong> "Two days on the data dump, then we decide" - b2's spike pattern applied to your week. Open-ended exploration is where data weeks go to die; a dated decision point converts curiosity into a plan. The output of the box is the decision, not necessarily the answer.</li>
+          <li><strong>The polish timebox.</strong> Decks, dashboards, and documentation can absorb infinite refinement - Parkinson's favorite food. "The steering pack gets 45 minutes and ships at whatever state 45 minutes buys" is not sloppiness; it is a deliberate quality-cost trade you make once instead of renegotiating with yourself hourly.</li>
+          <li><strong>The batch box.</strong> Email, Slack, and intake triage each get two fixed daily slots instead of ambient all-day attention. The surprise is how little urgency survives a four-hour wait - most "urgent" pings self-resolve or clarify before the batch opens.</li>
+          <li><strong>The hard stop as a feature.</strong> End timeboxed meetings at the box even mid-topic, and park the remainder on the agenda for next time. Two meetings of this and the group starts front-loading what matters - the box trains the meeting.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The ad-hoc analysis trap (#16): DMs are a shadow intake<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Ad-hoc thematic analysis is a legitimate catalog service - Northgate lists it as service #16. What kills teams is the <strong>delivery channel</strong>: the DM. A direct message to a data scientist is an invisible, unscored, unqueued project with an implied deadline of "now." Ten of those a week and the portfolio is running a shadow backlog nobody chartered.</p>
+        <ul>
+          <li><strong>Every ask takes the one door.</strong> The intake board from b1 - Received, Sized, Scored, Scheduled, or Declined-with-reasons. The CMO's "quick cut of the segments" goes on a card like everything else. Small asks clear fast; the point is visibility, not bureaucracy.</li>
+          <li><strong>Redirect without friction.</strong> The team's standing reply is one sentence and a link: "Adding this to intake so it gets scheduled properly - here's the card." No lecture, no guilt. The requester keeps their dignity and the queue keeps its integrity.</li>
+          <li><strong>Watch the pattern, not just the asks.</strong> If the same exec files five ad-hoc asks a month, that is not five requests - that is an unmet reporting need. Feed it to b6's insights-sharing cadence or the self-serve BI backlog (#13) and retire the whole class of interrupts.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE PMO CALENDAR ============ -->
+  <section class="section" id="pmo-calendar">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the recurring skeleton: steering, sprint events, variance review, insights share</span>
+      <h2>The recurring skeleton on one week <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Everything this course has installed - steering (b6), sprint events (b3), variance review (b9's preview), insights sharing (#18) - has a cadence. Laid on one week, the recurring skeleton is surprisingly small: it fits, with room for maker blocks, <strong>if and only if nothing else metastasizes</strong>. The skeleton is the calendar's constitution: recurring slots are pre-decided, everything else fights for what remains.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Northgate's week, fully loaded<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Recurring event</th><th>Cadence</th><th>Slot</th><th>Why it earns the slot</th></tr>
+          <tr><td>Daily scrum</td><td>Daily</td><td>9:00, 15 min</td><td>The one sanctioned interrupt - then the maker block starts (b3)</td></tr>
+          <tr><td>Intake triage</td><td>Weekly</td><td>Mon 4:30</td><td>Every ask sized and scored within a week - DMs lose their excuse (b1)</td></tr>
+          <tr><td>Sprint planning / review + retro</td><td>Per sprint</td><td>Alternating Fri pm</td><td>Stacked at the week's edge so no mid-block hit (b3)</td></tr>
+          <tr><td>Steering committee</td><td>Monthly</td><td>1st Wed 10:00</td><td>Ranked decisions with the scorecard on the table (b6)</td></tr>
+          <tr><td>Variance review</td><td>Monthly</td><td>2nd Tue 3:00</td><td>Budget drift caught at month scale, not year scale (b9)</td></tr>
+          <tr><td>Insights share (#18)</td><td>Biweekly</td><td>Thu 3:00, 30 min</td><td>Regular insights as a product - it retires ad-hoc asks upstream</td></tr>
+          <tr><td>PM maker block</td><td>2x weekly</td><td>Tue + Thu am</td><td>Charters and plans are maker work; unprotected, they never happen</td></tr>
+          <tr><td>Team maker blocks</td><td>Daily</td><td>9:30-12:30</td><td>The half-day unit everything above exists to protect</td></tr>
+        </table>
+        <p>Count it: for the PM that is roughly seven recurring hours a week plus two monthly slots. A 14-meeting week is not the skeleton's fault - it is the skeleton plus seven meetings that never passed the agenda test.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The calendar is where the focus factor lives<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>b1 mentioned it and b10 will do the math: Northgate plans capacity at <strong>~70% focus</strong> - 14 people are about 10 real FTE. The missing 30% is not laziness; it is exactly what tonight's session is about: meetings, interrupts, context switches, intake triage. Which means the calendar is not adjacent to capacity planning - <strong>it IS capacity planning, enforced daily</strong>.</p>
+        <ul>
+          <li><strong>A defended calendar keeps the 70% honest.</strong> Maker blocks published and protected, meetings at the edges, interrupts absorbed by the PM - that is what "70% focus" looks like in practice. Without the defense, real focus drifts to 50% and every b2 timeline quietly becomes fiction.</li>
+          <li><strong>A rotting calendar is a leading indicator.</strong> When maker blocks start losing to invites, delivery slips follow four to six weeks later - long before any status report turns amber. Check the team's calendar in your weekly review the way b9 checks the burn: it is the cheapest early-warning signal you own.</li>
+          <li><strong>Escalate calendar debt like scope debt.</strong> If a stakeholder's recurring demands push a squad below the planned focus factor, that is a capacity variance - it goes to steering with numbers ("this cadence costs 0.5 FTE"), not into quiet team suffering.</li>
+        </ul>
+        <p>Hold that thought for b10, where the allocation matrix makes the same math explicit across all 10 projects - and the capstone pack gets a capacity page the calendar has to keep true.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Rebuild a broken week: 14 meetings to 7 <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">You get the PM's real calendar from Northgate month four: 14 meetings, zero maker blocks, engineers double-booked twice. Bring your own week instead if you dare - it is more fun and more painful. The rule of the exercise: every cut must name what it trades away. Free lunches are not on the menu; cheap ones are.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Inventory the 14.</strong> List every meeting with three facts: decision it produces, who must be there, what breaks if it vanishes for a month. No meeting is defended by "we've always had it."</p></div>
+      <div class="step"><p><strong>Eisenhower-sort them.</strong> Do-now stays. Schedule-it moves to the skeleton. Route-it goes to intake (yes, meetings can be routed - a recurring "quick sync" about analysis asks IS service #16 wearing a calendar costume). Decline-it gets the agenda-or-async line.</p></div>
+      <div class="step"><p><strong>Make the seven cuts, and price each one.</strong> Cancel two statuses readable from the kanban - trade: execs must actually open the kanban, so you owe them a 2-minute walkthrough. Merge two vendor calls into one - trade: the smaller vendor gets less airtime. Decline three agenda-less syncs - trade: you will absorb two of them as async threads, which costs writing time. Seven remain.</p></div>
+      <div class="step"><p><strong>Timebox what survives.</strong> Every survivor drops from 60 to 45 or 25. Parkinson gives the time back without a fight - the same decisions fit the smaller boxes.</p></div>
+      <div class="step"><p><strong>Lay the skeleton and pour the concrete.</strong> Place the recurring skeleton first, then the team's 9:30-12:30 maker blocks, then your own two PM blocks. What is left is the true budget for everything new next week - visible, finite, defensible.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Name the trade or the cut will not hold.</strong> A meeting cancelled with "this is waste" comes back in six weeks with a sponsor. A meeting cancelled with "we trade this for the kanban plus a walkthrough, and here is the walkthrough" stays cancelled - because the need it served still has a home.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Run the 14-to-7 exercise on YOUR real week: inventory, Eisenhower-sort, cut with named trades. Bring the one cut you could not bring yourself to make - it is usually the interesting one.</li>
+      <li>Publish one team maker block on the shared calendar and defend it for a full week. Log every attempted invasion and how you absorbed it.</li>
+      <li>Trace the last three ad-hoc analysis asks that reached your team. Which arrived by DM? Route the next one through intake and note how long the polite redirect actually took.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Why does a 30-minute meeting at 2pm cost a data engineer more than 30 minutes?</p>
+      <button class="qopt" type="button">A · It doesn't - time is time, and 30 minutes is 30 minutes wherever it sits</button>
+      <button class="qopt" type="button">B · Afternoon meetings run long more often than morning ones</button>
+      <button class="qopt" type="button">C · Makers work in half-day units - a mid-block meeting splits the afternoon into two stubs too short for deep work</button>
+      <p class="qwhy">Graham's maker's schedule (2009): for makers the damage of a meeting is its position, not its duration. The same 30 minutes at the edge of the day costs 30 minutes; mid-block it costs the block. That is why the PM absorbs interrupts and stacks meetings at the edges.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Parkinson's law says work expands to fill the time available. What is the PMO's working counter?</p>
+      <button class="qopt" type="button">A · Timebox it - give the status deck 45 minutes instead of a morning, and end meetings at 25 or 45 by default</button>
+      <button class="qopt" type="button">B · Add buffer time so the expansion has somewhere safe to go</button>
+      <button class="qopt" type="button">C · Track actuals against estimates and coach the slow performers</button>
+      <p class="qwhy">Parkinson's law (1955) is beaten by shrinking the container, not padding it - buffers just give the expansion more room. Northgate's 60-to-45 default change made the same decisions happen in 25% less time. Buffers belong in budgets (b9), not in meeting slots.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · The CMO DMs a data scientist asking for a "quick" thematic analysis. What is the right move?</p>
+      <button class="qopt" type="button">A · Do it fast - it's the CMO, and keeping executives happy protects the portfolio</button>
+      <button class="qopt" type="button">B · Redirect it to the intake board with one friendly sentence - it gets sized, scored, and scheduled like every ask</button>
+      <button class="qopt" type="button">C · The data scientist should decline directly and explain the team is at capacity</button>
+      <p class="qwhy">DMs are a shadow intake: unscored, unqueued, invisible work with an implied deadline of now. Service #16 is legitimate - the channel is the problem. The one-door rule from b1 holds for the CMO too, and repeat asks signal an unmet need for b6's insights cadence to retire.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Ad-hoc Thematic Analysis (service #16)</span><span class="note">The DM trap named and closed - every ask routed through the b1 intake board; conflict angle continues in b8</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Regular Insights Sharing (service #18)</span><span class="note">Placed on the weekly skeleton as a biweekly product - the upstream cure that retires ad-hoc interrupts</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Maker's schedule, manager's schedule (Paul Graham, 2009)</span><span class="note">Half-day units, position over duration, the PM as interrupt absorber - worked on both calendars</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Eisenhower matrix · Parkinson's law (1955)</span><span class="note">Urgent x important sorted with PMO examples; timeboxing as the working counter to expansion</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Sprint events (Scrum Guide 2020)</span><span class="note">Placed on the calendar skeleton at the week's edges - the full mechanics live in b3</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Maker vs manager</b><span>Makers run on half-day units, managers on hour slots (Graham 2009). A mid-block meeting costs the block, not the minutes.</span></div>
+      <div class="cheat-item"><b>The PM absorbs</b><span>Interrupts land on your calendar, not the team's. Publish the maker blocks, be the front door, batch the forwards to one daily edge.</span></div>
+      <div class="cheat-item"><b>Meetings at edges</b><span>Stack maker-facing meetings at day/week edges, never mid-block. One heavy afternoon beats five sprinkled days.</span></div>
+      <div class="cheat-item"><b>Eisenhower</b><span>Urgent x important. Do now / schedule it / route it / decline it. Urgency impersonating importance is the failure mode.</span></div>
+      <div class="cheat-item"><b>Parkinson + timebox</b><span>Work expands to fill the time available (1955). Shrink the container: 45-min default, 25-min syncs, end early on purpose.</span></div>
+      <div class="cheat-item"><b>Agenda or decline</b><span>Three lines: decision needed, inputs attached, who must be there. No agenda = async or no meeting. Applies to you too.</span></div>
+      <div class="cheat-item"><b>Ad-hoc asks (#16)</b><span>DMs are a shadow intake. One door for every ask; repeat askers signal an unmet need - retire the class via insights (#18) or self-serve BI.</span></div>
+      <div class="cheat-item"><b>The skeleton</b><span>Scrum daily · intake weekly · steering + variance monthly · insights biweekly · sprint events at edges · maker blocks daily. ~7 recurring hrs.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 7 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-stakeholder-management.html">← Prev: Stakeholder management</a> &nbsp;·&nbsp; <a href="b8-conflict-management.html">Next: Conflict management →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

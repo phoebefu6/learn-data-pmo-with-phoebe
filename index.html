@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn data pmo with phoebe - a two-track course on running a data portfolio</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(62,92,118,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#F5F8FA); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe</div>
+    <h1>Run the whole data portfolio - not just one project</h1>
+    <p class="sub">Northgate, a 120-store retailer, stands up a data office: 30 services on the catalog - cloud, lakehouse, dashboards, KPI systems, forecasting, governance, agents - 14 people, $2,700k, one year. This course is the PMO chair for that year. A leader track gives data executives the roadmap, budget, headcount, and steering disciplines. A practitioner track runs the delivery machinery: intake and charters, critical-path timelines, sprints fitted to data work, RACI, stakeholders, conflict, EVM cost control, capacity. At its heart a live portfolio simulator: toggle the five PMO levers and watch on-time delivery climb from 1 in 10 to 9 in 10 - then press the tempting "add headcount" button and meet Brooks's law in one click. Sibling courses cover running ONE tech project and managing a programme with AI; this is the portfolio layer above both.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="30">30</b><span>services in the catalog</span></div>
+      <div class="stat"><b data-count="10">10</b><span>projects on the board</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🧭 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for data executives, heads of data &amp; sponsors · 6 x 45 min · decisions, not mechanics</span></h2>
+      <p class="plede">The steering chair: what a data PMO is and is not, the dependency-honest annual roadmap, run-vs-change budgeting, the shape and math of a 14-person data office, steering cadences that prevent month-4 surprises, and reading the portfolio health board like an executive - including when to kill, pivot, or re-baseline.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-the-data-pmo.html" style="--diff:#34D399">
+        <span class="cicon">🏛️</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>The data PMO</h3>
+        <p>Project vs program vs portfolio, the 4-domain catalog as a portfolio, and what the PMO does - and pointedly does not - own. PMBOK 7's domains as the leader's checklist.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-annual-roadmap.html" style="--diff:#34D399">
+        <span class="cicon">🗺️</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>The annual roadmap</h3>
+        <p>Sequencing by dependency - lake before warehouse before BI before ML before agents - what runs parallel, and the roadmap as a versioned communication contract.</p>
+        <span class="meta"><span class="pill light">The dependency ladder</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-budget-and-cost.html" style="--diff:#FBBF24">
+        <span class="cicon">💰</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Budget and cost</h3>
+        <p>Run vs change, costing data projects (people, platform, tokens), why a 10% buffer plus monthly variance review beats padded line items - CPI/SPI as traffic lights.</p>
+        <span class="meta"><span class="pill light">The two-pot budget</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-headcount-and-rr.html" style="--diff:#FBBF24">
+        <span class="cicon">🧑‍🤝‍🧑</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Headcount and R&amp;R</h3>
+        <p>The 14-FTE data office role by role, hire vs contract vs train, capacity math with a 70% focus factor - and Brooks's law as a hiring caution.</p>
+        <span class="meta"><span class="pill light">The org shape</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-stakeholders-and-steering.html" style="--diff:#FB923C">
+        <span class="cicon">🤝</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Stakeholders and steering</h3>
+        <p>The power-interest map for Northgate's executives, the steering cadence, the exec scorecard as the steering artifact, and escalation paths that work.</p>
+        <span class="meta"><span class="pill light">The steering room</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-portfolio-health.html" style="--diff:#FB923C">
+        <span class="cicon">📊</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Portfolio health</h3>
+        <p>The health scorecard, stage gates, kill-pivot-re-baseline decisions - and the live simulator read from the steering chair: name the missing lever, ask for the right fix.</p>
+        <span class="meta"><span class="pill light">▶ The simulator, exec view</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The practitioner track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for PMs, delivery leads &amp; data leads wearing the PMO hat · 10 x 45 min · method over software</span></h2>
+      <p class="plede">One running case, built harder every session: Northgate's year-one portfolio. Intake and charters, dependency-aware timelines, sprints that respect data work's discovery risk, RACI with exactly one A, the live lever-ladder simulator (1 → 2 → 4 → 6 → 9 projects on time), stakeholders, your own calendar, conflict, EVM by hand, and the capstone: the complete year-one PMO pack.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-portfolio-intake.html" style="--diff:#34D399">
+        <span class="cicon">📥</span>
+        <span class="cnum">Practitioner 1 · easy</span>
+        <h3>Portfolio intake</h3>
+        <p>Roll 30 services into 10 projects, write the one-page charter with the out-of-scope box that saves you in month 4, and score the queue with MoSCoW, RICE, WSJF.</p>
+        <span class="meta"><span class="pill amber">▶ Practitioners start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-roadmap-to-timeline.html" style="--diff:#34D399">
+        <span class="cicon">📅</span>
+        <span class="cnum">Practitioner 2 · easy</span>
+        <h3>Roadmap to timeline</h3>
+        <p>Milestones, cross-project dependencies, the critical path and its float - plus estimating data work honestly: planning fallacy, reference classes, discovery spikes.</p>
+        <span class="meta"><span class="pill light">The critical path</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-sprint-planning-for-data.html" style="--diff:#FBBF24">
+        <span class="cicon">🔁</span>
+        <span class="cnum">Practitioner 3 · medium</span>
+        <h3>Sprint planning for data</h3>
+        <p>Scrum Guide 2020 essentials, then the honest adaptation: pipelines estimate like software, models iterate like CRISP-DM - timeboxes, spikes, and done-means per work type.</p>
+        <span class="meta"><span class="pill light">Data sprints differ</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-raci-and-rr.html" style="--diff:#FBBF24">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Practitioner 4 · medium</span>
+        <h3>RACI and R&amp;R</h3>
+        <p>One A per deliverable, the smells (two As, ten Cs), and four worked RACIs - one per domain, from schema design to data governance.</p>
+        <span class="meta"><span class="pill light">One A. Exactly one.</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-timeline-management.html" style="--diff:#FB923C">
+        <span class="cicon">🎛️</span>
+        <span class="cnum">Practitioner 5 · the heart</span>
+        <h3>Timeline management + the simulator</h3>
+        <p>Status that predicts, the portfolio's own early-warning telemetry - then the live lever ladder: 1 → 9 on time, +38% → +1% variance, and the Brooks button.</p>
+        <span class="meta"><span class="pill light">▶ The simulator session</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-stakeholder-management.html" style="--diff:#FB923C">
+        <span class="cicon">🗣️</span>
+        <span class="cnum">Practitioner 6 · hands-on</span>
+        <h3>Stakeholder management</h3>
+        <p>The power-interest map and comms plan, cadences that build trust, insights sharing as a product, and the AI use-case discovery workshop as alignment.</p>
+        <span class="meta"><span class="pill light">Trust on a cadence</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-time-management.html" style="--diff:#FB923C">
+        <span class="cicon">⏰</span>
+        <span class="cnum">Practitioner 7 · hands-on</span>
+        <h3>Time management</h3>
+        <p>Maker vs manager schedule, protecting the team's deep-work blocks, Eisenhower and timeboxing on your own week - and 14 meetings cut to 7.</p>
+        <span class="meta"><span class="pill light">Your own calendar</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-conflict-management.html" style="--diff:#FB923C">
+        <span class="cicon">🤼</span>
+        <span class="cnum">Practitioner 8 · hands-on</span>
+        <h3>Conflict management</h3>
+        <p>The five Thomas-Kilmann modes mapped to real portfolio fights - priority deadlocks, resource contention - plus disagree-and-commit and escalation etiquette.</p>
+        <span class="meta"><span class="pill light">Structural vs personal</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-budget-and-cost-management.html" style="--diff:#F87171">
+        <span class="cicon">🧾</span>
+        <span class="cnum">Practitioner 9 · hardest</span>
+        <h3>Budget and cost management</h3>
+        <p>EVM by hand on the lakehouse - PV, EV, AC, SPI, CPI, EAC - cloud and GenAI token cost control, and the month-6 variance review run live.</p>
+        <span class="meta"><span class="pill light">The money session</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-headcount-and-capacity.html" style="--diff:#F87171">
+        <span class="cicon">🏆</span>
+        <span class="cnum">Practitioner 10 · capstone</span>
+        <h3>Headcount, capacity + the pack</h3>
+        <p>The allocation matrix, focus-factor math, hire vs contract vs train - then assemble the complete year-one PMO pack: six artifacts, one checklist.</p>
+        <span class="meta"><span class="pill light">Ship the pack</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors into the same conviction: a data office earns trust portfolio-first - one visible queue, honest dates, money watched monthly, and zero surprises in the steering room.</p>
+      <div class="path"><b>🧭 Leader (decide &amp; steer)</b>
+        <a class="pstep" href="courses/a1-the-data-pmo.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-annual-roadmap.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-budget-and-cost.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-headcount-and-rr.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-stakeholders-and-steering.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-portfolio-health.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Practitioner (run the machine)</b>
+        <a class="pstep" href="courses/b1-portfolio-intake.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-roadmap-to-timeline.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-sprint-planning-for-data.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-raci-and-rr.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-timeline-management.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-stakeholder-management.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-time-management.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-conflict-management.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-budget-and-cost-management.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-headcount-and-capacity.html">b10</a>
+      </div>
+      <div class="path"><b>⚡ New PM fast lane</b>
+        <a class="pstep" href="courses/b1-portfolio-intake.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-roadmap-to-timeline.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-raci-and-rr.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-timeline-management.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-budget-and-cost-management.html">b9</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (steer AND run)</b>
+        <a class="pstep" href="courses/a1-the-data-pmo.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-portfolio-intake.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · taught from the Scrum Guide 2020, PMBOK Guide 7th ed, standard EVM (PMI), The Mythical Man-Month, the Thomas-Kilmann conflict modes, CRISP-DM, and Paul Graham's maker-manager essay · the simulator is an honestly-labeled teaching simulation · not covered by design: PMP/PRINCE2 cert prep, tool tutorials, HR performance management, vendor contracting depth</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nData PMO",
+  centerColor: "#22364A",
+  sessions: [
+    { label: "The data\nPMO", href: "courses/a1-the-data-pmo.html", color: "#34D399",
+      concepts: [
+        { label: "Portfolio > project", href: "courses/a1-the-data-pmo.html" },
+        { label: "What PMO does not own", href: "courses/a1-the-data-pmo.html" } ] },
+    { label: "Annual\nroadmap", href: "courses/a2-annual-roadmap.html", color: "#34D399",
+      concepts: [
+        { label: "Dependency ladder", href: "courses/a2-annual-roadmap.html" },
+        { label: "Roadmap = contract", href: "courses/a2-annual-roadmap.html" } ] },
+    { label: "Budget\n& cost", href: "courses/a3-budget-and-cost.html", color: "#FBBF24",
+      concepts: [
+        { label: "Run vs change", href: "courses/a3-budget-and-cost.html" },
+        { label: "Buffer, not padding", href: "courses/a3-budget-and-cost.html" } ] },
+    { label: "Headcount\n& R&R", href: "courses/a4-headcount-and-rr.html", color: "#FBBF24",
+      concepts: [
+        { label: "14-FTE org shape", href: "courses/a4-headcount-and-rr.html" },
+        { label: "70% focus factor", href: "courses/a4-headcount-and-rr.html" } ] },
+    { label: "Stakeholders\n& steering", href: "courses/a5-stakeholders-and-steering.html", color: "#FB923C",
+      concepts: [
+        { label: "Power-interest map", href: "courses/a5-stakeholders-and-steering.html" },
+        { label: "Steering cadence", href: "courses/a5-stakeholders-and-steering.html" } ] },
+    { label: "Portfolio\nhealth", href: "courses/a6-portfolio-health.html", color: "#FB923C",
+      concepts: [
+        { label: "Kill · pivot · re-baseline", href: "courses/a6-portfolio-health.html" },
+        { label: "Sim, exec view", href: "courses/a6-portfolio-health.html" } ] },
+    { label: "Portfolio\nintake", href: "courses/b1-portfolio-intake.html", color: "#34D399",
+      concepts: [
+        { label: "30 → 10 rollup", href: "courses/b1-portfolio-intake.html" },
+        { label: "One-page charter", href: "courses/b1-portfolio-intake.html" },
+        { label: "WSJF", href: "courses/b1-portfolio-intake.html" } ] },
+    { label: "Roadmap to\ntimeline", href: "courses/b2-roadmap-to-timeline.html", color: "#34D399",
+      concepts: [
+        { label: "Critical path", href: "courses/b2-roadmap-to-timeline.html" },
+        { label: "Discovery spikes", href: "courses/b2-roadmap-to-timeline.html" } ] },
+    { label: "Sprints\nfor data", href: "courses/b3-sprint-planning-for-data.html", color: "#FBBF24",
+      concepts: [
+        { label: "Scrum 2020 core", href: "courses/b3-sprint-planning-for-data.html" },
+        { label: "CRISP-DM loop", href: "courses/b3-sprint-planning-for-data.html" } ] },
+    { label: "RACI\n& R&R", href: "courses/b4-raci-and-rr.html", color: "#FBBF24",
+      concepts: [
+        { label: "One A rule", href: "courses/b4-raci-and-rr.html" },
+        { label: "4 worked RACIs", href: "courses/b4-raci-and-rr.html" } ] },
+    { label: "Timeline mgmt\n+ simulator", href: "courses/b5-timeline-management.html", color: "#FB923C",
+      concepts: [
+        { label: "Lever ladder 1 → 9", href: "courses/b5-timeline-management.html" },
+        { label: "Brooks button", href: "courses/b5-timeline-management.html" },
+        { label: "Honest re-baseline", href: "courses/b5-timeline-management.html" } ] },
+    { label: "Stakeholder\nmgmt", href: "courses/b6-stakeholder-management.html", color: "#FB923C",
+      concepts: [
+        { label: "Comms plan", href: "courses/b6-stakeholder-management.html" },
+        { label: "Discovery workshop", href: "courses/b6-stakeholder-management.html" } ] },
+    { label: "Time\nmgmt", href: "courses/b7-time-management.html", color: "#FB923C",
+      concepts: [
+        { label: "Maker vs manager", href: "courses/b7-time-management.html" },
+        { label: "14 → 7 meetings", href: "courses/b7-time-management.html" } ] },
+    { label: "Conflict\nmgmt", href: "courses/b8-conflict-management.html", color: "#FB923C",
+      concepts: [
+        { label: "5 TKI modes", href: "courses/b8-conflict-management.html" },
+        { label: "Disagree & commit", href: "courses/b8-conflict-management.html" } ] },
+    { label: "Budget & cost\nmgmt", href: "courses/b9-budget-and-cost-management.html", color: "#F87171",
+      concepts: [
+        { label: "EVM by hand", href: "courses/b9-budget-and-cost-management.html" },
+        { label: "Token cost control", href: "courses/b9-budget-and-cost-management.html" } ] },
+    { label: "Capacity +\nthe pack", href: "courses/b10-headcount-and-capacity.html", color: "#F87171",
+      concepts: [
+        { label: "Allocation matrix", href: "courses/b10-headcount-and-capacity.html" },
+        { label: "Year-one PMO pack", href: "courses/b10-headcount-and-capacity.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

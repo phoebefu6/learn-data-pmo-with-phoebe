@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Headcount and R&amp;R - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Fourteen people, <span class="accent">ten projects</span></h1>
+    <p class="sub">Northgate's data office is 14 FTE - and the portfolio asks for more than 14 FTE can give. Tonight is the leader's people session: the shape of a working data office role by role, when to hire vs contract vs upskill (including literacy training as a genuine capacity lever), who owns pipelines vs models vs dashboards vs governance so the one-A rule survives at org scale, and the capacity math that separates plans from wishes. The number that matters: 14 people at roughly 70% focus is about 10 real FTE. Plan for 14 and you have already failed - you just do not know it yet.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Data executives · heads of data · sponsors</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The 14-FTE org + R&amp;R</span>
+      <span class="a3" style="flex:5">18-40 · Capacity math + allocation demo</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: SHAPE OF A DATA OFFICE ============ -->
+  <section class="section" id="org-shape">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the 14-FTE org + hire vs contract vs upskill</span>
+      <h2>The shape of a data office <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Northgate's year-one data office is 14 FTE: a Head of Data, a PMO lead (you, if you are taking the practitioner track), one platform engineer, four data engineers, three analytics engineers on BI, two data scientists, one ML engineer, and a governance lead. Notice the ratios: engineering-heavy, one lonely ML engineer, and governance funded from day one rather than bolted on after the first incident. That shape is deliberate - it mirrors the dependency ladder from a2: you cannot analyze what nobody piped, and you cannot deploy models on data nobody governs.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Northgate's 14-FTE data office org chart: Head of Data over PMO lead, governance lead, and five delivery roles.">
+        <style>
+          .ogT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .ogS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .ogP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .ogX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .ogN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .ogWire { stroke: #5C7A94; stroke-width: 2; fill: none; }
+        </style>
+        <text class="ogP" x="60" y="36">NORTHGATE DATA OFFICE · 14 FTE, YEAR ONE</text>
+        <rect x="330" y="52" width="220" height="56" rx="8" fill="#22364A"/>
+        <text class="ogT" x="348" y="76">Head of Data · 1</text>
+        <text class="ogS" x="348" y="94">Owns the portfolio cut line</text>
+        <path class="ogWire" d="M440,108 L440,132"/>
+        <path class="ogWire" d="M440,132 L200,132 L200,150"/>
+        <path class="ogWire" d="M440,132 L680,132 L680,150"/>
+        <rect x="90" y="150" width="220" height="56" rx="8" fill="#E2590A"/>
+        <text class="ogT" x="108" y="174">PMO lead · 1 (you)</text>
+        <text class="ogS" x="108" y="192">Cadence, visibility, money</text>
+        <rect x="570" y="150" width="220" height="56" rx="8" fill="#3E5C76"/>
+        <text class="ogT" x="588" y="174">Governance lead · 1</text>
+        <text class="ogS" x="588" y="192">Policy, quality, stewards</text>
+        <path class="ogWire" d="M440,132 L440,240"/>
+        <path class="ogWire" d="M120,240 L760,240"/>
+        <path class="ogWire" d="M120,240 L120,258"/>
+        <path class="ogWire" d="M280,240 L280,258"/>
+        <path class="ogWire" d="M440,240 L440,258"/>
+        <path class="ogWire" d="M600,240 L600,258"/>
+        <path class="ogWire" d="M760,240 L760,258"/>
+        <rect x="48" y="258" width="144" height="70" rx="8" fill="#3E5C76"/>
+        <text class="ogT" x="62" y="284">Platform eng · 1</text>
+        <text class="ogS" x="62" y="302">Landing zone,</text>
+        <text class="ogS" x="62" y="317">cloud + monitoring</text>
+        <rect x="208" y="258" width="144" height="70" rx="8" fill="#22364A"/>
+        <text class="ogT" x="222" y="284">Data eng · 4</text>
+        <text class="ogS" x="222" y="302">Pipelines, lake,</text>
+        <text class="ogS" x="222" y="317">warehouse</text>
+        <rect x="368" y="258" width="144" height="70" rx="8" fill="#5C7A94"/>
+        <text class="ogT" x="382" y="284">Analytics/BI · 3</text>
+        <text class="ogS" x="382" y="302">Reports, KPIs,</text>
+        <text class="ogS" x="382" y="317">dashboards</text>
+        <rect x="528" y="258" width="144" height="70" rx="8" fill="#22364A"/>
+        <text class="ogT" x="542" y="284">Data sci · 2</text>
+        <text class="ogS" x="542" y="302">Segments,</text>
+        <text class="ogS" x="542" y="317">forecasts</text>
+        <rect x="688" y="258" width="144" height="70" rx="8" fill="#3E5C76"/>
+        <text class="ogT" x="702" y="284">ML eng · 1</text>
+        <text class="ogS" x="702" y="302">Models to prod,</text>
+        <text class="ogS" x="702" y="317">agentic pilot</text>
+        <text class="ogX" x="60" y="366">1 + 1 + 1 + 4 + 3 + 2 + 1 + 1 = 14 FTE. Engineering-heavy on purpose - the ladder is fed from the bottom.</text>
+        <text class="ogX" x="60" y="384">The single ML engineer is the org chart's built-in bottleneck. Remember this box for Part 3.</text>
+        <rect x="60" y="408" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="ogN" x="84" y="420">14 on paper is NOT 14 of capacity - at ~70% focus this org is about 10 real FTE. Part 3 does the math.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the 14-FTE Northgate data office, role by role</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Hire, contract, or upskill - the three-way call<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every capacity gap gets one of three answers, and the signal is the shape of the need, not the loudness of the ask:</p>
+        <ul>
+          <li><strong>Hire</strong> when the need is permanent and recurring - a capability the office will exercise every quarter for years. Slow (months to productive) but compounding. Northgate's four data engineers are hires: pipelines never stop needing owners.</li>
+          <li><strong>Contract</strong> when the need is a spike or a one-off - the cloud landing zone build, a security review, a migration. Fast and expensive, and the knowledge walks out the door, so pair every contractor with a named internal shadow.</li>
+          <li><strong>Upskill</strong> when the skill is adjacent to what the team already does - and when the real bottleneck is the BUSINESS side. Data literacy training for store managers and AI literacy training for head office are catalog services precisely because every self-serve user is an ad-hoc request that never reaches the team. Training is capacity building, not a perk.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The cheapest FTE Northgate never hired.</strong> Month 3: regional managers file dashboard requests faster than three BI engineers can clear them. The instinctive fix is "hire a fourth." Instead, the data literacy course teaches forty store managers to answer their own top ten questions in self-serve BI - and the request queue drops by roughly a third. The BI team gets its month back without a single requisition. When training is on the roadmap as a capacity lever, headcount conversations change shape.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The two roles execs mix up<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two pairs of roles get conflated in steering meetings, and each mix-up costs real money:</p>
+        <ul>
+          <li><strong>Head of Data vs PMO lead.</strong> The Head of Data decides WHAT the office does - owns the cut line, kills projects, faces the board. The PMO lead runs HOW it flows - cadence, visibility, escalation, money hygiene. Give the PMO the cut line and you get a bureaucrat with enemies; give the Head of Data the status mechanics and strategy time disappears into spreadsheets.</li>
+          <li><strong>Governance lead vs data stewards.</strong> The governance lead (1 FTE, central) writes policy and runs the quality scorecard. Stewards sit IN the business domains, part-time, applying policy to their own data. Central governance without domain stewards is a documentation project; b4 wires this into a proper RACI.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Reading the ratios - why 4 : 3 : 2 : 1<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The delivery ratios (4 data engineers : 3 analytics engineers : 2 data scientists : 1 ML engineer) encode a year-one truth worth saying out loud in steering:</p>
+        <ul>
+          <li><strong>Engineering outnumbers science on purpose.</strong> Year one is mostly plumbing: landing zone, lakehouse, validated pipelines. Data scientists without piped, governed data are expensive people waiting politely.</li>
+          <li><strong>The BI three are the visible layer.</strong> Dashboards and the exec scorecard are what the business SEES - understaff this and the whole office looks slow, whatever engineering ships.</li>
+          <li><strong>One ML engineer is a year-one bet, not an oversight.</strong> Two model-bearing projects plus a pilot is the most one person can shepherd to production - Part 3 shows it is already too much if all three run at once.</li>
+          <li><strong>The ratio shifts in year two.</strong> As the platform stabilizes, run work grows and the science share can grow with it - which is why headcount plans are re-cut annually, not carved in stone.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: R&R AT TEAM LEVEL ============ -->
+  <section class="section" id="rr-team">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers asset ownership + the one-A rule at org scale</span>
+      <h2>Who owns what - one A per asset <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">RACI's iron rule - exactly one Accountable per deliverable - scales up from documents to whole asset classes. Pipelines, models, dashboards, governance: each needs ONE named accountable role, or every incident becomes a negotiation. The failure mode at org scale is not "nobody owns it" - it is <strong>two teams who both sort-of own it</strong>, each assuming the other has the pager.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The ownership grid<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Asset class</th><th>Accountable (the one A)</th><th>Responsible</th><th>Consulted</th></tr>
+          <tr><td>Pipelines + lake/warehouse</td><td>Data engineering lead</td><td>Data engineers (4)</td><td>Platform engineer, governance lead</td></tr>
+          <tr><td>Models in production</td><td>ML engineer</td><td>Data scientists (2) build, ML eng deploys</td><td>Data engineering, business owner</td></tr>
+          <tr><td>Dashboards + KPI system</td><td>Analytics/BI lead</td><td>Analytics engineers (3)</td><td>Metric owners in the business</td></tr>
+          <tr><td>Governance + data quality</td><td>Governance lead</td><td>Domain stewards (in the business)</td><td>Everyone shipping data assets</td></tr>
+        </table>
+        <p>Read the grid twice: once down the A column (every asset has exactly one), once across the ML row - the scientists BUILD models, but the ML engineer is accountable for them IN PRODUCTION. That handoff line, written down, is what stops "the model broke" from becoming a two-team blame loop.</p>
+        <div class="callout tip">
+          <strong>The one-A test for leaders.</strong> Point at any asset in the portfolio and ask "who is accountable?" One name, instantly, from anyone you ask = healthy. A pause, a committee, or two names = this session's homework. Full RACI mechanics live in b4 on the practitioner track.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When two teams both own the dashboard<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The classic org-scale RACI smell: the BI team "owns dashboards" and the data science team "owns their model's dashboard." Both true-ish, so the forecasting dashboard has two As - which means zero. It breaks on a Saturday; each team assumes the other saw the alert; the CFO sees stale numbers Monday.</p>
+        <ul>
+          <li><strong>Fix by asset, not by tool.</strong> The rule "Analytics/BI is accountable for every dashboard executives see, whatever produced the numbers" gives one A. The DS team becomes Responsible for the model behind it, Consulted on the display.</li>
+          <li><strong>Publish the grid.</strong> Ownership that lives in people's heads reorganizes itself every time someone is on leave. One page, on the wall next to the portfolio kanban.</li>
+          <li><strong>Escalation is part of R&amp;R.</strong> Each A gets a named escalation path - the a5 steering session builds the ladder above them.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CAPACITY MATH ============ -->
+  <section class="section" id="capacity-math">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the focus factor + Brooks's law</span>
+      <h2>Capacity math - the honest kind <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A person is not 1.0 FTE of project capacity. Meetings, support, interviews, leave, the run work that keeps yesterday's deliveries alive - a realistic focus factor is <strong>around 70%</strong>. So Northgate's 14 people are about 10 real FTE against 10 projects, which is why the in-flight limit exists. And when a project runs late anyway, the tempting fix - add people - has a name and a warning label: <strong>Brooks's law</strong> (The Mythical Man-Month, 1975): adding manpower to a late software project makes it later.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Capacity math: one FTE shrinks to about 0.7 at realistic focus, and the ML engineer's three project assignments demand 1.5 FTE against 0.7 available.">
+        <style>
+          .cmT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .cmP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .cmX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .cmO { font: 700 12px Inter, sans-serif; fill: #E2590A; }
+          .cmN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .cmD { stroke: #E2590A; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; }
+        </style>
+        <text class="cmP" x="60" y="40">ONE PERSON ON PAPER · scale: 1.0 FTE = 300px</text>
+        <rect x="60" y="54" width="300" height="40" rx="6" fill="#A3B8C9"/>
+        <text class="cmP" x="76" y="79">1.0 FTE hired</text>
+        <text class="cmP" x="60" y="126">THE SAME PERSON, HONESTLY</text>
+        <rect x="60" y="140" width="210" height="40" rx="6" fill="#22364A"/>
+        <text class="cmT" x="76" y="165">~0.7 project focus</text>
+        <rect x="270" y="140" width="90" height="40" rx="6" fill="#EDF2F6" stroke="#A3B8C9"/>
+        <text class="cmX" x="280" y="165">0.3 the rest</text>
+        <text class="cmX" x="380" y="165">meetings · support · leave · run work</text>
+        <text class="cmX" x="60" y="208">Whole org: 14 x 0.7 = about 10 real FTE for 10 projects</text>
+        <text class="cmP" x="60" y="248">THE ML ENGINEER'S QUARTER · demand vs reality</text>
+        <rect x="60" y="262" width="120" height="40" rx="6" fill="#3E5C76"/>
+        <text class="cmT" x="72" y="287">P6 · 0.4</text>
+        <rect x="180" y="262" width="180" height="40" rx="6" fill="#22364A"/>
+        <text class="cmT" x="192" y="287">P7 forecasting · 0.6</text>
+        <rect x="360" y="262" width="150" height="40" rx="6" fill="#5C7A94"/>
+        <text class="cmT" x="372" y="287">P10 agentic · 0.5</text>
+        <path class="cmD" d="M270,252 L270,316"/>
+        <text class="cmO" x="282" y="330">capacity ends here: 0.7</text>
+        <text class="cmO" x="524" y="287">demand 1.5 = 2x overallocated</text>
+        <text class="cmX" x="60" y="330">Three projects, one human.</text>
+        <rect x="60" y="358" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="cmN" x="84" y="370">Three projects per ML engineer is not a plan, it is a queue with extra meetings. Resequence, contract, or descope.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the focus factor and the overallocated ML engineer</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why 3 projects per person is a plan to fail<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The allocation matrix says the ML engineer gives 0.4 + 0.6 + 0.5 = 1.5 FTE. The engineer has about 0.7. Three things happen, all bad:</p>
+        <ul>
+          <li><strong>Context switching taxes what little there is.</strong> Every project swap costs re-immersion time, so the real output is even less than 0.7 - split three ways, each project gets a distracted fraction.</li>
+          <li><strong>Every project inherits the same single point of failure.</strong> One resignation, one illness, and three charters slip at once. The org chart flagged this box for a reason.</li>
+          <li><strong>The slip is invisible until it is triple.</strong> Each PM sees "my ML task is a bit late" - only the portfolio view (the kanban, the allocation matrix) reveals the shared cause.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>How the overallocation actually surfaces.</strong> Northgate's steering meeting, month 4: forecasting is amber, the agentic pilot is amber, segmentation's model task just slipped. Three separate excuses on three separate slides - until the PMO lead overlays the allocation matrix and one column glows. The fix was never "push the teams harder"; it was resequencing the agentic pilot to Q3 (which the a2 roadmap wanted anyway) and contracting model-deployment help for one quarter, with the ML engineer as the named shadow.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Brooks's law - the hiring caution, quantified<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"Adding manpower to a late software project makes it later" - Fred Brooks, 1975, still undefeated. Two mechanisms do the damage:</p>
+        <ul>
+          <li><strong>Ramp-up drains the veterans.</strong> New joiners produce little for weeks while consuming the time of exactly the people who were already behind - the project slows down before it speeds up, and "before" is the part you cannot afford.</li>
+          <li><strong>Communication paths explode.</strong> Paths grow as n(n-1)/2: a team of 4 has 6, a team of 6 has 15. More of everyone's focus factor goes to coordination - the 0.7 quietly becomes 0.6.</li>
+        </ul>
+        <p>The leader's translation: headcount is a fix for NEXT year's capacity, never for THIS quarter's slip. The simulator's crash button (a6/b5) plays this out: adding people to late projects adds about a month and 15% cost to each one. Mid-year rescue options are the demo's trio - resequence, contract a bounded gap, or descope - not a hiring spree.</p>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The allocation matrix as a standing artifact<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tonight's demo builds the matrix once - the win is keeping it alive. Three habits turn a spreadsheet into an instrument:</p>
+        <ul>
+          <li><strong>Re-cut it quarterly, with the roadmap.</strong> Allocations follow sequencing: when the agentic pilot moves to Q3, the ML engineer's row changes on the same day, in the same meeting.</li>
+          <li><strong>New project? Show the row it eats.</strong> Every mid-year addition must name whose 0.7 it comes from. "We'll absorb it" is the sentence that turns 0.7 into 0.9 into burnout - the matrix makes absorption visible and therefore refusable.</li>
+          <li><strong>Read it next to the kanban.</strong> The kanban says WHAT is in flight, the matrix says WHO is carrying it. Amber projects with an overallocated shared person are one problem, not three - the b10 capstone binds both into the year-one PMO pack.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Allocate 14 people, find the break <span class="tag demo">★ 18 min · everyone allocates</span></h2>
+    </div>
+    <p class="lede">The allocation matrix: 14 FTE down the side, 10 projects across the top, fractions in the cells. Fill it for Northgate's Q1-Q2 and find where the plan quietly asks for people who do not exist.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Set each row's budget.</strong> Every person's cells may sum to at most 0.7 - not 1.0. Write the 0.7 ceiling at the end of every row before allocating anything. This one habit kills most fantasy plans at birth.</p></div>
+      <div class="step"><p><strong>Allocate the obvious rows.</strong> Data engineers to the lakehouse and pipelines, analytics engineers to reporting and the scorecard, platform engineer to the landing zone. Watch how fast 0.7 fills up once run-work reality is respected.</p></div>
+      <div class="step"><p><strong>Find the hot column.</strong> Sum each PERSON's row. At least one row breaks - the ML engineer carrying segmentation, forecasting, and the agentic pilot lands near 1.5 against 0.7. Circle it.</p></div>
+      <div class="step"><p><strong>Fix it without Brooks.</strong> Three legal moves: resequence (park the agentic pilot to Q3 - the dependency ladder approves), contract a bounded gap (with a named internal shadow), or descope. "Hire someone by March" is not on the list - say why, citing ramp-up and n(n-1)/2.</p></div>
+      <div class="step"><p><strong>Check the upskill lever.</strong> Which allocations exist only because the business cannot self-serve? Tag the cells that literacy training (services #20 and #27) would hand back - that is the training budget's business case, in FTE.</p></div>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with tonight.</strong> A filled allocation matrix with every row capped at 0.7, one circled overallocation, and a fix that survives Brooks's law - the exact artifact the b10 capstone builds into the year-one PMO pack.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Build the allocation matrix for YOUR team - people x projects, rows capped at 0.7. Circle every row that breaks the cap and note which fix (resequence, contract, descope, upskill) fits each.</li>
+      <li>Run the one-A test on four real assets: a pipeline, a model, a dashboard, a data-quality rule. Write down how long each answer took and how many names came back.</li>
+      <li>Find one recurring request stream that training could eliminate. Estimate the FTE it would hand back - bring the number, not the sentiment.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why does Northgate plan its 14 people as roughly 10 FTE of project capacity?</p>
+      <button class="qopt" type="button">A · Four of the fourteen are managers who do not deliver</button>
+      <button class="qopt" type="button">B · A realistic focus factor is about 70% - meetings, support, leave, and run work consume the rest, so 14 x 0.7 is about 10</button>
+      <button class="qopt" type="button">C · HR requires a 30% attrition reserve in all workforce plans</button>
+      <p class="qwhy">The focus factor is about what every person's week actually contains, not about roles or attrition. Rows in the allocation matrix cap at 0.7 - plans built on 1.0 per head are fantasy with a spreadsheet.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The forecasting project is late. Why does Brooks's law warn against adding two engineers now?</p>
+      <button class="qopt" type="button">A · New engineers are too expensive mid-year to be worth it</button>
+      <button class="qopt" type="button">B · It does not - Brooks's law only applies to teams larger than twenty</button>
+      <button class="qopt" type="button">C · Ramp-up consumes the veterans' time exactly when they are behind, and communication paths grow as n(n-1)/2 - the project slows before it speeds up</button>
+      <p class="qwhy">"Adding manpower to a late software project makes it later" (The Mythical Man-Month, 1975). Headcount fixes next year's capacity, not this quarter's slip - mid-year the legal moves are resequence, contract a bounded gap, or descope.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Store managers flood the BI team with dashboard requests. What signals upskill rather than hire?</p>
+      <button class="qopt" type="button">A · The demand is really self-serve questions - literacy training hands capacity back without a requisition, which is why it sits in the service catalog</button>
+      <button class="qopt" type="button">B · Nothing - recurring demand always means a permanent hire</button>
+      <button class="qopt" type="button">C · Budget freezes - upskilling is only ever the cheap fallback</button>
+      <p class="qwhy">Hire for permanent recurring capability, contract for spikes, upskill when the bottleneck is the business side's ability to self-serve. Data literacy and AI literacy training are catalog services because training IS capacity building.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Literacy Training (service #20)</span><span class="note">Taught as a capacity lever - the upskill answer in hire vs contract vs upskill; returns in b10</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI Literacy Training (service #27)</span><span class="note">Same lever on the Gen AI side - readiness before the agentic pilot scales</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brooks's law (The Mythical Man-Month, 1975)</span><span class="note">Ramp-up + n(n-1)/2 communication paths - the hiring caution behind the simulator's crash button</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">RACI one-A rule</span><span class="note">Applied at asset-class scale here - full grid mechanics and the broken-RACI fix are b4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Governance (service #25)</span><span class="note">Governance lead vs domain stewards drawn here - the working RACI lands in b4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The 14-FTE shape</b><span>Head of Data 1 · PMO 1 · platform 1 · data eng 4 · analytics/BI 3 · data sci 2 · ML eng 1 · governance 1. Engineering-heavy, governance from day one.</span></div>
+      <div class="cheat-item"><b>Hire / contract / upskill</b><span>Permanent recurring need = hire · spike or one-off = contract (with a named shadow) · business-side bottleneck = upskill.</span></div>
+      <div class="cheat-item"><b>Training = capacity</b><span>Literacy + AI literacy (services #20, #27) hand FTE back by making the business self-serve. Cost it in FTE returned.</span></div>
+      <div class="cheat-item"><b>One A per asset class</b><span>Pipelines: data eng lead · prod models: ML eng · dashboards: BI lead · governance: governance lead. One name, instantly, from anyone.</span></div>
+      <div class="cheat-item"><b>The two-A smell</b><span>Two teams "sort of" owning one asset = zero owners. Fix by asset, not by tool, and publish the grid.</span></div>
+      <div class="cheat-item"><b>Focus factor ~70%</b><span>14 people x 0.7 = about 10 real FTE. Cap every allocation-matrix row at 0.7 before planning anything.</span></div>
+      <div class="cheat-item"><b>The 3-project trap</b><span>ML engineer at 0.4 + 0.6 + 0.5 = 1.5 demanded vs 0.7 real. Context switching + single point of failure x3. Resequence, contract, or descope.</span></div>
+      <div class="cheat-item"><b>Brooks's law</b><span>Adding people to a late project makes it later - ramp-up drains veterans, paths grow n(n-1)/2. Headcount fixes next year, not this quarter.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a3-budget-and-cost.html">← Prev: Budget and cost</a> &nbsp;·&nbsp; <a href="a5-stakeholders-and-steering.html">Next: Stakeholders and steering →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

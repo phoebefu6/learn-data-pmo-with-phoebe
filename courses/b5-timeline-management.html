@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 5 · Timeline management + the portfolio simulator - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Practitioner session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Practitioner track · Session 5 of 10</div>
+    <h1>Watch the portfolio slip - <span class="accent">then stop it</span></h1>
+    <p class="sub">This is the heart of the course. Northgate's whole year runs live on this page: 10 projects, $2,700k, 12 months. With no PMO discipline, 1 project in 10 lands on time and the budget runs 38% over. Toggle the five levers on - RACI, sprint cadence, steering, capacity plan, budget buffer - and watch on-time delivery climb to 9 of 10 and the overrun collapse to 1%. Then press the tempting red button that adds headcount to late projects, and learn in one click why Brooks called it in 1975. One project never goes green, no matter what you do - and what happens to it instead is the deepest lesson in the session.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">PMs · delivery leads · anyone who writes status reports</span>
+      <span class="chip time">▶ The simulator session</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-15 · Tracking that predicts</span>
+      <span class="a3" style="flex:6">15-42 · Build-along: the lever ladder, live</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">You have a chartered, prioritized portfolio (b1), a dependency-aware timeline (b2), sprints fitted to data work (b3), and a RACI with exactly one A per deliverable (b4). Tonight those disciplines stop being separate topics: the simulator scores them as levers on ONE portfolio, and you see what each is worth in months and dollars. Sessions b6-b10 then deepen each lever. Leaders meet this same board in a6, framed for the steering chair.</p>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A tracking habit that predicts instead of describes, the full lever ladder run live (1 → 2 → 4 → 6 → 9 projects on time), the Brooks anti-lever burned into memory, and the re-baseline script for the project that was never going to be green.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: TRACKING THAT PREDICTS ============ -->
+  <section class="section" id="tracking">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers slip-early tracking, App Performance Monitoring + Data Validation as early warning</span>
+      <h2>Status that predicts, not describes <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Most status reports are history lessons: "we did X last week." A PMO report is a forecast: "at this burn and this velocity, we land in March, not January - decide now." The difference is WHEN a slip becomes visible. A slip surfaced in month 2 costs a conversation and a re-plan. The same slip surfaced in month 6 costs money already burned, stakeholders already promised, and options already gone. Everything in this session exists to move discovery left.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same 2-month slip discovered at month 2 versus month 6: early discovery keeps options, late discovery burns money and trust.">
+        <style>
+          .tmT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .tmH { font: 700 12.5px Inter, sans-serif; fill: #1C242E; }
+          .tmX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .tmW { font: 600 12px Inter, sans-serif; fill: #FFFFFF; }
+          .tmN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .tmAxis { stroke: #C3CCD5; stroke-width: 1.5; }
+        </style>
+        <text class="tmH" x="60" y="40">The same 2-month slip, discovered at two different moments</text>
+        <line class="tmAxis" x1="60" y1="120" x2="820" y2="120"/>
+        <text class="tmX" x="60" y="105">Discovered month 2 - options open</text>
+        <rect x="60" y="128" width="500" height="26" rx="6" fill="#3E5C76"/>
+        <text class="tmW" x="76" y="146">Re-plan · re-sequence · descope · tell steering early</text>
+        <rect x="564" y="128" width="130" height="26" rx="6" fill="#A3B8C9"/>
+        <text class="tmW" x="578" y="146">Lands re-planned</text>
+        <line class="tmAxis" x1="60" y1="210" x2="820" y2="210"/>
+        <text class="tmX" x="60" y="195">Discovered month 6 - options gone</text>
+        <rect x="60" y="218" width="500" height="26" rx="6" fill="#C2410C"/>
+        <text class="tmW" x="76" y="236">Money burned · promises made · integration dates missed</text>
+        <rect x="564" y="218" width="200" height="26" rx="6" fill="#991B1B"/>
+        <text class="tmW" x="578" y="236">Crisis re-plan under fire</text>
+        <rect x="60" y="286" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="tmN" x="84" y="298">The slip was identical. The cost was not. PMO tracking exists to buy the month-2 version.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - early vs late discovery of the same slip</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Three early-warning instruments a data portfolio already has<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Data offices are lucky: the portfolio produces its own telemetry. Wire these three into the weekly review and slips announce themselves:</p>
+        <ul>
+          <li><strong>App performance monitoring (service #3)</strong> - pipeline run times, failure rates, queue depth. A nightly load that crept from 40 minutes to 3 hours is a schedule slip that has not landed yet.</li>
+          <li><strong>Data validation (service #9)</strong> - reconciliation pass rates. Dashboards blocked on failing validation are late BEFORE the dashboard workstream misses anything.</li>
+          <li><strong>Sprint velocity trend (b3)</strong> - three sprints of declining completion on one project is a forecast, not a blip. Ask what it predicts, not who to blame.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>SPI thinking without the ceremony.</strong> Full earned-value lands in b9. The habit to install tonight is the ratio in your head: planned-by-now vs done-by-now. Below 1.0 and trending down = say it out loud this week. The number is less important than the reflex.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why data projects slip differently<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Application projects mostly slip on scope and estimation. Data projects add two slip modes of their own, and your tracking has to watch for both:</p>
+        <ul>
+          <li><strong>Discovery risk</strong> - "the data is not there / not usable." The b2 estimate assumed the ERP's order table was clean; week 3 finds the data dump has three years of duplicate keys. Fix: spike early (b2), track spike outcomes as first-class status.</li>
+          <li><strong>Model risk</strong> - the forecasting model may plateau below the accuracy the business needs, and no amount of schedule pressure changes the math. CRISP-DM is a loop, not a line - which is why b3 timeboxes iteration and why one project on tonight's board can never be forced green.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE SIMULATOR ============ -->
+  <section class="section" id="simulator">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the portfolio simulator - RACI, sprints, steering, capacity, buffer as live levers</span>
+      <h2>Northgate's year, live <span class="tag demo">★ 20 min · everyone drives</span></h2>
+    </div>
+    <p class="lede">Ten projects, twelve months, $2,700k. Grey bar = plan, colored bar = actual. Every slip on this board is a failure pattern you will meet in real life, keyed to the FIRST missing lever that would have prevented it. Toggle levers in any order - the recommended ladder is left to right. Then press the dashed orange button and watch the most natural management instinct in the world make everything worse.</p>
+
+    <div id="pmo-live"></div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The lever ladder - what each discipline buys, in numbers<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Levers on</th><th>On time</th><th>Budget variance</th><th>What just got fixed</th></tr>
+          <tr><td>None</td><td>1 / 10</td><td>+38%</td><td>Only the landing zone survives - it is small, single-team, and lucky</td></tr>
+          <tr><td>+ RACI (b4)</td><td>2 / 10</td><td>+28%</td><td>Governance stops stalling on "whose data is this?" - ownership questions stop costing months</td></tr>
+          <tr><td>+ Sprint cadence (b3)</td><td>4 / 10</td><td>+22%</td><td>Scope churn and research spirals get timeboxed - reporting and segmentation land</td></tr>
+          <tr><td>+ Steering (b6)</td><td>6 / 10</td><td>+17%</td><td>No more month-4 exec surprises - the scorecard and self-serve BI stop being rebuilt</td></tr>
+          <tr><td>+ Capacity plan (b10)</td><td>9 / 10</td><td>+12%</td><td>Shared engineers stop being double-booked - the lakehouse, data product, and pilot unblock</td></tr>
+          <tr><td>+ Budget buffer (b9)</td><td>9 / 10</td><td>+1%</td><td>Cloud and token overruns get caught by monthly variance review - money, not months</td></tr>
+        </table>
+        <p>Read the ladder the way an exec would: <strong>RACI, sprints, and steering are schedule levers. Capacity is the biggest single jump (6 → 9). The buffer is a money lever</strong> - it never rescues a date, it rescues the year-end number.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The red button: Brooks's law, one click<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"Crash it: add headcount to late projects" is the instinct every steering committee has in month 6. The simulator lets you try it. Result: <strong>on-time delivery never improves, every late project gets one month later, and the overrun jumps</strong> (at zero levers: +38% becomes +61%).</p>
+        <p>Why, mechanically: new people need ramp-up from exactly the people who are busiest, and communication paths grow as <strong>n(n-1)/2</strong> - a team of 4 has 6 paths, a team of 8 has 28. Fred Brooks wrote it in The Mythical Man-Month in 1975: "adding manpower to a late software project makes it later." Half a century of managers have re-verified it the expensive way.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>What TO do with money in month 6:</strong> buy scope relief (descope to the must-haves), buy dependency relief (a contractor on the UPSTREAM blocker, who ramps up on isolated work), or buy the NEXT project's start. Headcount on the late project itself is the one purchase that reliably makes things worse.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>How the simulator computes - and what is honest about it<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each project carries scripted sensitivities: months of slip that occur while a given lever is off, drawn from real failure patterns (unowned source systems, scope churn, exec surprises, double-booked specialists, unmetered cloud and token spend). The arithmetic on top is computed live in your browser: late months burn at 60% of the project's monthly rate, missing buffers add the documented overrun, crashing adds 15% of budget plus ramp-up burn per late project. It is a teaching simulation, honestly labeled - the patterns are scripted, the math is real, and the numbers above are its exact canon.</p>
+        <p>And the deliberate imperfection: <strong>9 of 10 is the ceiling.</strong> The sales forecasting model carries irreducible model risk - no process lever makes a hard prediction problem easy. What the levers change is HOW it lands: unmanaged, it is a month-12 surprise; with sprints + steering on, it becomes an amber "re-baselined" - v1 ships two SKU families, v2 goes on the roadmap, and steering heard it in month 3. A PMO's promise is not zero slips. It is zero surprises.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: RE-BASELINING ============ -->
+  <section class="section" id="rebaseline">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers honest re-baselining, Sales Forecasting + Data Quality Scorecard as the monitoring pair</span>
+      <h2>Re-baselining without losing the room <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A re-baseline is not an admission of failure - hiding one is. The test of a good re-baseline is that steering says "thank you for telling us in March" instead of "why are we hearing this in November." Three rules make the difference.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three rules + the script<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Re-baseline once, not monthly.</strong> A plan that moves every review is not a plan. Gather the slip, its cause, and the recovery options into ONE decision moment.</li>
+          <li><strong>Bring options, not apologies.</strong> Descope (v1 = 2 SKU families), extend (8 months, same scope), or add upstream capacity (contractor on data prep). Each priced in time and money. Steering picks; you recommend.</li>
+          <li><strong>Show what the monitoring caught.</strong> "The data quality scorecard flagged SKU-level sparsity in week 3; the model plateau confirmed it by sprint 4" - evidence that the system works builds trust even while the news is bad.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ The re-baseline opener - steal this</span>
+Forecasting update, decision needed today. The model reliably hits the accuracy bar for beverages and snacks - not yet for fresh, and the data will not support fresh this year (quality scorecard evidence attached). Options: A ship v1 on two families in March and charter v2 for fresh next year - my recommendation; B extend 3 months for one more data-prep cycle at $65k, 40% confidence; C stop now, keep the pipeline for BI. All three keep the March dashboard commitment. Which way?</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Drive the ladder yourself <span class="tag demo">★ 22 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Solo first, then pairs. The goal is not to memorize the numbers - it is to be able to NAME the missing lever from the failure story, which is exactly the diagnostic skill real portfolios need.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Baseline.</strong> All levers off. Read every red row's note - each one is a failure story. Write down which of the five disciplines each story is missing before touching anything.</p></div>
+      <div class="step"><p><strong>Climb the ladder</strong> left to right, one lever at a time. After each click, find WHICH projects changed and check it against your prediction. Note the 6 → 9 jump at capacity - the biggest single rung.</p></div>
+      <div class="step"><p><strong>Press CRASH at zero levers.</strong> Watch +38% become +61% with zero schedule gain. Then turn all five levers on and press it again - even on a healthy portfolio it still hurts (the one amber project gets later). Say the n(n-1)/2 reason out loud to your pair.</p></div>
+      <div class="step"><p><strong>Find the ceiling.</strong> All levers on: who is still not green? Read the forecasting row's amber note. Pair-practice the re-baseline script on it - one of you is the CFO who wanted all-SKU forecasts.</p></div>
+      <div class="step"><p><strong>Map to your world.</strong> Each person names their real portfolio's weakest lever and the project it is currently costing. That lever's session (b3/b4/b6/b9/b10) is your homework priority.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Write next week's status for your real project as a FORECAST (where it lands, at current velocity and burn) instead of a history. Note how different it feels to write.</li>
+      <li>Identify your portfolio's three early-warning instruments - what plays the role of APM, validation pass rates, and velocity trend? If one is missing, that is a finding.</li>
+      <li>Draft a re-baseline opener for any project you privately know will slip. You do not have to send it yet. You do have to write it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · At zero levers the portfolio runs +38% over budget. You press "Crash it: add headcount to late projects." What happens?</p>
+      <button class="qopt" type="button">A · On-time delivery improves to about 4 of 10 - more hands, more done</button>
+      <button class="qopt" type="button">B · Nothing changes - the button is decorative</button>
+      <button class="qopt" type="button">C · On-time stays at 1 of 10, every late project gets a month later, and the overrun jumps to about +61%</button>
+      <p class="qwhy">Brooks's law, live: ramp-up steals time from the busiest people and communication paths grow as n(n-1)/2. The simulator prices it at +1 month and +15% budget per late project - generous compared to some real cases.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · With all five levers on, the sales forecasting project shows amber "re-baselined," never green. Why is that the intended lesson?</p>
+      <button class="qopt" type="button">A · Model risk is irreducible - good PMO turns it into an early, honest re-baseline instead of a month-12 surprise</button>
+      <button class="qopt" type="button">B · The simulator caps at 9 to stay modest - a real PMO would get 10 of 10</button>
+      <button class="qopt" type="button">C · Forecasting projects should never be attempted in year one</button>
+      <p class="qwhy">No process lever makes a hard prediction problem easy. The levers change WHEN you find out and HOW it lands: v1 ships two SKU families in March with steering's blessing, instead of an all-SKU promise dying in November. Zero surprises, not zero slips.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · The nightly pipeline load crept from 40 minutes to 3 hours, but every workstream still reports green. What is the PMO read?</p>
+      <button class="qopt" type="button">A · Green is green - APM is an engineering concern, not a portfolio one</button>
+      <button class="qopt" type="button">B · That is a schedule slip that has not landed yet - raise it now, while the fix costs a conversation</button>
+      <button class="qopt" type="button">C · Wait two more weeks to confirm the trend before mentioning it</button>
+      <p class="qwhy">The portfolio's own telemetry (APM, validation pass rates, velocity trend) predicts slips before any workstream misses a date. Moving discovery left is the entire economics of tracking - month-2 slips cost conversations, month-6 slips cost money and trust.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">App Performance Monitoring (service #3)</span><span class="note">Wired into the weekly review as a schedule early-warning instrument</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Data Validation (service #9)</span><span class="note">Reconciliation pass rates as the leading indicator for every dashboard commitment</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brooks's law (The Mythical Man-Month, 1975)</span><span class="note">The crash anti-lever: ramp-up + n(n-1)/2 communication overhead, priced live</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Sales Forecasting + Data Quality Scorecard (#22, #26)</span><span class="note">The monitoring pair behind the honest re-baseline - modeling depth stays with the DS team</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Earned-value thinking (PMI)</span><span class="note">SPI as a mental habit tonight - the full PV/EV/AC working session is b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The lever ladder</b><span>1 → 2 → 4 → 6 → 9 on time as RACI, sprints, steering, capacity, buffer come on. Variance +38% → +1%. Capacity is the biggest jump.</span></div>
+      <div class="cheat-item"><b>Schedule vs money levers</b><span>RACI, sprints, steering, capacity move DATES. The buffer + variance review moves the year-end NUMBER. Know which you are pulling.</span></div>
+      <div class="cheat-item"><b>Brooks's law</b><span>Adding people to a late project makes it later - ramp-up + n(n-1)/2 paths. Buy scope relief, upstream help, or the next start instead.</span></div>
+      <div class="cheat-item"><b>Slip early &gt; slip late</b><span>Month-2 discovery costs a conversation; month-6 costs burned money and trust. All tracking exists to move discovery left.</span></div>
+      <div class="cheat-item"><b>Early-warning trio</b><span>APM run times · validation pass rates · velocity trend. The portfolio tells you it is slipping before any date is missed.</span></div>
+      <div class="cheat-item"><b>Status = forecast</b><span>"At this burn and velocity we land in March, not January - decide now." Planned-by-now vs done-by-now, below 1.0 = say it this week.</span></div>
+      <div class="cheat-item"><b>Re-baseline rules</b><span>Once, not monthly · options priced, not apologies · show what the monitoring caught. Goal: "thanks for March," never "why November."</span></div>
+      <div class="cheat-item"><b>Zero surprises</b><span>9 of 10 is the honest ceiling - model risk is real. The PMO's promise is not zero slips; it is that steering never gets ambushed.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 5 of 10 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-raci-and-rr.html">← Prev: RACI and R&amp;R</a> &nbsp;·&nbsp; <a href="b6-stakeholder-management.html">Next: Stakeholder management →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/pmo-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

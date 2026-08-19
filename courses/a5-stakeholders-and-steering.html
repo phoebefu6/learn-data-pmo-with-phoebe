@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · Stakeholders and steering - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>Five executives, <span class="accent">one steering rhythm</span></h1>
+    <p class="sub">Northgate's data office does not fail in the codebase - it fails in rooms. The CFO wants the number, the CMO wants segmentation yesterday, store ops wants their dashboard back, IT wants change control, and legal appears in month 5 with a veto nobody mapped. Tonight you build the leader's answer: a power x interest map of the real players, a three-loop steering cadence (weekly, monthly, quarterly) that all reads from ONE artifact - the executive scorecard - and an escalation path that lets your PMO say no with data instead of drama. By a6 this rhythm is what keeps the whole portfolio honest.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Data executives · heads of data · sponsors</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Map + cadence + scorecard</span>
+      <span class="a3" style="flex:4">20-42 · Build-along: run the steering agenda</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">You have the operating model (a1), the dependency-sequenced roadmap (a2), the two-pot budget (a3), and 14 people allocated without fantasy math (a4). All of it is now hostage to one question: <strong>do the executives around this portfolio trust what they are hearing?</strong> Tonight is the trust machinery - who needs what, on what rhythm, from which artifact, and what happens when someone tries to route around it. a6 puts the whole thing on a live board.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Northgate's five executives placed on the power x interest grid with a comms strategy per quadrant, a three-loop steering cadence you can copy into your calendar Monday, the executive scorecard as the single steering artifact, and the honest-broker script for saying no to a powerful person without saying "no."
+    </div>
+  </section>
+
+  <!-- ============ PART 1: STAKEHOLDER MAP ============ -->
+  <section class="section" id="stakeholder-map">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the power x interest grid for Northgate's executives</span>
+      <h2>Map the room before the room maps you <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every stakeholder tool starts with the same 2x2: <strong>power</strong> (can they change your budget, your scope, your existence?) against <strong>interest</strong> (does your portfolio touch their week?). The grid is not a personality test - it is a routing table. It tells you who gets a seat at steering, who gets a page, who gets a newsletter, and who gets a quiet coffee before anything surprises them.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Power x interest grid placing Northgate's CFO, CMO, legal, store ops, and IT into four quadrants with a strategy each.">
+        <style>
+          .pgT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .pgS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .pgH { font: 700 12.5px Inter, sans-serif; fill: #1C242E; }
+          .pgC { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .pgX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .pgN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="pgH" x="60" y="36">Northgate's executives on the power x interest grid</text>
+        <rect x="150" y="60" width="330" height="170" rx="10" fill="#3E5C76"/>
+        <text class="pgT" x="170" y="88">KEEP SATISFIED</text>
+        <text class="pgS" x="170" y="106">high power, low interest - no surprises</text>
+        <rect x="170" y="122" width="200" height="30" rx="15" fill="#EDF2F6"/>
+        <text class="pgC" x="186" y="142">Legal · privacy sign-off</text>
+        <rect x="484" y="60" width="330" height="170" rx="10" fill="#22364A"/>
+        <text class="pgT" x="504" y="88">MANAGE CLOSELY</text>
+        <text class="pgS" x="504" y="106">high power, high interest - partners</text>
+        <rect x="504" y="122" width="190" height="30" rx="15" fill="#EDF2F6"/>
+        <text class="pgC" x="520" y="142">CFO · sponsor + money</text>
+        <rect x="504" y="160" width="220" height="30" rx="15" fill="#EDF2F6"/>
+        <text class="pgC" x="520" y="180">CMO · wants segmentation</text>
+        <rect x="150" y="234" width="330" height="170" rx="10" fill="#EDF2F6" stroke="#A3B8C9" stroke-width="1.5"/>
+        <text class="pgH" x="170" y="262">MONITOR</text>
+        <text class="pgX" x="170" y="280">low power, low interest - the newsletter</text>
+        <text class="pgX" x="170" y="304">Everyone else, until the grid moves them</text>
+        <rect x="484" y="234" width="330" height="170" rx="10" fill="#5C7A94"/>
+        <text class="pgT" x="504" y="262">KEEP INFORMED</text>
+        <text class="pgS" x="504" y="280">high interest, lower power - allies</text>
+        <rect x="504" y="296" width="210" height="30" rx="15" fill="#EDF2F6"/>
+        <text class="pgC" x="520" y="316">Store ops · daily users</text>
+        <rect x="504" y="334" width="220" height="30" rx="15" fill="#EDF2F6"/>
+        <text class="pgC" x="520" y="354">IT · shared infrastructure</text>
+        <text class="pgX" x="60" y="74">High power</text>
+        <text class="pgX" x="60" y="398">Low power</text>
+        <text class="pgX" x="150" y="432">Low interest</text>
+        <text class="pgX" x="726" y="432">High interest</text>
+        <rect x="60" y="460" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="pgN" x="84" y="472">The grid is a routing table, not an org chart - legal holds a veto no org chart shows. Re-map quarterly.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - Northgate's five executives placed, with a strategy per quadrant</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The five players, read honestly<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Placement is a judgment call you revisit quarterly - people move when the portfolio touches them. Northgate's opening read:</p>
+        <ul>
+          <li><strong>CFO - manage closely.</strong> Signs the $2,700k change budget, chairs steering. Wants variance and benefits in numbers, monthly, no adjectives.</li>
+          <li><strong>CMO - manage closely.</strong> Highest-energy champion (segmentation, forecasting) and the most likely to queue-jump. Channel the energy through steering, not around it.</li>
+          <li><strong>Store ops - keep informed.</strong> 120 stores of daily dashboard users. Less budget power, enormous adoption power - they decide whether anything you ship gets used.</li>
+          <li><strong>IT - keep informed, treat as co-builder.</strong> Owns the cloud estate and change control. Ignore them and your landing zone waits in their queue.</li>
+          <li><strong>Legal - keep satisfied.</strong> Low interest until customer data or AI shows up, then instant veto power. One early briefing beats a month-5 stop order.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The quadrant nobody briefs is the one that stops you.</strong> Northgate's segmentation project is humming until legal learns - from a lunch conversation - that customer purchase histories feed a model. Work pauses three weeks for a privacy review that would have taken three days in month 1. Nothing about the model changed; the sequence of who-heard-what did. Keep-satisfied is cheap insurance: one page, quarterly, before they need it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Interest is a verb: people move on the grid<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The grid is a snapshot, and portfolios melt snapshots. Three predictable migrations to plan for:</p>
+        <ul>
+          <li><strong>Legal moves right</strong> the week the agentic pilot touches customer conversations - low interest becomes high interest overnight. Your quarterly briefing is what makes that arrival friendly.</li>
+          <li><strong>Store ops move up</strong> once the exec scorecard makes store P&amp;L visible - regional VPs discover opinions about your backlog. Route them to intake (b1) before the favor economy forms.</li>
+          <li><strong>A champion can cool.</strong> If the CMO's segmentation lands late, your loudest advocate becomes your loudest critic. Manage-closely means bad news travels to them first, from you.</li>
+        </ul>
+        <p>Practical habit: re-place the grid at the quarterly board meeting. It takes ten minutes and it is the cheapest strategic review the portfolio gets.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: STEERING CADENCE ============ -->
+  <section class="section" id="steering-cadence">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the three-loop cadence + the executive scorecard (#12) and KPI system design (#15)</span>
+      <h2>The cadence that replaces panic <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Steering is not a meeting - it is a rhythm with three loops at three speeds: a <strong>weekly PMO review</strong> that filters noise into exceptions, a <strong>monthly steering committee</strong> that makes decisions, and a <strong>quarterly board</strong> that re-ranks the portfolio. The trick that makes all three cheap: they read from the SAME artifact. Northgate builds it as a real project - the executive scorecard (service #12), sitting on KPI system design (service #15) so every number has one definition and one owner.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One quarter of steering cadence: thirteen weekly PMO reviews, three monthly steering meetings, one quarterly board, all reading the same scorecard.">
+        <style>
+          .cdT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .cdH { font: 700 12.5px Inter, sans-serif; fill: #1C242E; }
+          .cdL { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .cdX { font: 400 11px Inter, sans-serif; fill: #626D79; }
+          .cdN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+        </style>
+        <text class="cdH" x="60" y="36">One quarter of cadence - three loops, three speeds, one artifact</text>
+        <text class="cdL" x="60" y="86">Weekly · PMO review</text>
+        <text class="cdX" x="60" y="102">exceptions only · 30 min</text>
+        <rect x="290" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="330" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="370" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="410" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="450" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="490" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="530" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="570" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="610" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="650" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="690" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="730" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <rect x="770" y="66" width="34" height="28" rx="5" fill="#A3B8C9"/>
+        <text class="cdL" x="60" y="156">Monthly · steering</text>
+        <text class="cdX" x="60" y="172">decisions, not status · 60 min</text>
+        <rect x="290" y="136" width="160" height="32" rx="6" fill="#3E5C76"/>
+        <text class="cdT" x="306" y="157">Steering 1</text>
+        <rect x="466" y="136" width="160" height="32" rx="6" fill="#3E5C76"/>
+        <text class="cdT" x="482" y="157">Steering 2</text>
+        <rect x="642" y="136" width="162" height="32" rx="6" fill="#3E5C76"/>
+        <text class="cdT" x="658" y="157">Steering 3</text>
+        <text class="cdL" x="60" y="226">Quarterly · board</text>
+        <text class="cdX" x="60" y="242">re-rank the portfolio · 90 min</text>
+        <rect x="642" y="206" width="162" height="32" rx="6" fill="#22364A"/>
+        <text class="cdT" x="658" y="227">Board re-rank</text>
+        <rect x="290" y="272" width="514" height="56" rx="10" fill="#EDF2F6" stroke="#3E5C76" stroke-width="2"/>
+        <text class="cdL" x="310" y="296">ONE ARTIFACT · the executive scorecard (service #12)</text>
+        <text class="cdX" x="310" y="314">built on KPI system design (#15): one definition, one owner per number</text>
+        <rect x="60" y="356" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="cdN" x="84" y="368">Weekly filters, monthly decides, quarterly re-ranks - the same scorecard feeds all three, zero re-formatting.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three-loop cadence reading one scorecard</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Steering vs status: the distinction that saves an hour a month<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Loop</th><th>Question it answers</th><th>Output</th><th>Death mode</th></tr>
+          <tr><td>Weekly PMO review</td><td>What moved off plan this week?</td><td>Exception list + owner per item</td><td>Becomes a 10-project readout everyone endures</td></tr>
+          <tr><td>Monthly steering</td><td>What do the sponsors need to DECIDE?</td><td>Logged decisions with options priced</td><td>Becomes status theater - information in, nothing out</td></tr>
+          <tr><td>Quarterly board</td><td>Is this still the right portfolio?</td><td>Re-ranked queue, kills and starts confirmed</td><td>Becomes a victory lap - nothing is ever re-ranked</td></tr>
+        </table>
+        <p>The test for any agenda item: <strong>if nobody has to decide anything, it is status - send it as a page, not a meeting.</strong> Northgate's rule is blunt: an item gets steering airtime only if it carries a decision or an escalation. Everything else rides the scorecard pre-read.</p>
+        <div class="callout tip">
+          <strong>Why the scorecard must be a project, not a slide.</strong> A deck someone assembles the night before steering will drift - numbers get "improved" en route. Service #12 makes the scorecard a governed product: KPI definitions from #15, refreshed from the warehouse, same numbers whether the CFO or an analyst opens it. Steering trust is a data quality problem before it is a communication problem.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The steering pack: five pages, twenty minutes of reading<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Northgate's monthly pack, sent 48 hours ahead so the meeting starts decided-adjacent:</p>
+        <ul>
+          <li><strong>Page 1 - the scorecard.</strong> On-time, variance, benefits, risks. The a6 health view, one glance.</li>
+          <li><strong>Page 2 - exceptions.</strong> Only ambers and reds, each with owner, cause, and the ask.</li>
+          <li><strong>Page 3 - decisions needed.</strong> Two or three items max, each with options priced in time and money.</li>
+          <li><strong>Page 4 - decisions made last time</strong> and what happened. Nothing builds trust faster than closing loops.</li>
+          <li><strong>Page 5 - the horizon.</strong> What lands next month, what starts, what legal or IT should see coming.</li>
+        </ul>
+        <p>Anyone who has read the pack can chair the meeting. That is the point - the rhythm should survive any one person's vacation, including yours.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: ESCALATION + SAYING NO ============ -->
+  <section class="section" id="escalation">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers escalation paths + the PMO as honest broker</span>
+      <h2>Saying no with data, escalating without drama <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">The PMO's authority is strange: almost no formal power, enormous informational power. That only works as an <strong>honest broker</strong> - the function whose numbers both sides of any fight trust. Which means the no is never "the PMO says no." It is "here is the cut line, here is the capacity math, here is what displacing project 6 costs - which trade do you want to make?" The data says no; you stay the broker.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The escalation ladder - and what triggers a climb<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One path, published in week one: <strong>project owner → weekly PMO review → monthly steering → quarterly board.</strong> An issue climbs a rung when, and only when, it needs a decision above the current rung's authority. Three honest triggers:</p>
+        <ul>
+          <li><strong>Cross-project contention</strong> - two projects need the same engineer in the same month. The PMO cannot rank sponsors against each other; steering can.</li>
+          <li><strong>The triangle moved</strong> - scope, date, or money on any chartered project needs to change. That is a sponsor decision by definition (the charter is their signature).</li>
+          <li><strong>A stakeholder is routing around the system</strong> - queue-jumps, side-channel builds, shadow spreadsheets. Escalate the pattern, never the person.</li>
+        </ul>
+        <p>And the counter-rule: <strong>bad news alone is not an escalation.</strong> A slip with a recovery plan inside existing authority is a weekly-review item. Escalating everything teaches executives to stop listening; escalating precisely teaches them to lean in when you do.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The no that kept a friend.</strong> Month 3: the CMO wants a campaign-attribution dashboard "in two weeks, it's small." The PMO lead does not argue. She brings one page to steering: the WSJF score (below the cut line), the capacity math (both analytics engineers committed to the exec scorecard until month 4), and two priced options - wait eight weeks, or displace the scorecard the CFO chairs steering to get. The CMO looks at the page, picks waiting, and later tells the head of data it was the first time a no came with its reasons attached. The broker survived; so did the relationship.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Managing up without theatrics<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three quiet habits that do the work heroic memos pretend to:</p>
+        <ul>
+          <li><strong>No surprises, ever.</strong> Anything that will be said in steering reaches the affected executive before the meeting. Steering confirms decisions; it should never break news to a sponsor about their own project.</li>
+          <li><strong>Feed forward, not blame back.</strong> When a decision goes sideways, bring "here is what we change next month," not a post-mortem of who said what. Executives fund people who make the next decision easier.</li>
+          <li><strong>Let the artifact carry the tension.</strong> A red cell on a governed scorecard starts a calmer conversation than the same fact spoken across a table. Put the awkward number in the pre-read and let everyone arrive having already had their private reaction.</li>
+        </ul>
+        <p>None of this is spin. It is sequencing - the same truths, ordered so the room can act on them.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Four steering anti-patterns and their antidotes<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Anti-pattern</th><th>What it looks like</th><th>Antidote</th></tr>
+          <tr><td>The shadow steering</td><td>Real decisions happen in a pre-meeting of two; the committee rubber-stamps</td><td>Decisions logged only if made in the room - and the pack goes to everyone at once</td></tr>
+          <tr><td>The 40-slide pack</td><td>Sponsors stop pre-reading, the meeting becomes a narrated deck</td><td>Five pages, 48 hours ahead, meeting starts with page 3 (decisions)</td></tr>
+          <tr><td>The permanent guest list</td><td>Twelve attendees, four of whom decide anything</td><td>Deciders attend; everyone else gets the pack and an open question channel</td></tr>
+          <tr><td>The undead action log</td><td>Same items every month, owners "still on it"</td><td>Every action carries a date and a decision-if-missed - stale items escalate or die</td></tr>
+        </table>
+        <p>All four share one root: the meeting drifted from deciding to performing. The fix is always the same direction - fewer pages, fewer people, more verbs.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Run the 20-minute steering agenda <span class="tag demo">★ 20 min · everyone chairs</span></h2>
+    </div>
+    <p class="lede">Groups of four: one chair, one CFO, one CMO, one PMO lead presenting. Material: the live Northgate portfolio as of month 6. The goal is to feel how fast a decision-shaped agenda moves - and how instantly a status-shaped one bogs down.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Minutes 0-2 · silence.</strong> Scorecard on screen. Everyone reads. No narration - if the artifact needs a voiceover, the artifact failed (note what you would fix).</p></div>
+      <div class="step"><p><strong>Minutes 2-8 · exceptions.</strong> The PMO lead walks ONLY the ambers and reds: cause, owner, ask. The chair cuts any sentence that is history rather than forecast.</p></div>
+      <div class="step"><p><strong>Minutes 8-16 · decisions.</strong> Two queued items, each with priced options: release buffer to the lakehouse, and the CMO's attribution-dashboard request against the WSJF cut line. Sponsors must pick - "let's discuss offline" is banned.</p></div>
+      <div class="step"><p><strong>Minutes 16-19 · escalations + horizon.</strong> One item climbing to the quarterly board (a re-rank candidate), one heads-up for legal (the agentic pilot reaches customer data next month).</p></div>
+      <div class="step"><p><strong>Minute 19-20 · read back.</strong> The chair repeats every decision and owner out loud, and they go in the log. Then swap roles and note what the CFO chair does differently from the CMO chair.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>If it fit in 20 minutes, it was steering.</strong> The meeting only ran long when someone smuggled status in through the exceptions slot. That is the diagnostic to take home: time-in-meeting is a direct measure of how much deciding versus describing you are doing.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>Draw the power x interest grid for YOUR portfolio's real executives - five names minimum, a comms strategy per quadrant, and one person you predict will migrate this year.</li>
+      <li>Audit your current steering meeting against the three-loop model: which loop is it actually? What percentage of the last agenda was decisions versus status? Write the number down.</li>
+      <li>Draft the one-page "no with data" for a request you are currently absorbing informally: score, capacity math, two priced options. You do not have to send it - yet.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Legal barely attends anything and never asks about the portfolio. Where do they sit on Northgate's grid, and what do they get?</p>
+      <button class="qopt" type="button">A · Monitor - low interest means the newsletter is enough until they complain</button>
+      <button class="qopt" type="button">B · Manage closely - anyone with veto power needs a seat at every steering meeting</button>
+      <button class="qopt" type="button">C · Keep satisfied - high power, low interest: a short quarterly briefing before customer data or AI ever surprises them</button>
+      <p class="qwhy">Low interest does not mean low power. Legal can stop the segmentation project cold - the keep-satisfied strategy (brief early, brief lightly) is what turns a month-5 stop order into a month-1 three-day review.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · An agenda item for monthly steering has an update, a chart, and no question attached. What does the cadence say to do with it?</p>
+      <button class="qopt" type="button">A · Move it to the scorecard pre-read - no decision means it is status, and status travels as a page, not airtime</button>
+      <button class="qopt" type="button">B · Keep it - executives should hear all progress directly to stay engaged</button>
+      <button class="qopt" type="button">C · Escalate it to the quarterly board where there is more time</button>
+      <p class="qwhy">Steering exists to decide. Items without a decision or escalation ride the pre-read; the meeting spends its hour on options and choices. That single filter is what keeps the whole rhythm at 20-60 minutes instead of two hours of theater.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · A project slips two weeks but the owner has a recovery plan within existing scope, date, and budget authority. Escalate to steering?</p>
+      <button class="qopt" type="button">A · Yes - every slip belongs in front of sponsors immediately</button>
+      <button class="qopt" type="button">B · No - it is a weekly PMO review item; escalation triggers on decisions above current authority, not on bad news alone</button>
+      <button class="qopt" type="button">C · No, and keep it out of the weekly review too - recovery plans mean nothing happened</button>
+      <p class="qwhy">The ladder climbs on authority, not anxiety: cross-project contention, triangle changes, or routing-around patterns go up; managed slips stay in the weekly loop (and on the scorecard - never hidden). Escalate everything and executives stop listening; escalate precisely and they lean in.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Executive Scorecard (service #12)</span><span class="note">Elevated from "a report" to the single governed steering artifact all three loops read</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">KPI System Design (service #15)</span><span class="note">One definition and one owner per number - why the scorecard's credibility is a data project first</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PMBOK 7 performance domains (Stakeholders)</span><span class="note">The power x interest grid + comms-per-quadrant; the practitioner-depth version lands in b6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Biz Performance Monitoring (service #17)</span><span class="note">Previewed as the scorecard's feed - it becomes a6's health-board backbone next session</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Power x interest</b><span>Manage closely (CFO, CMO) · keep satisfied (legal) · keep informed (store ops, IT) · monitor (everyone else). Re-map quarterly.</span></div>
+      <div class="cheat-item"><b>The grid is a routing table</b><span>Seat at steering / quarterly page / newsletter / coffee-before-surprises. Low interest never means low power - ask legal.</span></div>
+      <div class="cheat-item"><b>Three loops</b><span>Weekly PMO review (exceptions, 30 min) · monthly steering (decisions, 60) · quarterly board (re-rank, 90). One scorecard feeds all.</span></div>
+      <div class="cheat-item"><b>Steering vs status</b><span>No decision attached = status = pre-read page, not airtime. The meeting's length measures deciding vs describing.</span></div>
+      <div class="cheat-item"><b>Scorecard = a project</b><span>Service #12 on #15: governed numbers, one definition, one owner. Steering trust is a data quality problem first.</span></div>
+      <div class="cheat-item"><b>Escalation triggers</b><span>Cross-project contention · the triangle moved · routing-around patterns. Bad news with a plan inside authority stays weekly.</span></div>
+      <div class="cheat-item"><b>No with data</b><span>Cut line + capacity math + two priced options. The data says no; the PMO stays the honest broker both sides trust.</span></div>
+      <div class="cheat-item"><b>No surprises</b><span>Affected sponsors hear it before the room does. Steering confirms news - it never breaks it. Close last month's loops first.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-headcount-and-rr.html">← Prev: Headcount and R&amp;R</a> &nbsp;·&nbsp; <a href="a6-portfolio-health.html">Next: Portfolio health →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

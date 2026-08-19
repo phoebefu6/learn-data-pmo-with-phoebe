@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · The data PMO - learn data pmo with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-pmo-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data PMO with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>Run the data office like a <span class="accent">portfolio</span></h1>
+    <p class="sub">Northgate, a 120-store retailer with ecommerce and ~4,000 staff, just stood up a data office: 14 people, a $2,700k change budget, and a service catalog with 30 lines on it - lakes, dashboards, forecasts, agents. Every executive wants their line first. Tonight you learn the leader's first move: stop reading the catalog as a menu and start reading it as a portfolio. You will see why project thinking alone cannot run a data office, why the four domains stack in a dependency order nobody gets to vote on, and exactly what a data PMO does for you - and what it must never be allowed to own.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Data executives · heads of data · sponsors</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Portfolio thinking + the catalog</span>
+      <span class="a3" style="flex:5">18-42 · Operating model + sort the 30</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How the leader track works</h2>
+    </div>
+    <p class="lede">Six sessions, one running case: <strong>Northgate's year-one data portfolio - 30 services, 10 projects, 14 people, $2,700k change budget</strong>. Tonight the PMO itself. a2 sequences the year into a roadmap, a3 covers budget and cost, a4 headcount and roles, a5 stakeholders and steering, a6 portfolio health with a live simulator you can pull levers on. Sibling courses, so you pick the right one: <em>learn-tech-project-pmo</em> runs ONE technical project end to end; <em>learn-ai-project-management</em> runs one programme with AI drafting beside you. This course is the level above both - the whole data office's year, many projects at once, plus the money and people disciplines. There is also a 10-session Practitioner track covering the same portfolio from the delivery chair.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live portfolio sim - arrives in a6</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The three-level lens (project, program, portfolio) and the one question each level answers, the 4-domain catalog read as a dependency stack instead of a menu, and a one-page operating model for your PMO: four things it owns, three things it must never own, checked against PMBOK 7's eight performance domains.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: PROJECT VS PROGRAM VS PORTFOLIO ============ -->
+  <section class="section" id="three-levels">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers project vs program vs portfolio</span>
+      <h2>Three levels, three questions <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A <strong>project</strong> is one team shipping one deliverable against one charter - the question it answers is "is this piece on track?" A <strong>program</strong> is a set of related projects steered toward one outcome - "do the pieces add up?" A <strong>portfolio</strong> is every bet the office is making, ranked on one list against finite money and people - "are these the right bets at all?" A data office with 30 requested services and 14 people lives or dies at the portfolio level: the hardest word in year one is not "how" but "not yet".</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three-level pyramid: portfolio on top asking are these the right bets, programs in the middle, projects at the base.">
+        <style>
+          .pyT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .pyS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .pyQ { font: 700 13px Inter, sans-serif; fill: #1C242E; }
+          .pyX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .pyN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .pyWire { stroke: #5C7A94; stroke-width: 2; fill: none; marker-end: url(#pyHd); }
+        </style>
+        <defs>
+          <marker id="pyHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="pyQ" x="60" y="38">One question per level - and decisions flow top down</text>
+        <rect x="250" y="56" width="220" height="72" rx="10" fill="#22364A"/>
+        <text class="pyT" x="268" y="86">PORTFOLIO</text>
+        <text class="pyS" x="268" y="106">All bets, one ranked list</text>
+        <rect x="180" y="148" width="360" height="72" rx="10" fill="#3E5C76"/>
+        <text class="pyT" x="198" y="178">PROGRAMS</text>
+        <text class="pyS" x="198" y="198">Related projects, one outcome</text>
+        <rect x="110" y="240" width="500" height="72" rx="10" fill="#5C7A94"/>
+        <text class="pyT" x="128" y="270">PROJECTS</text>
+        <text class="pyS" x="128" y="290">One team, one charter, one deliverable</text>
+        <path class="pyWire" d="M478,92 L640,92"/>
+        <text class="pyQ" x="652" y="88">Are these the</text>
+        <text class="pyQ" x="652" y="104">right bets?</text>
+        <path class="pyWire" d="M548,184 L640,184"/>
+        <text class="pyQ" x="652" y="180">Do the pieces</text>
+        <text class="pyQ" x="652" y="196">add up?</text>
+        <path class="pyWire" d="M618,276 L640,276"/>
+        <text class="pyQ" x="652" y="272">Is this piece</text>
+        <text class="pyQ" x="652" y="288">on track?</text>
+        <text class="pyX" x="110" y="336">Leaders live at the top. The PMO carries answers up and decisions down.</text>
+        <rect x="60" y="372" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="pyN" x="84" y="384">Northgate runs 10 projects and no formal programs - at this size the portfolio talks straight to projects.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three-level pyramid, portfolio on top</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why a data office needs portfolio thinking on day one<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most organizations discover portfolio thinking late, after two years of project-by-project chaos. A data office cannot afford that, for three structural reasons:</p>
+        <ul>
+          <li><strong>Demand always exceeds capacity.</strong> Northgate's catalog holds 30 services; 14 FTE can honestly run about 10 projects. Without a ranked list, the loudest sponsor wins - which is a ranking method, just a terrible one.</li>
+          <li><strong>Everything shares the same platform.</strong> The forecasting model, the dashboards, and the agent pilot all stand on the same lake and warehouse. Project-level thinking optimizes each piece; only the portfolio sees that they share one foundation and one queue.</li>
+          <li><strong>The money is one pot.</strong> $2,700k of change budget across 10 projects means every yes to one thing is a quiet no to another. Portfolio thinking makes the trade visible before it is made, not after.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The menu problem.</strong> Northgate's first steering meeting, week two: the CMO circles "Customer Segmentation" in the catalog, the CFO circles "Executive Scorecard", store ops circles "Sales Forecasting". Three circles, three verbal yeses, zero sequencing. By week six all three are "in progress" and none is staffed above half a team. The catalog was written to show what the office CAN do - read as a menu of simultaneous orders, it quietly booked the same 14 people three times. The portfolio lens exists to catch exactly this.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where programs fit - and when to skip them<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Programs earn their overhead when several projects must land together to release any value - a migration plus a retraining plus a cutover, say. Northgate's year one does not have that shape: its 10 projects release value one at a time, in dependency order. So the portfolio steers projects directly, and "program manager" is a hat nobody wears yet.</p>
+        <p>The leader's test: <strong>add a level only when the level below keeps producing decisions nobody is placed to make.</strong> If two projects keep fighting over one outcome, that is a program smell. If ten projects keep fighting over one budget, that is the portfolio - and that one you need from day one.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE CATALOG AS A PORTFOLIO ============ -->
+  <section class="section" id="catalog-stack">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the 4-domain catalog + the dependency reality</span>
+      <h2>Four domains, one direction <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Northgate's 30 services group into four domains: <strong>Infrastructure</strong> (8 services - cloud, lake, warehouse), <strong>Data Analytics</strong> (11 - reports, KPIs, BI), <strong>Data Science</strong> (5 - segments, forecasts), and <strong>Gen AI</strong> (7 - governance, agents, as Northgate files them). The domains are not four aisles you shop from in any order. They stack: infrastructure feeds analytics, analytics feeds data science, data science feeds Gen AI. The stack is a physical dependency, not an opinion - and it is the single most useful fact a leader can hold when a board member asks why the agent pilot is not first.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four-lane ladder: infrastructure at the base feeds analytics, which feeds data science, which feeds Gen AI at the top.">
+        <style>
+          .lcT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .lcS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .lcP { font: 600 12px Inter, sans-serif; fill: #1C242E; }
+          .lcX { font: 400 11.5px Inter, sans-serif; fill: #626D79; }
+          .lcN { font: 600 13px Inter, sans-serif; fill: #4A2005; }
+          .lcWire { stroke: #5C7A94; stroke-width: 2.5; fill: none; marker-end: url(#lcHd); }
+        </style>
+        <defs>
+          <marker id="lcHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#5C7A94"/>
+          </marker>
+        </defs>
+        <text class="lcP" x="60" y="36">THE STACK · every lane stands on the one below</text>
+        <text class="lcP" x="610" y="36">MAPS TO PROJECTS</text>
+        <rect x="60" y="56" width="520" height="70" rx="10" fill="#22364A"/>
+        <text class="lcT" x="78" y="86">Gen AI</text>
+        <text class="lcS" x="78" y="106">7 services · governance, agents, evals, AI literacy</text>
+        <text class="lcP" x="610" y="86">P9 Governance + DQ</text>
+        <text class="lcP" x="610" y="104">P10 Agentic pilot</text>
+        <rect x="60" y="150" width="520" height="70" rx="10" fill="#5C7A94"/>
+        <text class="lcT" x="78" y="180">Data Science</text>
+        <text class="lcS" x="78" y="200">5 services · segments, forecasts, data product</text>
+        <text class="lcP" x="610" y="180">P6 Segmentation · P7 Forecasting</text>
+        <text class="lcP" x="610" y="198">P8 Data product v1</text>
+        <rect x="60" y="244" width="520" height="70" rx="10" fill="#3E5C76"/>
+        <text class="lcT" x="78" y="274">Data Analytics</text>
+        <text class="lcS" x="78" y="294">11 services · reports, dashboards, KPIs, self-serve</text>
+        <text class="lcP" x="610" y="274">P3 Reporting + dashboards</text>
+        <text class="lcP" x="610" y="292">P4 Scorecard · P5 Self-serve BI</text>
+        <rect x="60" y="338" width="520" height="70" rx="10" fill="#22364A"/>
+        <text class="lcT" x="78" y="368">Infrastructure</text>
+        <text class="lcS" x="78" y="388">8 services · cloud, lake, warehouse, schema</text>
+        <text class="lcP" x="610" y="368">P1 Cloud landing zone</text>
+        <text class="lcP" x="610" y="386">P2 Lakehouse build</text>
+        <path class="lcWire" d="M320,338 L320,318"/>
+        <path class="lcWire" d="M320,244 L320,224"/>
+        <path class="lcWire" d="M320,150 L320,130"/>
+        <text class="lcX" x="336" y="332">feeds</text>
+        <text class="lcX" x="336" y="238">feeds</text>
+        <text class="lcX" x="336" y="144">feeds</text>
+        <rect x="60" y="432" width="14" height="14" rx="3" fill="#E2590A"/>
+        <text class="lcN" x="84" y="444">Order a Gen AI pilot before the lake exists and you are buying rework - value flows up, one lane at a time.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the 4-domain catalog as a dependency stack, mapped to the 10 projects</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Reading the stack like a sponsor<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three leader-level consequences fall straight out of the stack:</p>
+        <ul>
+          <li><strong>Early quarters look boring on purpose.</strong> Landing zone and lakehouse produce no dashboard anyone applauds - they produce the floor the applause lines stand on. Budget your patience along with your money.</li>
+          <li><strong>The exciting stuff is hostage to the dull stuff.</strong> Forecasting quality is capped by warehouse quality; agent behavior is capped by governance quality. When a model underwhelms, look one lane down before blaming the data scientists.</li>
+          <li><strong>Governance is not a lane of its own - it underpins all four.</strong> Northgate files Data Governance and the Data Quality Scorecard under Gen AI, because agents forced the issue - but the discipline pays off in every lane above the lake.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The upside-down year.</strong> A Northgate board member returns from a conference and asks for "an AI agent for store managers, this quarter." The head of data does not argue AI - she draws the stack: the agent reads from the warehouse, the warehouse does not exist yet, and an agent on ungoverned data automates mistakes at machine speed. The ask goes on the portfolio as P10 with its enablers named, scheduled behind governance. Same ambition, right order - and the board member becomes the pilot's sponsor instead of its casualty.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why 30 services and not 30 projects<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The catalog's 30 lines roll up into 10 portfolio projects - services sharing a team, a dependency chain, and a sponsor become one project with one charter, one Accountable owner, one budget line. Data Lake, Data Warehouse, Schema Design, Data Dictionary, and Data Dump are five catalog lines and exactly one project: the lakehouse build. Thirty separately chartered projects would drown 14 people in coordination overhead; four domain-blobs would be too coarse to steer.</p>
+        <p>You will do this rollup yourself in tonight's demo. The Practitioner track's b1 works the same rollup from the delivery side, with the charter template and the scoring math.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE PMO OPERATING MODEL ============ -->
+  <section class="section" id="operating-model">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers what the PMO owns, what it never owns, PMBOK 7</span>
+      <h2>What your PMO does - and must not do <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A data PMO owns exactly four things: <strong>cadence</strong> (the meeting and reporting rhythm that makes progress visible), <strong>visibility</strong> (one honest wall showing every project's state), <strong>escalation</strong> (problems reach the right decider while they are still cheap), and <strong>money</strong> (budget tracking and variance, not budget setting). It must never <strong>build things</strong>, <strong>own products</strong>, or <strong>make architecture calls</strong> - the moment it does, it stops being the honest broker and becomes one more team defending its own work. Guard that line personally; it erodes from both sides.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>PMBOK 7's eight performance domains - the leader's checklist<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>PMBOK Guide 7th edition (PMI, 2021) replaced 49 processes with 12 principles and <strong>8 performance domains</strong>. Skip the certification framing; as a leader, read the domains as eight questions to ask your PMO lead in the first month. If any question has no owner, you found the gap before it found you.</p>
+        <table class="clean">
+          <tr><th>Domain</th><th>The leader's question</th><th>Where this course covers it</th></tr>
+          <tr><td>Stakeholders</td><td>Who can hurt or help us, and who talks to them, how often?</td><td>a5</td></tr>
+          <tr><td>Team</td><td>Do 14 people know who owns what - one Accountable each?</td><td>a4</td></tr>
+          <tr><td>Development Approach and Life Cycle</td><td>Are we running data work like data work, not app dev?</td><td>Practitioner b3</td></tr>
+          <tr><td>Planning</td><td>Is there one roadmap, versioned and dated?</td><td>a2</td></tr>
+          <tr><td>Project Work</td><td>Does work enter through one door, or ambush the team in DMs?</td><td>Practitioner b1, b7</td></tr>
+          <tr><td>Delivery</td><td>Does "done" mean the sponsor's definition or ours?</td><td>a6</td></tr>
+          <tr><td>Measurement</td><td>Would we know a project was slipping a month before it slips?</td><td>a3, a6</td></tr>
+          <tr><td>Uncertainty</td><td>Which bets carry discovery or model risk, and where is the buffer?</td><td>a3</td></tr>
+        </table>
+        <div class="callout tip">
+          <strong>One pass, eight questions, thirty minutes.</strong> Run the checklist with your PMO lead in week one and again each quarter. The answers matter less than whether every question has a named owner and a visible artifact behind it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The two failure modes of a new PMO<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Failure mode 1: the PMO becomes a build team.</strong> It starts innocently - the PMO lead "just helps" with a dashboard, then owns it, then defends its priority in the very steering meeting they are supposed to broker. Cure: the PMO's headcount plan contains zero builders, forever.</p>
+        <p><strong>Failure mode 2: the PMO becomes a reporting theater.</strong> Beautiful status decks, no escalations, no declined requests, every project green until the month it turns red. Cure: judge your PMO by decisions surfaced per month, not slides produced. A PMO that never brings you a hard call is not running a portfolio - it is decorating one.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Sort the 30 services into 10 projects <span class="tag demo">★ 20 min · everyone sorts</span></h2>
+    </div>
+    <p class="lede">The full Northgate catalog on cards - 30 services across four domains. Your table plays the steering committee and builds the portfolio.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Deal the catalog.</strong> Spread all 30 service cards. First pass: sort into the four domains (Infrastructure 8, Analytics 11, Data Science 5, Gen AI 7 - Northgate files governance under Gen AI; keep their grouping).</p></div>
+      <div class="step"><p><strong>Roll up.</strong> Group services that share a team, a dependency chain, and a sponsor into candidate projects. Target ten-ish; argue the edge cases out loud. Is Data Literacy Training its own project or part of segmentation's adoption plan? (Northgate: part of it.)</p></div>
+      <div class="step"><p><strong>Compare to Northgate's answer.</strong> P1 landing zone, P2 lakehouse, P3 reporting, P4 scorecard + KPI, P5 self-serve BI, P6 segmentation, P7 forecasting, P8 data product, P9 governance + DQ, P10 agentic pilot. Where you differ, decide whose rollup survives a budget review better - there is more than one defensible answer.</p></div>
+      <div class="step"><p><strong>Stack it.</strong> Arrange the 10 projects on the four-lane ladder. Mark every project whose lane sits above an unbuilt lane - that is your "not yet" list, and saying it out loud now is the whole point.</p></div>
+      <div class="step"><p><strong>Name one A each.</strong> For each project, propose exactly one Accountable owner from the 14-FTE org. Notice where you wanted two - that itch is next session's material, and b4 on the Practitioner track works the full RACI.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>Keep the disagreements.</strong> Where your table's rollup differed from Northgate's, write the difference down - it is the best predictor of where your real organization's portfolio will fight itself.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Before next session</span>
+      <h2>Homework <span class="tag exercise">◐ 30 min</span></h2>
+    </div>
+    <ul>
+      <li>List every data service YOUR organization currently offers or has promised - aim for the honest number, not the tidy one. Sort them into the four domains.</li>
+      <li>Roll your list into candidate projects (shared team + dependency chain + sponsor) and mark every project sitting above an unbuilt lane on the stack.</li>
+      <li>Write the four-owns / three-never-owns line for your PMO on one page. If your PMO currently builds or owns products, note what it would take to hand that off.</li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What question does the portfolio level answer that no project can?</p>
+      <button class="qopt" type="button">A · Is this piece of work on track against its plan?</button>
+      <button class="qopt" type="button">B · Do these related projects add up to one outcome?</button>
+      <button class="qopt" type="button">C · Are these the right bets at all, ranked against finite money and people?</button>
+      <p class="qwhy">Projects answer "on track?", programs answer "adds up?", the portfolio answers "right bets?" - one ranked list against one pot of money and 14 people. A data office with 30 requested services dies without that question having an owner.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Northgate's 10 projects each get exactly one Accountable owner. Why one, not two?</p>
+      <button class="qopt" type="button">A · Two As means the outcome belongs to nobody - shared accountability dissolves under pressure</button>
+      <button class="qopt" type="button">B · Budget systems can only bill one cost center per project</button>
+      <button class="qopt" type="button">C · With 14 people there simply are not enough leaders to double up</button>
+      <p class="qwhy">The one-A rule (from RACI: one and only one Accountable per deliverable) exists because shared accountability evaporates exactly when it is needed - when the project is in trouble. Full RACI mechanics land in a4 and Practitioner b4.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Which of these does a healthy data PMO own?</p>
+      <button class="qopt" type="button">A · The architecture decision between lake vendors, since it sees all projects</button>
+      <button class="qopt" type="button">B · Cadence, visibility, escalation, and money tracking - and none of the building</button>
+      <button class="qopt" type="button">C · The executive dashboard product, since reporting is its specialty</button>
+      <p class="qwhy">The PMO owns cadence, visibility, escalation, and money. The moment it builds things, owns products, or makes architecture calls, it becomes one more team defending its own work - and you lose your honest broker.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ SOURCES COVERED ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered tonight</span>
+      <h2>What this session drew from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Northgate service catalog (all 4 domains, 30 services)</span><span class="note">Sorted into the 10-project portfolio in the demo - the map every later session steers by</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PMBOK Guide 7th ed (PMI, 2021) - 12 principles, 8 performance domains</span><span class="note">The eight domains reframed as the leader's monthly checklist questions</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">RACI - the one-A rule</span><span class="note">Previewed at project level; full grid mechanics in a4 and Practitioner b4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data Governance + Data Quality Scorecard (services 25-26)</span><span class="note">Placed on the stack as the discipline underpinning every lane - depth in a6 and b4/b5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three levels</b><span>Project: "on track?" · Program: "adds up?" · Portfolio: "right bets?" Leaders live at the top; the PMO carries answers up and decisions down.</span></div>
+      <div class="cheat-item"><b>Northgate canon</b><span>120 stores + ecommerce, ~4,000 staff, 14-FTE data office, $2,700k change budget, 30 services, 10 projects, no formal programs.</span></div>
+      <div class="cheat-item"><b>The four domains</b><span>Infrastructure (8) · Data Analytics (11) · Data Science (5) · Gen AI (7, incl. governance as Northgate files it).</span></div>
+      <div class="cheat-item"><b>The stack</b><span>Infra feeds Analytics feeds DS feeds Gen AI. Physical dependency, not opinion. When a model underwhelms, look one lane down.</span></div>
+      <div class="cheat-item"><b>The rollup rule</b><span>Shared team + shared dependency chain + shared sponsor = one project, one charter, one Accountable, one budget line.</span></div>
+      <div class="cheat-item"><b>PMO owns four things</b><span>Cadence · visibility · escalation · money tracking. Judge it by decisions surfaced per month, not slides produced.</span></div>
+      <div class="cheat-item"><b>PMO never owns</b><span>Building things · products · architecture calls. Cross the line and you lose your honest broker - it erodes from both sides.</span></div>
+      <div class="cheat-item"><b>PMBOK 7 checklist</b><span>Stakeholders · Team · Dev Approach + Life Cycle · Planning · Project Work · Delivery · Measurement · Uncertainty - eight questions, each needs a named owner.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-data-pmo-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-annual-roadmap.html">Next: The annual roadmap →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
